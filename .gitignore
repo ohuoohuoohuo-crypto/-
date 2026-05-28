@@ -1,2 +1,4 @@
 .DS_Store
 assets/prototype.png
+.deploy-key*
+.known_hosts
