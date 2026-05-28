@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Singularity Games / 奇点游戏，未来科技风动态游戏官网。"
+    />
+    <title>Singularity Games / 奇点游戏</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+    <div id="burstLayer" class="burst-layer" aria-hidden="true"></div>
+
+    <div class="stage-bg" aria-hidden="true">
+      <video
+        class="stage-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="./assets/homepage-pipe-animation.mp4" type="video/mp4" />
+      </video>
+      <div class="video-shade"></div>
+      <div class="grid-plane"></div>
+      <div class="light-trails"></div>
+      <div class="scan-field"></div>
+    </div>
+
+    <header class="site-header" data-reveal>
+      <a class="brand" href="#home" aria-label="Singularity Games home">
+        <span class="brand-mark">
+          <span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Singularity Games</strong>
+          <small>奇点游戏</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#home" data-i18n="navHome">首页</a>
+        <a href="#products" data-i18n="navProducts">产品</a>
+        <a href="#advantages" data-i18n="navAbout">关于我们</a>
+        <a href="#contact" data-i18n="navContact">联系我们</a>
+      </nav>
+
+      <div class="language-switch" aria-label="语言切换">
+        <button class="is-active" type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="en">English</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="floating-field" aria-hidden="true">
+          <div class="float-shape float-cube"></div>
+          <div class="float-shape float-prism"></div>
+          <div class="float-shape float-ring"></div>
+          <div class="float-shape float-chip"></div>
+          <div class="float-shape float-core"></div>
+        </div>
+
+        <div class="hero-copy" data-reveal>
+          <h1 class="glitch-title" aria-label="探索无限可能的游戏世界">
+            <span class="glitch-line" data-glitch="heroTitleTop" data-text="探索无限可能" data-i18n="heroTitleTop">
+              探索无限可能
+            </span>
+            <span class="glitch-line accent" data-glitch="heroTitleBottom" data-text="游戏世界" data-i18n="heroTitleBottom">
+              游戏世界
+            </span>
+          </h1>
+          <p data-i18n="heroLead">
+            Singularity Games 致力于打造创新、沉浸式的游戏体验和 AI 应用，
+            用动态世界、智能角色与全息交互连接玩家的下一次冒险。
+          </p>
+
+          <div class="hero-actions">
+            <a class="neon-button primary" href="#products" data-burst data-i18n="heroPrimary">
+              探索产品
+            </a>
+            <a class="neon-button secondary" href="#advantages" data-burst data-i18n="heroSecondary">
+              了解更多
+            </a>
+          </div>
+
+          <div class="signal-row" aria-label="Singularity Games data signals">
+            <div>
+              <strong>07</strong>
+              <span data-i18n="signalGames">游戏与 AI 产品</span>
+            </div>
+            <div>
+              <strong>24K</strong>
+              <span data-i18n="signalWorlds">动态世界节点</span>
+            </div>
+            <div>
+              <strong>AI</strong>
+              <span data-i18n="signalEngine">原生智能体验</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="section product-section">
+        <div class="section-head" data-reveal>
+          <span class="section-kicker" data-i18n="productsKicker">我们的产品</span>
+          <h2 data-i18n="productsTitle">把奇点引擎装进每一个世界</h2>
+          <p data-i18n="productsLead">
+            以游戏、AI 对话、智能创作与 SaaS 系统为核心，构建跨平台的互动产品矩阵。
+          </p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card reveal-card featured" tabindex="0" style="--accent: 190 100% 62%">
+            <div class="product-visual island">
+              <span class="tag" data-i18n="tagFeatured">重点产品</span>
+              <div class="mini-model model-island"></div>
+            </div>
+            <div class="product-copy">
+              <h3 data-i18n="product1Title">奇幻岛</h3>
+              <p data-i18n="product1Body">探索神秘的奇幻岛屿，体验前所未有的冒险与挑战。</p>
+              <a href="#contact" data-burst data-i18n="learnMore">了解更多</a>
+            </div>
+          </article>
+
+          <article class="product-card reveal-card featured" tabindex="0" style="--accent: 272 100% 70%">
+            <div class="product-visual painter">
+              <span class="tag" data-i18n="tagFeatured">重点产品</span>
+              <div class="mini-model model-painter"></div>
+            </div>
+            <div class="product-copy">
+              <h3 data-i18n="product2Title">AI 对话画家</h3>
+              <p data-i18n="product2Body">利用先进的 AI 技术，智能将创意转化为精美的艺术作品。</p>
+              <a href="#contact" data-burst data-i18n="learnMore">了解更多</a>
+            </div>
+          </article>
+
+          <article class="product-card reveal-card" tabindex="0" style="--accent: 45 100% 64%">
+            <div class="product-visual island-master">
+              <div class="mini-model model-crystal"></div>
+            </div>
+            <div class="product-copy">
+              <h3 data-i18n="product3Title">荒岛大师家</h3>
+              <p data-i18n="product3Body">在荒岛冒险游戏中收集名探险家，在神秘岛屿上求生存。</p>
+              <a href="#contact" data-burst data-i18n="learnMore">了解更多</a>
+            </div>
+          </article>
+
+          <article class="product-card reveal-card" tabindex="0" style="--accent: 326 100% 67%">
+            <div class="product-visual sayly">
+              <div class="mini-model model-chat"></div>
+            </div>
+            <div class="product-copy">
+              <h3>SayLy</h3>
+              <p data-i18n="product4Body">面向日本用户设计的聊天键盘与 AI 助手，让日语沟通更自然。</p>
+              <a href="#contact" data-burst data-i18n="learnMore">了解更多</a>
+            </div>
+          </article>
+
+          <article class="product-card reveal-card" tabindex="0" style="--accent: 152 100% 58%">
+            <div class="product-visual estate">
+              <div class="mini-model model-tower"></div>
+            </div>
+            <div class="product-copy">
+              <h3>EstateForce</h3>
+              <p data-i18n="product5Body">面向中小地产公司设计的 SaaS 管理系统，统一组织租赁、合同与客户。</p>
+              <a href="#contact" data-burst data-i18n="learnMore">了解更多</a>
+            </div>
+          </article>
+
+          <article class="product-card reveal-card" tabindex="0" style="--accent: 10 100% 66%">
+            <div class="product-visual roast">
+              <div class="mini-model model-mask"></div>
+            </div>
+            <div class="product-copy">
+              <h3 data-i18n="product6Title">毒舌坊主</h3>
+              <p data-i18n="product6Body">20+ 角色、增强 3D、口才挑战，创造热闹又爽快的真人派对游戏。</p>
+              <a href="#contact" data-burst data-i18n="learnMore">了解更多</a>
+            </div>
+          </article>
+
+          <article class="product-card reveal-card" tabindex="0" style="--accent: 215 100% 70%">
+            <div class="product-visual snake">
+              <div class="mini-model model-snake"></div>
+            </div>
+            <div class="product-copy">
+              <h3>ヘビ！もぐもぐ</h3>
+              <p data-i18n="product7Body">休闲贪吃蛇成长游戏，吞噬、进化、变强并挑战最终蛇王。</p>
+              <a href="#contact" data-burst data-i18n="learnMore">了解更多</a>
+            </div>
+          </article>
+
+          <article class="product-card reveal-card more-card" tabindex="0" style="--accent: 88 100% 62%">
+            <div class="product-visual more">
+              <div class="plus-core">+</div>
+            </div>
+            <div class="product-copy">
+              <h3 data-i18n="product8Title">更多产品</h3>
+              <p data-i18n="product8Body">更多有趣的游戏与 AI 应用正在开发中，敬请期待。</p>
+              <a href="#contact" data-burst data-i18n="seeAll">查看全部产品</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="advantages" class="section advantage-section">
+        <div class="section-head" data-reveal>
+          <span class="section-kicker" data-i18n="advantagesKicker">为什么选择我们</span>
+          <h2 data-i18n="advantagesTitle">沉浸式娱乐与 AI 工程的交汇点</h2>
+        </div>
+
+        <div class="advantage-grid">
+          <article class="advantage-panel reveal-card">
+            <div class="holo-icon icon-world"></div>
+            <div class="data-stream">
+              <span>WORLD.SEED 001011</span>
+              <span>PLAYER.EMOTION SYNC</span>
+              <span>QUEST.MATRIX LIVE</span>
+            </div>
+            <h3 data-i18n="adv1Title">创新游戏体验</h3>
+            <p data-i18n="adv1Body">专注于创造独特而有趣的游戏体验，为玩家带来前所未有的沉浸式体验。</p>
+          </article>
+
+          <article class="advantage-panel reveal-card">
+            <div class="holo-icon icon-ai"></div>
+            <div class="data-stream">
+              <span>LLM.ROUTER READY</span>
+              <span>AGENT.MEMORY ACTIVE</span>
+              <span>IMAGE.PIPELINE 4D</span>
+            </div>
+            <h3 data-i18n="adv2Title">先进 AI 技术</h3>
+            <p data-i18n="adv2Body">利用最先进的 AI 技术，为用户提供智能、个性化的服务和体验。</p>
+          </article>
+
+          <article class="advantage-panel reveal-card">
+            <div class="holo-icon icon-user"></div>
+            <div class="data-stream">
+              <span>RETENTION +18.6%</span>
+              <span>UX.LOOP OPTIMIZED</span>
+              <span>FEEDBACK REALTIME</span>
+            </div>
+            <h3 data-i18n="adv3Title">用户至上</h3>
+            <p data-i18n="adv3Body">始终将用户体验放在首位，不断优化产品，满足用户需求。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-section" data-reveal>
+        <div class="cta-inner">
+          <span class="section-kicker" data-i18n="ctaKicker">Ready Player Next</span>
+          <h2 data-i18n="ctaTitle">准备好开始你的冒险了吗？</h2>
+          <p data-i18n="ctaLead">立即探索我们的产品，开启一段难忘的旅程。</p>
+          <a class="neon-button primary" href="#products" data-burst data-i18n="ctaButton">立即探索</a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="footer-scan" aria-hidden="true"></div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">
+            <span></span>
+          </span>
+          <div>
+            <strong>Singularity Games / 奇点游戏</strong>
+            <p data-i18n="footerTagline">创新游戏与 AI 体验的领导者</p>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <strong data-i18n="footerContact">联系我们</strong>
+          <a href="mailto:sgames@hanlian.com">sgames@hanlian.com</a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Singularity Games. 保留所有权利。</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
