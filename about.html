@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="了解 Singularity Games / 奇点游戏的故事、使命、价值观与团队。"
+    />
+    <title>关于我们 - Singularity Games / 奇点游戏</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+    <div id="burstLayer" class="burst-layer" aria-hidden="true"></div>
+
+    <div class="stage-bg" aria-hidden="true">
+      <video
+        class="stage-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="./assets/homepage-pipe-animation.mp4" type="video/mp4" />
+      </video>
+      <div class="video-shade"></div>
+      <div class="grid-plane"></div>
+      <div class="light-trails"></div>
+      <div class="scan-field"></div>
+    </div>
+
+    <header class="site-header" data-reveal>
+      <a class="brand" href="./index.html#home" aria-label="Singularity Games home">
+        <span class="brand-mark">
+          <span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Singularity Games</strong>
+          <small>奇点游戏</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="主导航">
+        <a href="./index.html#home" data-i18n="navHome">首页</a>
+        <a href="./index.html#products" data-i18n="navProducts">产品</a>
+        <a class="is-current" href="./about.html" data-i18n="navAbout">关于我们</a>
+        <a href="#contact" data-i18n="navContact">联系我们</a>
+      </nav>
+
+      <div class="language-switch" aria-label="语言切换">
+        <button class="is-active" type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="en">English</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="section about-section">
+        <div class="about-hero-panel" data-reveal>
+          <div class="about-breadcrumb" aria-label="当前位置">
+            <a href="./index.html#home" data-i18n="breadcrumbHome">首页</a>
+            <span>/</span>
+            <span data-i18n="navAbout">关于我们</span>
+          </div>
+          <span class="section-kicker" data-i18n="aboutKicker">ABOUT SINGULARITY</span>
+          <h2 data-i18n="aboutTitle">关于我们</h2>
+          <p data-i18n="aboutLead">了解 Singularity Games 的故事、使命和团队。</p>
+          <a class="about-scroll" href="#about-story" aria-label="继续阅读" data-burst>
+            <span></span>
+          </a>
+          <div class="about-constellation" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div id="about-story" class="about-story-grid">
+          <div class="story-copy" data-reveal>
+            <span class="section-kicker" data-i18n="storyKicker">OUR STORY</span>
+            <h3 data-i18n="storyTitle">我们的故事</h3>
+            <p data-i18n="storyBody1">
+              Singularity Games 成立于 2023 年，由一群热爱游戏和人工智能的技术专家与创意人才共同创立。
+            </p>
+            <p data-i18n="storyBody2">
+              我们的初始团队在游戏开发、人工智能和用户体验设计领域拥有丰富经验，怀揣着将创新技术与娱乐体验融合的梦想，开启了奇点游戏的创业之旅。
+            </p>
+            <p data-i18n="storyBody3">
+              从小型创业团队到拥有数十名成员的科技公司，我们的产品不仅在国内市场取得了成功，也逐步拓展到国际市场。
+            </p>
+            <div class="story-metrics" aria-label="公司发展数据">
+              <div>
+                <strong>2023</strong>
+                <span data-i18n="storyMetric1">创立年份</span>
+              </div>
+              <div>
+                <strong>07</strong>
+                <span data-i18n="storyMetric2">产品矩阵</span>
+              </div>
+              <div>
+                <strong>24K</strong>
+                <span data-i18n="storyMetric3">动态节点</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-visual reveal-card" aria-label="Singularity Games 全息产品场景">
+            <div class="holo-stage">
+              <img
+                class="holo-product holo-product-main"
+                src="./assets/products/ai-painter.png"
+                alt="AI 对话画家全息产品场景"
+                loading="lazy"
+              />
+              <img
+                class="holo-product holo-product-island"
+                src="./assets/products/fantasy-island.png"
+                alt="奇幻岛全息产品场景"
+                loading="lazy"
+              />
+              <img
+                class="holo-product holo-product-chat"
+                src="./assets/products/sayly.png"
+                alt="SayLy 全息产品场景"
+                loading="lazy"
+              />
+              <div class="holo-console">
+                <span>SG.OS / LIVE</span>
+                <strong>WORLD ENGINE</strong>
+                <small>AI CREATION + GAMEPLAY LOOP</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-values">
+          <div class="about-block-head" data-reveal>
+            <span class="section-kicker" data-i18n="valuesKicker">MISSION & VALUES</span>
+            <h3 data-i18n="valuesTitle">我们的使命与价值观</h3>
+            <p data-i18n="valuesLead">
+              我们的使命是通过创新的游戏和 AI 应用，丰富人们的数字生活，激发创造力，连接人与技术。
+            </p>
+          </div>
+
+          <div class="value-grid">
+            <article class="value-card reveal-card" tabindex="0" style="--accent: 190 100% 62%">
+              <span class="value-index">01</span>
+              <h4 data-i18n="value1Title">创新</h4>
+              <p data-i18n="value1Body">不断探索新技术和创意，挑战传统，推动行业边界。</p>
+              <span class="value-scan">CREATION.SIGNAL ACTIVE</span>
+            </article>
+            <article class="value-card reveal-card" tabindex="0" style="--accent: 260 100% 72%">
+              <span class="value-index">02</span>
+              <h4 data-i18n="value2Title">用户至上</h4>
+              <p data-i18n="value2Body">以用户需求为中心，创造直观、愉悦且有价值的体验。</p>
+              <span class="value-scan">USER.LOOP OPTIMIZED</span>
+            </article>
+            <article class="value-card reveal-card" tabindex="0" style="--accent: 322 100% 68%">
+              <span class="value-index">03</span>
+              <h4 data-i18n="value3Title">卓越品质</h4>
+              <p data-i18n="value3Body">追求卓越，对每一个产品细节精益求精。</p>
+              <span class="value-scan">QUALITY.CORE ONLINE</span>
+            </article>
+            <article class="value-card reveal-card" tabindex="0" style="--accent: 88 100% 62%">
+              <span class="value-index">04</span>
+              <h4 data-i18n="value4Title">合作共赢</h4>
+              <p data-i18n="value4Body">重视团队协作和伙伴关系，共同创造更大价值。</p>
+              <span class="value-scan">PARTNER.NET SYNC</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="about-team">
+          <div class="about-block-head" data-reveal>
+            <span class="section-kicker" data-i18n="teamKicker">TEAM CONSTELLATION</span>
+            <h3 data-i18n="teamTitle">我们的团队</h3>
+            <p data-i18n="teamLead">
+              一支充满激情和才华的团队，来自不同背景，却拥有共同目标：创造令人惊叹的数字体验。
+            </p>
+          </div>
+
+          <div class="team-filter" aria-label="团队筛选">
+            <button class="is-active" type="button" data-team-filter="all" data-i18n="filterAll">全部</button>
+            <button type="button" data-team-filter="management" data-i18n="filterManagement">管理</button>
+            <button type="button" data-team-filter="tech" data-i18n="filterTech">技术</button>
+            <button type="button" data-team-filter="creative" data-i18n="filterCreative">创意</button>
+            <button type="button" data-team-filter="ops" data-i18n="filterOps">运营</button>
+          </div>
+
+          <div class="team-layout">
+            <div class="team-grid">
+              <button class="team-card reveal-card is-selected" type="button" data-team="management" data-member="ceo">
+                <span class="team-avatar">SG</span>
+                <strong data-i18n="team1Name">创始人 & CEO</strong>
+                <small data-i18n="team1Group">管理 / 战略</small>
+                <span data-i18n="teamReadMore">查看完整职责</span>
+              </button>
+              <button class="team-card reveal-card" type="button" data-team="tech" data-member="cto">
+                <span class="team-avatar">AI</span>
+                <strong data-i18n="team2Name">首席技术官</strong>
+                <small data-i18n="team2Group">技术 / 架构</small>
+                <span data-i18n="teamReadMore">查看完整职责</span>
+              </button>
+              <button class="team-card reveal-card" type="button" data-team="creative" data-member="creative">
+                <span class="team-avatar">CG</span>
+                <strong data-i18n="team3Name">创意总监</strong>
+                <small data-i18n="team3Group">创意 / 世界观</small>
+                <span data-i18n="teamReadMore">查看完整职责</span>
+              </button>
+              <button class="team-card reveal-card" type="button" data-team="tech" data-member="server">
+                <span class="team-avatar">SV</span>
+                <strong data-i18n="team4Name">游戏服务端主管</strong>
+                <small data-i18n="team4Group">技术 / 服务端</small>
+                <span data-i18n="teamReadMore">查看完整职责</span>
+              </button>
+              <button class="team-card reveal-card" type="button" data-team="tech" data-member="client">
+                <span class="team-avatar">UX</span>
+                <strong data-i18n="team5Name">游戏客户端主管</strong>
+                <small data-i18n="team5Group">技术 / 客户端</small>
+                <span data-i18n="teamReadMore">查看完整职责</span>
+              </button>
+              <button class="team-card reveal-card" type="button" data-team="creative" data-member="art">
+                <span class="team-avatar">3D</span>
+                <strong data-i18n="team6Name">美术总监</strong>
+                <small data-i18n="team6Group">美术 / 视觉</small>
+                <span data-i18n="teamReadMore">查看完整职责</span>
+              </button>
+              <button class="team-card reveal-card" type="button" data-team="creative" data-member="design">
+                <span class="team-avatar">LV</span>
+                <strong data-i18n="team7Name">游戏策划主管</strong>
+                <small data-i18n="team7Group">策划 / 系统</small>
+                <span data-i18n="teamReadMore">查看完整职责</span>
+              </button>
+              <button class="team-card reveal-card" type="button" data-team="ops" data-member="tools">
+                <span class="team-avatar">LM</span>
+                <strong data-i18n="team8Name">AI 游戏工具研发主管</strong>
+                <small data-i18n="team8Group">AI / 工具链</small>
+                <span data-i18n="teamReadMore">查看完整职责</span>
+              </button>
+            </div>
+
+            <aside class="team-detail reveal-card" aria-live="polite">
+              <span id="teamDetailGroup">管理 / 战略</span>
+              <h4 id="teamDetailName">创始人 & CEO</h4>
+              <p id="teamDetailBio">负责公司战略规划和整体运营，引领团队实现愿景，推动公司持续创新发展。</p>
+              <div class="team-detail-tags" id="teamDetailTags">
+                <span>战略规划</span>
+                <span>团队建设</span>
+                <span>产品方向</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="footer-scan" aria-hidden="true"></div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">
+            <span></span>
+          </span>
+          <div>
+            <strong>Singularity Games / 奇点游戏</strong>
+            <p data-i18n="footerTagline">创新游戏与 AI 体验的领导者</p>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <strong data-i18n="footerContact">联系我们</strong>
+          <a href="mailto:sgames@hanlian.com">sgames@hanlian.com</a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Singularity Games. 保留所有权利。</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

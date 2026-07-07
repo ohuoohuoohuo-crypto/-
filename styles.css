@@ -278,8 +278,13 @@ button {
   box-shadow: 0 0 12px rgba(66, 245, 255, 0.85);
 }
 
-.site-nav a:hover::after {
+.site-nav a:hover::after,
+.site-nav a.is-current::after {
   transform: scaleX(1);
+}
+
+.site-nav a.is-current {
+  color: #f4f8ff;
 }
 
 .language-switch {
