@@ -318,6 +318,7 @@ main,
   display: grid;
   align-items: center;
   justify-items: start;
+  --hero-lift: clamp(2rem, 5.2vh, 3.25rem);
   padding: 8rem 5vw 5rem;
   overflow: hidden;
 }
@@ -328,6 +329,7 @@ main,
   width: min(45rem, 100%);
   margin-left: min(3vw, 2.6rem);
   text-align: left;
+  transform: translateY(calc(-1 * var(--hero-lift)));
 }
 
 .eyebrow,
@@ -453,7 +455,7 @@ main,
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 2rem;
+  margin-top: 1.7rem;
 }
 
 .neon-button,
@@ -520,7 +522,7 @@ main,
   grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   width: min(42rem, 100%);
-  margin: 2.5rem 0 0;
+  margin: 2.15rem 0 0;
   border: 1px solid rgba(123, 191, 255, 0.18);
   background: rgba(123, 191, 255, 0.14);
   box-shadow: 0 0 38px rgba(66, 245, 255, 0.08);
@@ -1529,6 +1531,10 @@ main,
 }
 
 @media (max-width: 1100px) {
+  .hero-section {
+    --hero-lift: clamp(1.25rem, 4vh, 2.25rem);
+  }
+
   .site-header {
     grid-template-columns: 1fr auto;
   }
@@ -1577,6 +1583,7 @@ main,
 
   .hero-section {
     min-height: 100svh;
+    --hero-lift: 0.75rem;
     padding: 7rem 1rem 4rem;
   }
 
