@@ -9,6 +9,7 @@ const translations = {
     navProducts: "产品",
     navAbout: "关于我们",
     navContact: "联系我们",
+    breadcrumbHome: "首页",
     heroEyebrow: "核心价值主张",
     heroAria: "探索无限可能的游戏世界",
     heroTitleTop: "探索无限可能的",
@@ -16,7 +17,7 @@ const translations = {
     heroLead:
       "Singularity Games 致力于打造创新、沉浸式的游戏体验和 AI 应用",
     heroPrimary: "探索产品",
-    heroSecondary: "了解更多",
+    heroSecondary: "关于我们",
     signalGames: "游戏与 AI 产品",
     signalWorlds: "动态世界节点",
     signalEngine: "原生智能体验",
@@ -39,6 +40,58 @@ const translations = {
     product8Body: "我们还有更多有趣的游戏与 AI 应用正在开发中，敬请期待。",
     learnMore: "了解更多",
     seeAll: "查看全部产品",
+    aboutKicker: "ABOUT SINGULARITY",
+    aboutTitle: "关于我们",
+    aboutLead: "了解 Singularity Games 的故事、使命和团队。",
+    storyKicker: "OUR STORY",
+    storyTitle: "我们的故事",
+    storyBody1:
+      "Singularity Games 成立于 2023 年，由一群热爱游戏和人工智能的技术专家与创意人才共同创立。",
+    storyBody2:
+      "我们的初始团队在游戏开发、人工智能和用户体验设计领域拥有丰富经验，怀揣着将创新技术与娱乐体验融合的梦想，开启了奇点游戏的创业之旅。",
+    storyBody3:
+      "从小型创业团队到拥有数十名成员的科技公司，我们的产品不仅在国内市场取得了成功，也逐步拓展到国际市场。",
+    storyMetric1: "创立年份",
+    storyMetric2: "产品矩阵",
+    storyMetric3: "动态节点",
+    valuesKicker: "MISSION & VALUES",
+    valuesTitle: "我们的使命与价值观",
+    valuesLead:
+      "我们的使命是通过创新的游戏和 AI 应用，丰富人们的数字生活，激发创造力，连接人与技术。",
+    value1Title: "创新",
+    value1Body: "不断探索新技术和创意，挑战传统，推动行业边界。",
+    value2Title: "用户至上",
+    value2Body: "以用户需求为中心，创造直观、愉悦且有价值的体验。",
+    value3Title: "卓越品质",
+    value3Body: "追求卓越，对每一个产品细节精益求精。",
+    value4Title: "合作共赢",
+    value4Body: "重视团队协作和伙伴关系，共同创造更大价值。",
+    teamKicker: "TEAM CONSTELLATION",
+    teamTitle: "我们的团队",
+    teamLead:
+      "一支充满激情和才华的团队，来自不同背景，却拥有共同目标：创造令人惊叹的数字体验。",
+    filterAll: "全部",
+    filterManagement: "管理",
+    filterTech: "技术",
+    filterCreative: "创意",
+    filterOps: "运营",
+    teamReadMore: "查看完整职责",
+    team1Name: "创始人 & CEO",
+    team1Group: "管理 / 战略",
+    team2Name: "首席技术官",
+    team2Group: "技术 / 架构",
+    team3Name: "创意总监",
+    team3Group: "创意 / 世界观",
+    team4Name: "游戏服务端主管",
+    team4Group: "技术 / 服务端",
+    team5Name: "游戏客户端主管",
+    team5Group: "技术 / 客户端",
+    team6Name: "美术总监",
+    team6Group: "美术 / 视觉",
+    team7Name: "游戏策划主管",
+    team7Group: "策划 / 系统",
+    team8Name: "AI 游戏工具研发主管",
+    team8Group: "AI / 工具链",
     advantagesKicker: "为什么选择我们",
     advantagesTitle: "为什么选择我们",
     adv1Title: "创新游戏体验",
@@ -57,8 +110,9 @@ const translations = {
   en: {
     navHome: "Home",
     navProducts: "Products",
-    navAbout: "Why Us",
+    navAbout: "About Us",
     navContact: "Contact",
+    breadcrumbHome: "Home",
     heroEyebrow: "Core Value",
     heroAria: "Explore Infinite Game Worlds",
     heroTitleTop: "Explore Infinite",
@@ -66,7 +120,7 @@ const translations = {
     heroLead:
       "Singularity Games builds inventive, immersive game experiences and AI applications, connecting players to their next adventure through dynamic worlds, intelligent characters, and holographic interaction.",
     heroPrimary: "Explore Products",
-    heroSecondary: "Learn More",
+    heroSecondary: "About Us",
     signalGames: "Games and AI Products",
     signalWorlds: "Live World Nodes",
     signalEngine: "AI-Native Experiences",
@@ -94,6 +148,58 @@ const translations = {
     product8Body: "More games and AI applications are in development. Stay tuned.",
     learnMore: "Learn More",
     seeAll: "See All Products",
+    aboutKicker: "ABOUT SINGULARITY",
+    aboutTitle: "About Us",
+    aboutLead: "Meet the story, mission, and team behind Singularity Games.",
+    storyKicker: "OUR STORY",
+    storyTitle: "Our Story",
+    storyBody1:
+      "Singularity Games was founded in 2023 by technologists and creators who love games and artificial intelligence.",
+    storyBody2:
+      "Our founding team brings deep experience across game development, AI, and user experience design, with a shared dream of blending advanced technology with memorable entertainment.",
+    storyBody3:
+      "From a small startup to a growing technology company, our products have gained traction locally and are expanding into international markets.",
+    storyMetric1: "Founded",
+    storyMetric2: "Product Matrix",
+    storyMetric3: "Live Nodes",
+    valuesKicker: "MISSION & VALUES",
+    valuesTitle: "Mission and Values",
+    valuesLead:
+      "We use inventive games and AI applications to enrich digital life, spark creativity, and connect people with technology.",
+    value1Title: "Innovation",
+    value1Body: "We explore new technology and ideas, challenge conventions, and push the edge of the industry.",
+    value2Title: "User First",
+    value2Body: "We build around user needs, creating experiences that feel clear, joyful, and valuable.",
+    value3Title: "Craft Quality",
+    value3Body: "We pursue excellence and polish every product detail with care.",
+    value4Title: "Shared Wins",
+    value4Body: "We value collaboration, partnerships, and creating larger value together.",
+    teamKicker: "TEAM CONSTELLATION",
+    teamTitle: "Our Team",
+    teamLead:
+      "A passionate, talented team from different backgrounds, united by one goal: create astonishing digital experiences.",
+    filterAll: "All",
+    filterManagement: "Management",
+    filterTech: "Tech",
+    filterCreative: "Creative",
+    filterOps: "Operations",
+    teamReadMore: "View Responsibilities",
+    team1Name: "Founder & CEO",
+    team1Group: "Management / Strategy",
+    team2Name: "Chief Technology Officer",
+    team2Group: "Tech / Architecture",
+    team3Name: "Creative Director",
+    team3Group: "Creative / Worldbuilding",
+    team4Name: "Game Server Lead",
+    team4Group: "Tech / Server",
+    team5Name: "Game Client Lead",
+    team5Group: "Tech / Client",
+    team6Name: "Art Director",
+    team6Group: "Art / Visuals",
+    team7Name: "Game Design Lead",
+    team7Group: "Design / Systems",
+    team8Name: "AI Game Tools Lead",
+    team8Group: "AI / Toolchain",
     advantagesKicker: "Why Choose Us",
     advantagesTitle: "Where immersive entertainment meets AI engineering",
     adv1Title: "Inventive Gameplay",
@@ -114,11 +220,116 @@ const translations = {
   },
 };
 
+const teamProfiles = {
+  zh: {
+    ceo: {
+      name: "创始人 & CEO",
+      group: "管理 / 战略",
+      bio: "负责公司战略规划和整体运营，引领团队实现愿景，推动公司持续创新发展。",
+      tags: ["战略规划", "团队建设", "产品方向"],
+    },
+    cto: {
+      name: "首席技术官",
+      group: "技术 / 架构",
+      bio: "负责技术路线和研发团队管理，专注于游戏引擎优化、AI 技术应用和高并发服务架构。",
+      tags: ["AI 架构", "引擎优化", "工程效率"],
+    },
+    creative: {
+      name: "创意总监",
+      group: "创意 / 世界观",
+      bio: "负责游戏概念设计、视觉风格和用户体验，把抽象创意转化为可感知的沉浸式世界。",
+      tags: ["世界观", "叙事体验", "交互概念"],
+    },
+    server: {
+      name: "游戏服务端主管",
+      group: "技术 / 服务端",
+      bio: "负责游戏服务端架构设计和后端系统开发，保障游戏稳定运行和数据安全。",
+      tags: ["高并发", "数据安全", "稳定性"],
+    },
+    client: {
+      name: "游戏客户端主管",
+      group: "技术 / 客户端",
+      bio: "负责客户端开发和性能优化，专注于提升游戏性能与用户体验。",
+      tags: ["跨端体验", "性能优化", "动效实现"],
+    },
+    art: {
+      name: "美术总监",
+      group: "美术 / 视觉",
+      bio: "负责游戏美术风格定位和视觉设计，统筹角色、场景、特效等视觉资产。",
+      tags: ["3D 资产", "视觉规范", "特效表现"],
+    },
+    design: {
+      name: "游戏策划主管",
+      group: "策划 / 系统",
+      bio: "负责游戏玩法设计和内容规划，把控游戏整体方向、成长节奏和可玩性。",
+      tags: ["玩法系统", "关卡节奏", "留存循环"],
+    },
+    tools: {
+      name: "AI 游戏工具研发主管",
+      group: "AI / 工具链",
+      bio: "负责 AI 游戏开发工具的研发和优化，专注提升团队效率与算法驱动的应用体验。",
+      tags: ["AIGC", "工具链", "智能工作流"],
+    },
+  },
+  en: {
+    ceo: {
+      name: "Founder & CEO",
+      group: "Management / Strategy",
+      bio: "Leads company strategy and operations, guiding the team toward its vision and continuous innovation.",
+      tags: ["Strategy", "Team Building", "Product Direction"],
+    },
+    cto: {
+      name: "Chief Technology Officer",
+      group: "Tech / Architecture",
+      bio: "Owns the technical roadmap, game engine optimization, AI applications, and high-concurrency service architecture.",
+      tags: ["AI Architecture", "Engine Optimization", "Engineering Velocity"],
+    },
+    creative: {
+      name: "Creative Director",
+      group: "Creative / Worldbuilding",
+      bio: "Transforms abstract ideas into immersive worlds through game concepts, visual direction, and experience design.",
+      tags: ["Worldbuilding", "Narrative UX", "Interaction Concepts"],
+    },
+    server: {
+      name: "Game Server Lead",
+      group: "Tech / Server",
+      bio: "Designs backend architecture and online systems that keep game experiences stable, secure, and scalable.",
+      tags: ["Concurrency", "Data Safety", "Reliability"],
+    },
+    client: {
+      name: "Game Client Lead",
+      group: "Tech / Client",
+      bio: "Builds and optimizes client experiences, improving performance, interaction quality, and cross-device polish.",
+      tags: ["Cross-Platform", "Performance", "Motion"],
+    },
+    art: {
+      name: "Art Director",
+      group: "Art / Visuals",
+      bio: "Defines visual direction and coordinates characters, environments, effects, and product art assets.",
+      tags: ["3D Assets", "Visual Systems", "Effects"],
+    },
+    design: {
+      name: "Game Design Lead",
+      group: "Design / Systems",
+      bio: "Shapes gameplay systems, content planning, progression rhythm, and long-term player engagement.",
+      tags: ["Gameplay", "Level Rhythm", "Retention"],
+    },
+    tools: {
+      name: "AI Game Tools Lead",
+      group: "AI / Toolchain",
+      bio: "Develops AI-powered creation tools that improve team efficiency and algorithm-driven product experiences.",
+      tags: ["AIGC", "Toolchain", "Smart Workflow"],
+    },
+  },
+};
+
 let width = 0;
 let height = 0;
 let particles = [];
 const pointer = { x: 0, y: 0, active: false };
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let currentLang = "zh";
+let activeMemberKey = "ceo";
 
 function resizeCanvas() {
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -223,7 +434,7 @@ function spawnBurst(target, amount = 22) {
 }
 
 function setupTiltCards() {
-  document.querySelectorAll(".product-card").forEach((card) => {
+  document.querySelectorAll(".product-card, .value-card, .team-card").forEach((card) => {
     card.addEventListener("pointermove", (event) => {
       const rect = card.getBoundingClientRect();
       const x = event.clientX - rect.left;
@@ -274,6 +485,7 @@ function setupLanguage() {
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
       const lang = button.dataset.lang;
+      currentLang = lang;
       document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
       buttons.forEach((item) => item.classList.toggle("is-active", item === button));
 
@@ -283,6 +495,7 @@ function setupLanguage() {
       });
 
       updateHeroTitleEffects(lang);
+      updateTeamDetail(activeMemberKey);
       spawnBurst(button, 20);
     });
   });
@@ -322,11 +535,71 @@ function setupVideoFallback() {
   }
 }
 
+function updateTeamDetail(memberKey = activeMemberKey) {
+  const profile = teamProfiles[currentLang]?.[memberKey] || teamProfiles.zh[memberKey];
+  const name = document.getElementById("teamDetailName");
+  const group = document.getElementById("teamDetailGroup");
+  const bio = document.getElementById("teamDetailBio");
+  const tags = document.getElementById("teamDetailTags");
+
+  if (!profile || !name || !group || !bio || !tags) return;
+
+  activeMemberKey = memberKey;
+  name.textContent = profile.name;
+  group.textContent = profile.group;
+  bio.textContent = profile.bio;
+  tags.replaceChildren(
+    ...profile.tags.map((tag) => {
+      const item = document.createElement("span");
+      item.textContent = tag;
+      return item;
+    })
+  );
+
+  document.querySelectorAll(".team-card").forEach((card) => {
+    card.classList.toggle("is-selected", card.dataset.member === memberKey);
+  });
+}
+
+function setupTeamDirectory() {
+  const filters = document.querySelectorAll("[data-team-filter]");
+  const cards = document.querySelectorAll(".team-card");
+  if (!filters.length || !cards.length) return;
+
+  filters.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.teamFilter;
+      filters.forEach((item) => item.classList.toggle("is-active", item === button));
+
+      cards.forEach((card) => {
+        const isVisible = filter === "all" || card.dataset.team === filter;
+        card.hidden = !isVisible;
+      });
+
+      const selected = document.querySelector(".team-card.is-selected:not([hidden])");
+      const firstVisible = document.querySelector(".team-card:not([hidden])");
+      if (!selected && firstVisible) updateTeamDetail(firstVisible.dataset.member);
+
+      spawnBurst(button, 16);
+    });
+  });
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      updateTeamDetail(card.dataset.member);
+      spawnBurst(card, 14);
+    });
+  });
+
+  updateTeamDetail(activeMemberKey);
+}
+
 resizeCanvas();
 setupPointer();
 setupTiltCards();
 setupReveal();
 setupLanguage();
+setupTeamDirectory();
 updateHeroTitleEffects("zh");
 setupVideoFallback();
 
