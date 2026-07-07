@@ -675,6 +675,10 @@ main,
   line-height: 1.12;
 }
 
+.section-head h2:first-child {
+  margin-top: 0;
+}
+
 .section-head p,
 .cta-section p {
   margin: 1rem auto 0;
