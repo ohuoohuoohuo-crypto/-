@@ -702,9 +702,9 @@ main,
   --ry: 0deg;
   --glow: hsl(var(--accent) / 0.18);
   position: relative;
-  min-height: 27rem;
+  min-height: 28.5rem;
   display: grid;
-  grid-template-rows: 12.5rem 1fr;
+  grid-template-rows: 13.75rem 1fr;
   overflow: hidden;
   border: 1px solid rgba(184, 210, 255, 0.18);
   border-radius: 8px;
@@ -762,7 +762,7 @@ main,
   display: grid;
   place-items: center;
   overflow: hidden;
-  min-height: 12.5rem;
+  min-height: 13.75rem;
   border-bottom: 1px solid rgba(180, 205, 255, 0.14);
   background:
     linear-gradient(135deg, hsl(var(--accent) / 0.16), rgba(255, 255, 255, 0.03)),
@@ -775,6 +775,7 @@ main,
 .product-visual::after {
   content: "";
   position: absolute;
+  z-index: 3;
   width: 150%;
   height: 1px;
   background: linear-gradient(90deg, transparent, hsl(var(--accent) / 0.75), transparent);
@@ -791,7 +792,7 @@ main,
   position: absolute;
   top: 0.8rem;
   left: 0.8rem;
-  z-index: 2;
+  z-index: 5;
   padding: 0.32rem 0.55rem;
   color: #08101f;
   background: hsl(var(--accent));
@@ -799,6 +800,66 @@ main,
   font-size: 0.75rem;
   font-weight: 800;
   box-shadow: 0 0 18px hsl(var(--accent) / 0.44);
+}
+
+.product-art {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 122%;
+  max-width: none;
+  height: auto;
+  max-height: 112%;
+  object-fit: contain;
+  transform: translateZ(42px) translateY(6px) scale(1);
+  transform-origin: center center;
+  filter:
+    drop-shadow(0 18px 24px rgba(0, 0, 0, 0.38))
+    drop-shadow(0 0 24px hsl(var(--accent) / 0.34));
+  transition: transform 260ms ease, filter 260ms ease;
+  user-select: none;
+  pointer-events: none;
+}
+
+.product-card:hover .product-art,
+.product-card:focus-visible .product-art {
+  transform: translateZ(78px) translateY(-4px) scale(1.08);
+  filter:
+    drop-shadow(0 26px 34px rgba(0, 0, 0, 0.46))
+    drop-shadow(0 0 36px hsl(var(--accent) / 0.54));
+}
+
+.product-art--island,
+.product-art--island-master,
+.product-art--roast {
+  width: 118%;
+  max-height: 118%;
+}
+
+.product-art--painter,
+.product-art--sayly,
+.product-art--estate,
+.product-art--snake {
+  width: 138%;
+}
+
+.product-art--sayly {
+  width: 146%;
+  transform: translateZ(42px) translateY(8px) translateX(-2px) scale(1);
+}
+
+.product-card:hover .product-art--sayly,
+.product-card:focus-visible .product-art--sayly {
+  transform: translateZ(78px) translateY(-4px) translateX(-2px) scale(1.08);
+}
+
+.product-art--roast {
+  transform: translateZ(42px) translateY(14px) scale(1.02);
+}
+
+.product-card:hover .product-art--roast,
+.product-card:focus-visible .product-art--roast {
+  transform: translateZ(78px) translateY(2px) scale(1.1);
 }
 
 .mini-model {
