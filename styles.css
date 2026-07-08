@@ -1305,8 +1305,8 @@ main,
   min-height: 100svh;
   display: grid;
   align-items: center;
-  justify-items: start;
-  padding: clamp(7.2rem, 11vh, 8.4rem) 5vw clamp(3.5rem, 7vh, 5rem);
+  justify-items: center;
+  padding: clamp(6.8rem, 10vh, 8rem) 5vw clamp(3.6rem, 7vh, 5rem);
   background:
     radial-gradient(circle at 16% 24%, rgba(255, 79, 216, 0.18), transparent 27rem),
     radial-gradient(circle at 68% 42%, rgba(66, 245, 255, 0.18), transparent 36rem),
@@ -1330,8 +1330,8 @@ main,
 .contact-section::after {
   content: "";
   position: absolute;
-  right: -8vw;
-  top: 18%;
+  right: -4vw;
+  top: 13%;
   z-index: -1;
   width: min(52rem, 54vw);
   height: min(36rem, 58vh);
@@ -1354,21 +1354,28 @@ main,
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  width: min(48rem, 100%);
-  margin-left: min(4vw, 4rem);
-  padding: clamp(1.75rem, 3.2vw, 3.2rem);
-  border: 1px solid rgba(184, 210, 255, 0.22);
-  border-radius: 8px;
+  width: min(80rem, 100%);
+  min-height: clamp(30rem, 58vh, 36rem);
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: clamp(0.9rem, 1.7vw, 1.25rem);
+  margin: 0 auto;
+  padding: clamp(4.8rem, 7.2vw, 6.6rem) clamp(1.4rem, 4vw, 4.2rem) clamp(3.8rem, 5.8vw, 5.2rem);
+  border: 1px solid rgba(147, 197, 253, 0.18);
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
   background:
-    linear-gradient(112deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.035) 42%, rgba(66, 245, 255, 0.06)),
-    radial-gradient(circle at 4% 0%, rgba(255, 79, 216, 0.24), transparent 21rem),
-    rgba(6, 12, 31, 0.68);
+    linear-gradient(180deg, rgba(4, 5, 16, 0.16), rgba(4, 5, 16, 0.78)),
+    linear-gradient(120deg, rgba(66, 245, 255, 0.12), transparent 36%),
+    linear-gradient(250deg, rgba(255, 79, 216, 0.14), transparent 43%);
   box-shadow:
-    0 26px 86px rgba(0, 0, 0, 0.5),
-    0 0 42px rgba(66, 245, 255, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 32px 110px rgba(0, 0, 0, 0.4),
+    0 0 58px rgba(66, 245, 255, 0.1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.09),
     inset 0 0 54px rgba(66, 245, 255, 0.06);
   backdrop-filter: blur(22px) saturate(1.15);
+  text-align: center;
   transform: rotateX(var(--rx)) rotateY(var(--ry)) translateY(0);
   transform-style: preserve-3d;
   transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
@@ -1382,29 +1389,36 @@ main,
 }
 
 .contact-minimal-panel::before {
-  inset: 0;
+  inset: auto -8% 0;
+  z-index: -2;
+  height: 12rem;
   background:
-    radial-gradient(circle at var(--mx, 38%) var(--my, 28%), rgba(66, 245, 255, 0.24), transparent 15rem),
-    radial-gradient(circle at 100% 0, rgba(255, 79, 216, 0.16), transparent 18rem),
-    linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.08), transparent);
-  opacity: 0.62;
+    linear-gradient(135deg, transparent 12%, rgba(66, 245, 255, 0.18) 13%, transparent 14%) 0 0 / 9rem 100%,
+    linear-gradient(45deg, transparent 18%, rgba(156, 109, 255, 0.2) 19%, transparent 20%) 3rem 0 / 10rem 100%;
+  opacity: 0.68;
+  filter: blur(0.2px);
+  mask-image: linear-gradient(180deg, transparent, #000 28%);
   transition: opacity 220ms ease, transform 220ms ease;
 }
 
 .contact-minimal-panel::after {
-  inset: 0.8rem;
-  border: 1px solid rgba(66, 245, 255, 0.14);
-  border-radius: 8px;
-  background:
-    linear-gradient(90deg, transparent 0 18%, rgba(66, 245, 255, 0.16) 18% 18.2%, transparent 18.2%),
-    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 6px);
-  opacity: 0.46;
-  mask-image: linear-gradient(180deg, #000, transparent 84%);
+  left: 50%;
+  top: 48%;
+  z-index: -1;
+  width: min(62rem, 88vw);
+  height: 14rem;
+  border: 0;
+  border-radius: 0;
+  background: linear-gradient(90deg, transparent, rgba(66, 245, 255, 0.18), rgba(255, 79, 216, 0.16), transparent);
+  opacity: 1;
+  transform: translate(-50%, -50%) skewX(-18deg);
+  filter: blur(4px);
+  mask-image: none;
 }
 
 .contact-minimal-panel:hover,
 .contact-minimal-panel:focus-within {
-  transform: rotateX(var(--rx)) rotateY(var(--ry)) translateY(-6px);
+  transform: rotateX(var(--rx)) rotateY(var(--ry)) translateY(-5px);
   border-color: rgba(66, 245, 255, 0.62);
   box-shadow:
     0 32px 102px rgba(0, 0, 0, 0.56),
@@ -1425,9 +1439,9 @@ main,
 
 .contact-glow-dot {
   position: absolute;
-  top: clamp(1rem, 2.4vw, 1.8rem);
-  right: clamp(1rem, 2.4vw, 1.9rem);
-  width: clamp(0.64rem, 0.9vw, 0.88rem);
+  top: clamp(1.25rem, 2.4vw, 2.1rem);
+  right: clamp(1.25rem, 2.4vw, 2.3rem);
+  width: clamp(0.72rem, 0.9vw, 0.95rem);
   aspect-ratio: 1;
   background: #fff;
   box-shadow:
@@ -1439,11 +1453,11 @@ main,
 }
 
 .contact-minimal-panel h1 {
-  margin: 0 0 clamp(1.05rem, 2vw, 1.55rem);
-  max-width: 10em;
-  padding-left: clamp(0.78rem, 1.2vw, 1rem);
-  font-size: clamp(2.35rem, 4.3vw, 3.85rem);
-  line-height: 1;
+  margin: 0;
+  max-width: 12em;
+  padding-left: 0;
+  font-size: clamp(3.1rem, 5vw, 4.45rem);
+  line-height: 1.04;
   font-weight: 880;
   letter-spacing: 0;
   background: linear-gradient(96deg, #ffffff 0%, #c8fbff 34%, #d4c1ff 61%, #ff8ee5 100%);
@@ -1454,26 +1468,20 @@ main,
 }
 
 .contact-minimal-panel h1::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.09em;
-  bottom: 0;
-  width: 3px;
-  background: linear-gradient(180deg, var(--cyan), var(--magenta));
-  box-shadow: 0 0 18px rgba(66, 245, 255, 0.76), 0 0 28px rgba(255, 79, 216, 0.44);
+  content: none;
 }
 
 .contact-minimal-copy {
   display: grid;
   gap: 0.65rem;
-  max-width: 40rem;
+  justify-items: center;
+  max-width: 56rem;
 }
 
 .contact-minimal-copy p {
   margin: 0;
   color: #e3ecff;
-  font-size: clamp(0.96rem, 1.06vw, 1.08rem);
+  font-size: clamp(1rem, 1.18vw, 1.14rem);
   font-weight: 680;
   line-height: 1.72;
   text-shadow: 0 0 18px rgba(4, 5, 16, 0.8);
@@ -1482,10 +1490,10 @@ main,
 .contact-minimal-mail {
   width: fit-content;
   max-width: 100%;
-  margin-top: 0.4rem;
-  padding: 0.2rem 0 0.28rem;
+  margin-top: 0.25rem;
+  padding: 0.1rem 0 0.24rem;
   color: #ff7adf;
-  font-size: clamp(1.18rem, 1.85vw, 1.58rem);
+  font-size: clamp(1.3rem, 2.05vw, 1.78rem);
   font-weight: 860;
   line-height: 1.16;
   overflow-wrap: anywhere;
@@ -1510,14 +1518,15 @@ main,
 .contact-minimal-meta {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem;
-  margin-top: clamp(1.3rem, 2.25vw, 2rem);
+  gap: 1rem;
+  width: min(48rem, 100%);
+  margin-top: clamp(0.8rem, 1.6vw, 1.35rem);
 }
 
 .contact-minimal-group {
   position: relative;
   overflow: hidden;
-  padding: 0.95rem 1.05rem 0.95rem;
+  padding: 1rem 1.1rem;
   border: 1px solid rgba(184, 210, 255, 0.16);
   border-radius: 8px;
   background:
@@ -1538,7 +1547,7 @@ main,
 .contact-minimal-group h2 {
   margin: 0;
   color: #f7fbff;
-  font-size: clamp(1.15rem, 1.55vw, 1.45rem);
+  font-size: clamp(1.12rem, 1.45vw, 1.38rem);
   line-height: 1.16;
   text-shadow: 0 0 18px rgba(66, 245, 255, 0.18);
 }
@@ -1552,12 +1561,51 @@ main,
 }
 
 .contact-minimal-footer {
-  margin: clamp(1.35rem, 2.3vw, 2rem) 0 0;
+  width: min(48rem, 100%);
+  margin: clamp(0.7rem, 1.4vw, 1.1rem) 0 0;
   padding-top: 1rem;
   border-top: 1px solid rgba(184, 210, 255, 0.14);
   color: rgba(226, 235, 255, 0.78);
   font-size: clamp(0.88rem, 1vw, 0.98rem);
   font-weight: 680;
+}
+
+.contact-constellation {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.contact-constellation span {
+  position: absolute;
+  width: 12rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(66, 245, 255, 0.72), transparent);
+  box-shadow: 0 0 18px rgba(66, 245, 255, 0.4);
+  animation: aboutConstellation 5.8s ease-in-out infinite;
+}
+
+.contact-constellation span:nth-child(1) {
+  left: 11%;
+  top: 34%;
+  transform: rotate(18deg);
+}
+
+.contact-constellation span:nth-child(2) {
+  right: 13%;
+  top: 30%;
+  background: linear-gradient(90deg, transparent, rgba(255, 79, 216, 0.72), transparent);
+  animation-delay: -1.7s;
+  transform: rotate(-20deg);
+}
+
+.contact-constellation span:nth-child(3) {
+  left: 48%;
+  bottom: 19%;
+  background: linear-gradient(90deg, transparent, rgba(184, 255, 106, 0.72), transparent);
+  animation-delay: -3s;
+  transform: rotate(-8deg);
 }
 
 .section-head {
@@ -2811,7 +2859,8 @@ main,
   .contact-section {
     min-height: 100svh;
     align-items: start;
-    padding: 7.2rem 1rem 3rem;
+    justify-items: center;
+    padding: 6.8rem 1rem 3rem;
   }
 
   .about-hero-panel {
@@ -2845,11 +2894,17 @@ main,
   .contact-minimal-panel {
     width: 100%;
     margin-left: 0;
-    padding: 1.35rem 1rem 1.2rem;
+    min-height: 33rem;
+    padding: 5.6rem 1rem 3.4rem;
+    align-content: center;
+    gap: 0.8rem;
   }
 
   .contact-minimal-panel::after {
-    inset: 0.6rem;
+    left: 50%;
+    top: 42%;
+    width: 92vw;
+    height: 11rem;
   }
 
   .contact-glow-dot {
@@ -2857,28 +2912,29 @@ main,
   }
 
   .contact-minimal-panel h1 {
-    margin-bottom: 0.9rem;
-    padding-left: 0.7rem;
-    font-size: clamp(1.65rem, 6.7vw, 1.95rem);
-    line-height: 1.02;
+    margin-bottom: 0;
+    padding-left: 0;
+    font-size: clamp(2.25rem, 10vw, 3rem);
+    line-height: 1.04;
     overflow-wrap: anywhere;
   }
 
   .contact-minimal-copy p {
-    font-size: 0.84rem;
-    line-height: 1.68;
+    font-size: 0.88rem;
+    line-height: 1.72;
     overflow-wrap: anywhere;
   }
 
   .contact-minimal-mail {
-    font-size: clamp(0.96rem, 4.3vw, 1.08rem);
+    font-size: clamp(1rem, 4.8vw, 1.18rem);
     overflow-wrap: anywhere;
   }
 
   .contact-minimal-meta {
     grid-template-columns: 1fr;
     gap: 0.7rem;
-    margin-top: 1.25rem;
+    width: 100%;
+    margin-top: 0.8rem;
   }
 
   .contact-minimal-group {
@@ -2890,8 +2946,13 @@ main,
   }
 
   .contact-minimal-footer {
-    margin-top: 1.08rem;
+    width: 100%;
+    margin-top: 0.75rem;
     font-size: 0.82rem;
+  }
+
+  .contact-constellation span {
+    width: 7rem;
   }
 
   .about-story-grid {
