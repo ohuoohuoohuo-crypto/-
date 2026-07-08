@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="毒舌坊主 - Savage Monk 技术支持与联系方式。"
+    />
+    <title>联系我们 - Singularity Games / 奇点游戏</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+    <div id="burstLayer" class="burst-layer" aria-hidden="true"></div>
+
+    <div class="stage-bg" aria-hidden="true">
+      <video
+        class="stage-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="./assets/homepage-pipe-animation.mp4" type="video/mp4" />
+      </video>
+      <div class="video-shade"></div>
+      <div class="grid-plane"></div>
+      <div class="light-trails"></div>
+      <div class="scan-field"></div>
+    </div>
+
+    <header class="site-header" data-reveal>
+      <a class="brand" href="./index.html#home" aria-label="Singularity Games home">
+        <span class="brand-mark">
+          <span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Singularity Games</strong>
+          <small>奇点游戏</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="主导航">
+        <a href="./index.html#home" data-i18n="navHome">首页</a>
+        <a href="./index.html#products" data-i18n="navProducts">产品</a>
+        <a href="./about.html" data-i18n="navAbout">关于我们</a>
+        <a class="is-current" href="./contact.html" data-i18n="navContact">联系我们</a>
+      </nav>
+
+      <div class="language-switch" aria-label="语言切换">
+        <button class="is-active" type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="en">English</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="contact-page" class="section contact-section">
+        <div class="contact-hero-panel" data-reveal>
+          <div class="about-breadcrumb" aria-label="当前位置">
+            <a href="./index.html#home" data-i18n="breadcrumbHome">首页</a>
+            <span>/</span>
+            <span data-i18n="navContact">联系我们</span>
+          </div>
+          <div class="contact-hero-copy">
+            <span class="section-kicker" data-i18n="contactKicker">TECHNICAL SUPPORT</span>
+            <h1 data-i18n="contactTitle">毒舌坊主 - Savage Monk</h1>
+            <p data-i18n="contactLead">Technical Support & Contact</p>
+          </div>
+          <div class="contact-orbit" aria-hidden="true">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info-stack">
+            <article class="contact-card reveal-card" style="--accent: 10 100% 66%">
+              <span class="contact-card-label" data-i18n="contactBlock1Label">お問い合わせ / Contact</span>
+              <h2 data-i18n="contactBlock1Title">技术支持与反馈</h2>
+              <p class="contact-jp">
+                ゲームに関するご質問・不具合報告・ご要望は下記メールアドレスまでお送りください。
+              </p>
+              <p data-i18n="contactSupportBody">
+                如有游戏相关问题、Bug 反馈或功能建议，请通过以下邮箱联系我们。
+              </p>
+              <div class="contact-mail-row">
+                <a href="mailto:sgames@hanlian.com">sgames@hanlian.com</a>
+                <button type="button" data-copy-email="sgames@hanlian.com" data-burst data-i18n="contactCopy">
+                  复制邮箱
+                </button>
+              </div>
+            </article>
+
+            <div class="contact-card-grid">
+              <article class="contact-card compact reveal-card" style="--accent: 190 100% 62%">
+                <span class="contact-card-label" data-i18n="contactBlock2Label">対応言語 / Supported Languages</span>
+                <h3 data-i18n="contactLanguagesTitle">支持语言</h3>
+                <p>日本語 / 中文 / English</p>
+              </article>
+
+              <article class="contact-card compact reveal-card" style="--accent: 260 100% 72%">
+                <span class="contact-card-label" data-i18n="contactBlock3Label">開発元 / Developer</span>
+                <h3 data-i18n="contactDeveloperTitle">开发者</h3>
+                <p>Hanlian Games</p>
+              </article>
+            </div>
+          </div>
+
+          <aside class="contact-visual reveal-card" aria-label="毒舌坊主 Savage Monk 支持场景">
+            <img
+              src="./assets/products/roast-master.png"
+              alt="毒舌坊主产品视觉"
+              loading="lazy"
+            />
+            <div class="contact-console">
+              <span>SUPPORT.NODE / ONLINE</span>
+              <strong>SAVAGE MONK</strong>
+              <small>BUG REPORTS + FEATURE REQUESTS</small>
+            </div>
+          </aside>
+        </div>
+
+        <div class="contact-status reveal-card" aria-live="polite">
+          <span data-i18n="contactFooterNote">毒舌坊主 - Savage Monk © 2026 Hanlian Games</span>
+          <span id="copyStatus" data-i18n="contactCopyIdle">邮箱已准备就绪</span>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="footer-scan" aria-hidden="true"></div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">
+            <span></span>
+          </span>
+          <div>
+            <strong>Singularity Games / 奇点游戏</strong>
+            <p data-i18n="footerTagline">创新游戏与 AI 体验的领导者</p>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <strong data-i18n="footerContact">联系我们</strong>
+          <a href="mailto:sgames@hanlian.com">sgames@hanlian.com</a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Singularity Games. 保留所有权利。</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

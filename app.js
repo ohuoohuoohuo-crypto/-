@@ -92,6 +92,22 @@ const translations = {
     team7Group: "策划 / 系统",
     team8Name: "AI 游戏工具研发主管",
     team8Group: "AI / 工具链",
+    contactKicker: "TECHNICAL SUPPORT",
+    contactTitle: "毒舌坊主 - Savage Monk",
+    contactLead: "Technical Support & Contact",
+    contactBlock1Label: "お問い合わせ / Contact",
+    contactBlock1Title: "技术支持与反馈",
+    contactSupportBody:
+      "如有游戏相关问题、Bug 反馈或功能建议，请通过以下邮箱联系我们。",
+    contactCopy: "复制邮箱",
+    contactCopyIdle: "邮箱已准备就绪",
+    contactCopySuccess: "邮箱已复制",
+    contactCopyError: "请手动复制邮箱",
+    contactBlock2Label: "対応言語 / Supported Languages",
+    contactLanguagesTitle: "支持语言",
+    contactBlock3Label: "開発元 / Developer",
+    contactDeveloperTitle: "开发者",
+    contactFooterNote: "毒舌坊主 - Savage Monk © 2026 Hanlian Games",
     advantagesKicker: "为什么选择我们",
     advantagesTitle: "为什么选择我们",
     adv1Title: "创新游戏体验",
@@ -200,6 +216,22 @@ const translations = {
     team7Group: "Design / Systems",
     team8Name: "AI Game Tools Lead",
     team8Group: "AI / Toolchain",
+    contactKicker: "TECHNICAL SUPPORT",
+    contactTitle: "Savage Monk",
+    contactLead: "Technical Support & Contact",
+    contactBlock1Label: "お問い合わせ / Contact",
+    contactBlock1Title: "Support and Feedback",
+    contactSupportBody:
+      "For questions, bug reports, or feature requests, please email us at:",
+    contactCopy: "Copy Email",
+    contactCopyIdle: "Email ready",
+    contactCopySuccess: "Email copied",
+    contactCopyError: "Copy manually",
+    contactBlock2Label: "対応言語 / Supported Languages",
+    contactLanguagesTitle: "Supported Languages",
+    contactBlock3Label: "開発元 / Developer",
+    contactDeveloperTitle: "Developer",
+    contactFooterNote: "Savage Monk © 2026 Hanlian Games",
     advantagesKicker: "Why Choose Us",
     advantagesTitle: "Where immersive entertainment meets AI engineering",
     adv1Title: "Inventive Gameplay",
@@ -434,7 +466,7 @@ function spawnBurst(target, amount = 22) {
 }
 
 function setupTiltCards() {
-  document.querySelectorAll(".product-card, .value-card, .team-card").forEach((card) => {
+  document.querySelectorAll(".product-card, .value-card, .team-card, .contact-card").forEach((card) => {
     card.addEventListener("pointermove", (event) => {
       const rect = card.getBoundingClientRect();
       const x = event.clientX - rect.left;
@@ -496,6 +528,7 @@ function setupLanguage() {
 
       updateHeroTitleEffects(lang);
       updateTeamDetail(activeMemberKey);
+      updateCopyStatus(translations[lang].contactCopyIdle);
       spawnBurst(button, 20);
     });
   });
@@ -594,12 +627,48 @@ function setupTeamDirectory() {
   updateTeamDetail(activeMemberKey);
 }
 
+function updateCopyStatus(message) {
+  const status = document.getElementById("copyStatus");
+  if (status && message) status.textContent = message;
+}
+
+function setupEmailCopy() {
+  document.querySelectorAll("[data-copy-email]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      const email = button.dataset.copyEmail;
+      if (!email) return;
+      let copied = false;
+
+      try {
+        await navigator.clipboard.writeText(email);
+        copied = true;
+      } catch {
+        const input = document.createElement("input");
+        input.value = email;
+        input.setAttribute("readonly", "");
+        input.style.position = "fixed";
+        input.style.opacity = "0";
+        document.body.appendChild(input);
+        input.select();
+        copied = document.execCommand("copy");
+        input.remove();
+      }
+
+      updateCopyStatus(
+        translations[currentLang][copied ? "contactCopySuccess" : "contactCopyError"],
+      );
+      if (copied) spawnBurst(button, 22);
+    });
+  });
+}
+
 resizeCanvas();
 setupPointer();
 setupTiltCards();
 setupReveal();
 setupLanguage();
 setupTeamDirectory();
+setupEmailCopy();
 updateHeroTitleEffects("zh");
 setupVideoFallback();
 
