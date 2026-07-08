@@ -262,6 +262,135 @@ const translations = {
     footerTagline: "Leader in innovative games and AI experiences",
     footerContact: "Contact Us",
   },
+  ja: {
+    navHome: "ホーム",
+    navProducts: "プロダクト",
+    navAbout: "私たちについて",
+    navContact: "お問い合わせ",
+    breadcrumbHome: "ホーム",
+    heroEyebrow: "コアバリュー",
+    heroAria: "無限に広がるゲーム世界を探索",
+    heroTitleTop: "無限に広がる",
+    heroTitleBottom: "ゲーム世界",
+    heroLead:
+      "Singularity Games は、革新的で没入感のあるゲーム体験と AI アプリケーションを創造します。",
+    heroPrimary: "プロダクトを見る",
+    heroSecondary: "私たちについて",
+    signalGames: "ゲームと AI プロダクト",
+    signalWorlds: "動的ワールドノード",
+    signalEngine: "AI ネイティブ体験",
+    productsKicker: "プロダクト",
+    productsTitle: "私たちのプロダクト",
+    productsLead: "",
+    tagFeatured: "注目プロダクト",
+    product1Title: "ファンタジーアイランド",
+    product1Body: "神秘的な島を探索し、これまでにない冒険と挑戦を体験できます。",
+    product2Title: "AI 対話ペインター",
+    product2Body: "先進的な AI 技術で、アイデアを美しいアート作品へ変換します。",
+    product3Title: "アイランドマスター",
+    product3Body: "謎の島を舞台に、探索者としてサバイバルに挑むアドベンチャーゲームです。",
+    product4Body:
+      "日本語シーンで自然に交流できる、チャットキーボードと AI チャットアシスタントです。",
+    product5Body:
+      "中小規模の不動産会社向けに、物件、賃貸、契約を一元管理する SaaS システムです。",
+    product6Title: "毒舌坊主",
+    product6Body:
+      "20以上のキャラクター、強化された 3D 表現、会話チャレンジを備えたリアル対戦パーティーゲームです。",
+    product7Body:
+      "ネオン圏のカジュアルスネーク。エネルギーを集めて成長し、最強の蛇王を目指します。",
+    product8Title: "その他のプロダクト",
+    product8Body: "さらに多くのゲームと AI アプリケーションを開発中です。どうぞご期待ください。",
+    learnMore: "詳しく見る",
+    seeAll: "すべて見る",
+    aboutKicker: "ABOUT SINGULARITY",
+    aboutTitle: "私たちについて",
+    aboutLead: "Singularity Games の物語、使命、チームをご紹介します。",
+    storyKicker: "OUR STORY",
+    storyTitle: "私たちの物語",
+    storyBody1:
+      "Singularity Games は 2023 年、ゲームと人工知能を愛する技術者とクリエイターによって設立されました。",
+    storyBody2:
+      "創業チームはゲーム開発、AI、ユーザー体験設計に深い経験を持ち、先端技術とエンターテインメントを融合する夢から歩み始めました。",
+    storyBody3:
+      "小さなスタートアップから成長するテクノロジーカンパニーへ。私たちのプロダクトは国内市場で成果を上げ、国際市場へも広がっています。",
+    storyMetric1: "設立年",
+    storyMetric2: "プロダクト群",
+    storyMetric3: "ライブノード",
+    valuesKicker: "MISSION & VALUES",
+    valuesTitle: "使命と価値観",
+    valuesLead:
+      "革新的なゲームと AI アプリケーションを通じて、デジタルライフを豊かにし、創造力を刺激し、人と技術をつなぎます。",
+    value1Title: "イノベーション",
+    value1Body: "新しい技術とアイデアを探求し、従来の枠を超えて業界の可能性を広げます。",
+    value2Title: "ユーザー第一",
+    value2Body: "ユーザーのニーズを中心に、直感的で楽しく価値ある体験をつくります。",
+    value3Title: "卓越した品質",
+    value3Body: "細部まで磨き込み、すべてのプロダクトで高い品質を追求します。",
+    value4Title: "共創と共栄",
+    value4Body: "チームワークとパートナーシップを大切にし、より大きな価値を共に生み出します。",
+    teamKicker: "TEAM CONSTELLATION",
+    teamTitle: "私たちのチーム",
+    teamLead:
+      "多様な背景を持つ情熱的なメンバーが、驚きのあるデジタル体験を創るという共通目標でつながっています。",
+    filterAll: "すべて",
+    filterManagement: "経営",
+    filterTech: "技術",
+    filterCreative: "創造",
+    filterOps: "運営",
+    teamReadMore: "職務を見る",
+    team1Name: "創業者 & CEO",
+    team1Group: "経営 / 戦略",
+    team2Name: "最高技術責任者",
+    team2Group: "技術 / アーキテクチャ",
+    team3Name: "クリエイティブディレクター",
+    team3Group: "創造 / 世界観",
+    team4Name: "ゲームサーバー責任者",
+    team4Group: "技術 / サーバー",
+    team5Name: "ゲームクライアント責任者",
+    team5Group: "技術 / クライアント",
+    team6Name: "アートディレクター",
+    team6Group: "アート / ビジュアル",
+    team7Name: "ゲームデザイン責任者",
+    team7Group: "企画 / システム",
+    team8Name: "AI ゲームツール開発責任者",
+    team8Group: "AI / ツールチェーン",
+    contactKicker: "TECHNICAL SUPPORT",
+    contactTitle: "お問い合わせ",
+    contactLead: "ゲームサポート / 不具合報告 / 機能リクエスト",
+    contactBlock1Label: "SUPPORT PORTAL",
+    contactBlock1Title: "お問い合わせ",
+    contactBlock1Subtitle: "ゲームに関する質問、不具合報告、リクエスト",
+    contactPrimaryBody:
+      "ゲームに関するご質問、不具合報告、ご要望は、下記のメールアドレスまでお送りください。",
+    contactSupportBody:
+      "ご質問、不具合報告、機能リクエストは、以下のメールアドレスまでご連絡ください：",
+    contactCopy: "メールをコピー",
+    contactCopyIdle: "メールアドレス準備完了",
+    contactCopySuccess: "メールアドレスをコピーしました",
+    contactCopyError: "手動でメールアドレスをコピーしてください",
+    contactBlock2Label: "LANGUAGE MATRIX",
+    contactLanguagesTitle: "対応言語",
+    contactLanguagesValue: "日本語 / 中文 / English",
+    contactBlock3Label: "DEVELOPER NODE",
+    contactDeveloperTitle: "開発者",
+    contactDeveloperValue: "漢聯ゲーム",
+    contactFooterNote: "『野蛮僧侶』 © 2026 漢聯ゲーム",
+    contactStatusLabel: "SUPPORT CHANNEL / COPY STATUS",
+    advantagesKicker: "選ばれる理由",
+    advantagesTitle: "選ばれる理由",
+    adv1Title: "革新的なゲーム体験",
+    adv1Body: "独自性と楽しさを備えたゲーム体験を創り、プレイヤーに新しい没入感を届けます。",
+    adv2Title: "先進 AI 技術",
+    adv2Body: "最先端の AI 技術を活用し、知的でパーソナライズされたサービスと体験を提供します。",
+    adv3Title: "ユーザー第一",
+    adv3Body: "ユーザー体験を最優先に考え、実際のニーズに合わせてプロダクトを継続的に改善します。",
+    ctaKicker: "Ready Player Next",
+    ctaTitle: "冒険を始める準備はできましたか？",
+    ctaLead: "今すぐプロダクトを探索し、忘れられない旅を始めましょう。",
+    ctaButton: "今すぐ探索",
+    footerTagline: "革新的なゲームと AI 体験のリーダー",
+    footerContact: "お問い合わせ",
+  },
 };
 
 const teamProfiles = {
@@ -365,6 +494,56 @@ const teamProfiles = {
       tags: ["AIGC", "Toolchain", "Smart Workflow"],
     },
   },
+  ja: {
+    ceo: {
+      name: "創業者 & CEO",
+      group: "経営 / 戦略",
+      bio: "会社戦略と全体運営を担い、チームをビジョンへ導きながら継続的な革新を推進します。",
+      tags: ["戦略設計", "チームづくり", "プロダクト方針"],
+    },
+    cto: {
+      name: "最高技術責任者",
+      group: "技術 / アーキテクチャ",
+      bio: "技術ロードマップ、ゲームエンジン最適化、AI 活用、高並行サービス基盤を統括します。",
+      tags: ["AI アーキテクチャ", "エンジン最適化", "開発効率"],
+    },
+    creative: {
+      name: "クリエイティブディレクター",
+      group: "創造 / 世界観",
+      bio: "ゲームコンセプト、ビジュアル方向、体験設計を通じて、抽象的なアイデアを没入できる世界へ変換します。",
+      tags: ["世界観", "物語体験", "インタラクション"],
+    },
+    server: {
+      name: "ゲームサーバー責任者",
+      group: "技術 / サーバー",
+      bio: "バックエンドアーキテクチャとオンラインシステムを設計し、安定性、拡張性、データ安全性を支えます。",
+      tags: ["高並行", "データ安全", "安定運用"],
+    },
+    client: {
+      name: "ゲームクライアント責任者",
+      group: "技術 / クライアント",
+      bio: "クライアント体験の開発と最適化を担い、性能、操作感、クロスデバイス品質を高めます。",
+      tags: ["クロス端末", "性能最適化", "モーション"],
+    },
+    art: {
+      name: "アートディレクター",
+      group: "アート / ビジュアル",
+      bio: "ビジュアル方針を定義し、キャラクター、環境、エフェクト、プロダクトアートを統括します。",
+      tags: ["3D アセット", "ビジュアル規範", "演出効果"],
+    },
+    design: {
+      name: "ゲームデザイン責任者",
+      group: "企画 / システム",
+      bio: "ゲームシステム、コンテンツ計画、成長リズム、長期的なプレイヤー体験を設計します。",
+      tags: ["ゲームシステム", "レベル設計", "継続率"],
+    },
+    tools: {
+      name: "AI ゲームツール開発責任者",
+      group: "AI / ツールチェーン",
+      bio: "AI を活用した制作ツールを開発し、チーム効率とアルゴリズム駆動の体験を向上させます。",
+      tags: ["AIGC", "ツールチェーン", "スマートワークフロー"],
+    },
+  },
 };
 
 let width = 0;
@@ -374,6 +553,28 @@ const pointer = { x: 0, y: 0, active: false };
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 let currentLang = "zh";
 let activeMemberKey = "ceo";
+const languageMeta = {
+  zh: "zh-CN",
+  en: "en",
+  ja: "ja-JP",
+};
+
+function getStoredLanguage() {
+  try {
+    const stored = window.localStorage.getItem("sg-language");
+    return translations[stored] ? stored : "zh";
+  } catch {
+    return "zh";
+  }
+}
+
+function storeLanguage(lang) {
+  try {
+    window.localStorage.setItem("sg-language", lang);
+  } catch {
+    // Storage can be unavailable in some embedded or private browsing contexts.
+  }
+}
 
 function resizeCanvas() {
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -524,26 +725,38 @@ function setupReveal() {
   });
 }
 
+function applyLanguage(lang, burstTarget = null) {
+  const nextLang = translations[lang] ? lang : "zh";
+  const dictionary = translations[nextLang];
+  currentLang = nextLang;
+  document.documentElement.lang = languageMeta[nextLang] || "zh-CN";
+
+  document.querySelectorAll("[data-lang]").forEach((item) => {
+    item.classList.toggle("is-active", item.dataset.lang === nextLang);
+  });
+
+  document.querySelectorAll("[data-i18n]").forEach((node) => {
+    const key = node.dataset.i18n;
+    const value = dictionary[key] || translations.zh[key];
+    if (value) node.textContent = value;
+  });
+
+  updateHeroTitleEffects(nextLang);
+  updateTeamDetail(activeMemberKey);
+  updateCopyStatus(dictionary.contactCopyIdle);
+  storeLanguage(nextLang);
+  if (burstTarget) spawnBurst(burstTarget, 20);
+}
+
 function setupLanguage() {
   const buttons = document.querySelectorAll("[data-lang]");
+  currentLang = getStoredLanguage();
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      const lang = button.dataset.lang;
-      currentLang = lang;
-      document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
-      buttons.forEach((item) => item.classList.toggle("is-active", item === button));
-
-      document.querySelectorAll("[data-i18n]").forEach((node) => {
-        const key = node.dataset.i18n;
-        if (translations[lang][key]) node.textContent = translations[lang][key];
-      });
-
-      updateHeroTitleEffects(lang);
-      updateTeamDetail(activeMemberKey);
-      updateCopyStatus(translations[lang].contactCopyIdle);
-      spawnBurst(button, 20);
+      applyLanguage(button.dataset.lang, button);
     });
   });
+  applyLanguage(currentLang);
 }
 
 function updateHeroTitleEffects(lang = "zh") {
@@ -681,7 +894,7 @@ setupReveal();
 setupLanguage();
 setupTeamDirectory();
 setupEmailCopy();
-updateHeroTitleEffects("zh");
+updateHeroTitleEffects(currentLang);
 setupVideoFallback();
 
 if (!prefersReduced) {

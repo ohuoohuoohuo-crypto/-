@@ -1,37 +1,40 @@
 **Source Visual Truth**
-- Target reference: `/var/folders/3y/7p49xbd53_dfd4_vxjqtpmpr0000gn/T/codex-clipboard-5530da6d-c86d-495a-b7ec-e8ea64f70961.png`
-- Intent: add the same footer content to the bottom of the Contact page: brand lockup, tagline, contact email, and Singularity Games copyright, while preserving the cyber glass style.
+- Target reference: `/var/folders/3y/7p49xbd53_dfd4_vxjqtpmpr0000gn/T/codex-clipboard-948a8f75-8736-475e-ac28-8e87d1d949bc.png`
+- Intent: extend the whole site language switcher from Chinese/English to Chinese/English/Japanese, and make all existing page content support Japanese mode.
 
 **Implementation Evidence**
-- Desktop URL tested: `http://127.0.0.1:4174/contact.html?v=contact-footer-qa1`
-- Mobile URL tested: `http://127.0.0.1:4174/contact.html?v=contact-footer-mobile-qa1`
-- Desktop footer screenshot: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/contact-footer-desktop-qa.png`
-- Mobile footer screenshot: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/contact-footer-mobile-qa.png`
-- Desktop viewport: 1440 x 900, state: contact page, Chinese language.
-- Mobile viewport: 390 x 844, state: contact page, Chinese language.
+- Home URL tested: `http://127.0.0.1:4174/index.html?v=ja-mode-qa1`
+- About URL tested: `http://127.0.0.1:4174/about.html?v=ja-mode-qa1`
+- Contact URL tested: `http://127.0.0.1:4174/contact.html?v=ja-mode-qa1`
+- Mobile Contact URL tested: `http://127.0.0.1:4174/contact.html?v=ja-mode-mobile-qa1`
+- Desktop viewport: 1440 x 900, state: Japanese language.
+- Mobile viewport: 390 x 844, state: Japanese language.
 
 **Full-View Comparison Evidence**
-- The Contact page now includes the shared site footer used by the Home and About pages.
-- Footer visible content: `Singularity Games / 奇点游戏`, `创新游戏与 AI 体验的领导者`, `联系我们`, `sgames@hanlian.com`, and `© 2026 Singularity Games. 保留所有权利。`
-- The footer keeps the dark scanline field and gains a Contact-page-specific grid glow so it blends with the hero section above.
+- The language switcher now shows `中文`, `English`, and `日本語` on Home, About, and Contact pages.
+- Japanese mode sets the document language to `ja-JP`.
+- Japanese mode persists across page navigation through local language storage when available.
+- All 98 `data-i18n` keys used by the three HTML pages are present in `zh`, `en`, and `ja` dictionaries.
 
 **Focused Region Comparison Evidence**
-- Desktop footer layout: two-column brand/contact layout matches the provided footer reference.
-- Mobile footer layout: footer stacks into a single column with left-aligned brand and contact details.
-- Desktop page width: no horizontal overflow at the tested bottom state.
-- Mobile page width: no horizontal overflow at the tested bottom state.
+- Home page Japanese check: navigation, hero title, and CTA render in Japanese.
+- About page Japanese check: breadcrumb, hero title, story title, team title, and selected team detail render in Japanese.
+- Contact page Japanese check: page title, contact copy, supported language label, developer value, and footer contact label render in Japanese.
+- Mobile header check: the three-language switcher fits in one row with no horizontal overflow.
 
 **Findings**
 - No P0/P1/P2 issues found.
-- Footer content: passed.
-- Footer visual match: passed.
+- Japanese language dictionary: passed.
+- Cross-page language persistence: passed in browser QA.
 - Desktop responsive check: passed.
 - Mobile responsive check: passed.
 
 **Implementation Checklist**
-- Desktop footer screenshot checked: passed.
-- Mobile footer screenshot checked: passed.
-- Footer content sweep checked: passed.
+- Added `日本語` button to Home, About, and Contact headers: passed.
+- Added Japanese translations for visible site copy: passed.
+- Added Japanese team-detail data: passed.
+- Added `ja-JP` language metadata: passed.
+- Translation key completeness check: passed.
 - Horizontal overflow check: passed.
 - JS syntax check: passed.
 - Git whitespace check: passed.
