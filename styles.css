@@ -1328,12 +1328,12 @@ main,
   position: relative;
   isolation: isolate;
   width: min(80rem, 100%);
-  min-height: 25rem;
-  margin: 0 auto 4.2rem;
+  min-height: 22.5rem;
+  margin: 0 auto 3.2rem;
   display: grid;
   align-items: center;
   overflow: hidden;
-  padding: 7.6rem 2rem 4.2rem;
+  padding: 7.2rem 2rem 3.4rem;
   border: 1px solid rgba(147, 197, 253, 0.18);
   border-top: 0;
   border-radius: 0 0 8px 8px;
@@ -1498,6 +1498,30 @@ main,
   z-index: 1;
 }
 
+.contact-card-topline {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  color: rgba(184, 255, 106, 0.82);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.contact-card-topline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(184, 255, 106, 0.5), rgba(66, 245, 255, 0.36), transparent);
+  box-shadow: 0 0 18px rgba(66, 245, 255, 0.2);
+}
+
 .contact-card-label {
   display: inline-flex;
   color: rgba(184, 255, 106, 0.82);
@@ -1513,8 +1537,22 @@ main,
   line-height: 1.18;
 }
 
+.contact-primary h2 {
+  font-size: clamp(2rem, 3.1vw, 3.15rem);
+  background: linear-gradient(96deg, #ffffff 0%, #d7fbff 42%, #ff8ee5 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 18px rgba(255, 79, 216, 0.18));
+}
+
 .contact-card h3 {
   font-size: 1.25rem;
+}
+
+.contact-card .contact-card-subtitle {
+  margin-top: 0.7rem;
+  color: rgba(217, 228, 255, 0.88);
+  font-weight: 800;
 }
 
 .contact-card p {
@@ -1523,7 +1561,7 @@ main,
   line-height: 1.8;
 }
 
-.contact-jp {
+.contact-card .contact-jp {
   color: #e1e8ff;
 }
 
@@ -1574,6 +1612,52 @@ main,
   min-height: 13rem;
 }
 
+.contact-reference-panel {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  padding: 0;
+}
+
+.contact-reference-row {
+  position: relative;
+  padding: 1.35rem 1.55rem;
+  overflow: hidden;
+}
+
+.contact-reference-row + .contact-reference-row {
+  border-left: 1px solid rgba(184, 210, 255, 0.14);
+}
+
+.contact-reference-row::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, rgba(66, 245, 255, 0.1), hsl(var(--accent) / 0.76), rgba(255, 79, 216, 0.12));
+  box-shadow: 0 0 18px hsl(var(--accent) / 0.35);
+}
+
+.contact-reference-row h3 {
+  margin-top: 0.65rem;
+  font-size: clamp(1.22rem, 1.72vw, 1.55rem);
+}
+
+.contact-reference-row p {
+  margin-top: 0.8rem;
+  color: #e1e8ff;
+  font-size: 1.05rem;
+}
+
+.contact-reference-footer {
+  grid-column: 1 / -1;
+  padding: 1rem 1.55rem;
+  border-top: 1px solid rgba(184, 210, 255, 0.14);
+  color: rgba(217, 228, 255, 0.68);
+  font-weight: 700;
+}
+
 .contact-visual {
   position: relative;
   min-height: 33rem;
@@ -1599,16 +1683,33 @@ main,
   mask-image: linear-gradient(180deg, #000, transparent 78%);
 }
 
+.contact-visual::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 60%;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(4, 8, 24, 0.22), rgba(4, 8, 24, 0.92) 46%, rgba(4, 8, 24, 0.99)),
+    radial-gradient(circle at 50% 100%, rgba(66, 245, 255, 0.16), transparent 60%);
+}
+
 .contact-visual img {
   position: absolute;
   left: 50%;
-  top: 46%;
+  top: 52%;
+  z-index: 0;
   width: 132%;
   max-width: none;
   transform: translate(-50%, -50%) translateZ(44px);
   filter:
     drop-shadow(0 30px 36px rgba(0, 0, 0, 0.52))
     drop-shadow(0 0 34px rgba(255, 79, 216, 0.28));
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 48%, rgba(0, 0, 0, 0.28) 62%, transparent 76%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 48%, rgba(0, 0, 0, 0.28) 62%, transparent 76%);
   animation: contactImageFloat 6s ease-in-out infinite;
   pointer-events: none;
   user-select: none;
@@ -2972,6 +3073,15 @@ main,
 
   .contact-card-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-reference-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-reference-row + .contact-reference-row {
+    border-top: 1px solid rgba(184, 210, 255, 0.14);
+    border-left: 0;
   }
 
   .contact-card {
