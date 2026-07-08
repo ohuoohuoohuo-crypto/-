@@ -1,32 +1,42 @@
-**Source Visual Truth**
-- Target reference: `/var/folders/3y/7p49xbd53_dfd4_vxjqtpmpr0000gn/T/codex-clipboard-fc9e0568-1ae1-457f-82ac-c395054a3853.png`
-- Contact reference: `/var/folders/3y/7p49xbd53_dfd4_vxjqtpmpr0000gn/T/codex-clipboard-79fc2ead-823c-4b27-a992-e936b93aacf8.png`
-- Intent: restore Chinese text to the previous Chinese-first font rendering while keeping Japanese mode available.
-
-**Implementation Evidence**
-- Home URL tested: `http://127.0.0.1:4174/index.html?v=font-zh-qa2`
-- Contact URL tested: `http://127.0.0.1:4174/contact.html?v=font-zh-qa2`
-- Japanese check URL tested: `http://127.0.0.1:4174/contact.html?v=font-ja-qa1`
-- Desktop viewport: 1440 x 900.
-
-**Font Evidence**
-- Chinese home hero title, hero lead, and primary button computed font stack:
-  `Inter, ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif`
-- Chinese contact title, body copy, language heading, and developer heading use the same Chinese-first stack.
-- Japanese contact title in `ja-JP` mode keeps the Japanese-first stack:
-  `Inter, ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", "PingFang SC", "Microsoft YaHei", sans-serif`
-
 **Findings**
-- No P0/P1/P2 issues found.
-- Chinese mode font priority: passed.
-- Japanese mode font priority: passed.
-- Desktop horizontal overflow check: passed.
+- No actionable P0/P1/P2 issues remain.
 
-**Implementation Checklist**
-- Restored default Chinese-first font stack: passed.
-- Added `ja-JP`-scoped Japanese font stack: passed.
-- Bumped stylesheet query on all pages to avoid stale CSS: passed.
-- JS syntax check: passed.
-- Git whitespace check: passed.
+**Source Visual Truth**
+- Reference image: `/Users/wangshengbin/Downloads/组 2.png`
+- Asset package: `/Users/wangshengbin/Downloads/归档.zip`
+
+**Implementation Screenshots**
+- Desktop hero: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/island-winner-desktop-viewport-qa.png`
+- Feature section: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/island-winner-features-qa3.png`
+- Gallery interaction: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/island-winner-gallery-qa.png`
+- Mobile hero: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/island-winner-viewport-qa.png`
+- Japanese mode: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/island-winner-ja-qa.png`
+- Combined comparison: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/island-winner-comparison-qa.png`
+
+**Viewport And State**
+- Desktop viewport: 1440 x 900.
+- Mobile viewport observed in app browser: 343 x 872.
+- States checked: first-load hero, feature section, gallery thumbnail switch, Japanese language mode, homepage product-card link.
+
+**Required Fidelity Surfaces**
+- Fonts and typography: Passed. The new detail page uses the existing Chinese-first font stack, with Japanese mode scoped to `html[lang="ja-JP"]`. Display text follows the current site style instead of the white-page reference typography.
+- Spacing and layout rhythm: Passed. The reference information architecture was preserved, while the layout was adapted to the existing Singularity Games glass/tech composition. No horizontal overflow was found on desktop or mobile.
+- Colors and visual tokens: Passed. The old cream/orange page was intentionally remixed into the site’s dark cyan/violet/magenta neon system.
+- Image quality and asset fidelity: Passed. Real supplied island assets are used for the hero, feature visuals, and gallery. No visible game-art placeholder is used.
+- Copy and content: Passed. The story, nine features, and gallery topics from the reference are represented; product naming is unified as “荒岛大赢家”.
+
+**Patches Made**
+- Added `island-winner.html` as the new product detail page.
+- Added `assets/island-winner/` with the supplied game artwork from `归档.zip`.
+- Connected the homepage “荒岛大赢家” card to `./island-winner.html`.
+- Added responsive hero, story, feature matrix, showcase cards, gallery preview, CTA, and hover/particle interactions.
+- Added Chinese, English, and Japanese translation keys for the new page.
+- Added interactive gallery thumbnail switching and language-aware gallery captions.
+
+**Open Questions**
+- None for this iteration.
+
+**Follow-Up Polish**
+- P3: If desired, the hero crop can be tuned again once the final brand/product naming is locked across all screenshots and assets.
 
 final result: passed

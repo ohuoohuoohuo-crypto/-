@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="荒岛大赢家，充满挑战的放置类冒险生存游戏。"
+    />
+    <title>荒岛大赢家 - Singularity Games / 奇点游戏</title>
+    <link rel="stylesheet" href="./styles.css?v=game-detail-1" />
+  </head>
+  <body>
+    <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+    <div id="burstLayer" class="burst-layer" aria-hidden="true"></div>
+
+    <div class="stage-bg" aria-hidden="true">
+      <video
+        class="stage-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="./assets/homepage-pipe-animation.mp4" type="video/mp4" />
+      </video>
+      <div class="video-shade"></div>
+      <div class="grid-plane"></div>
+      <div class="light-trails"></div>
+      <div class="scan-field"></div>
+    </div>
+
+    <header class="site-header" data-reveal>
+      <a class="brand" href="./index.html#home" aria-label="Singularity Games home">
+        <span class="brand-mark">
+          <span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Singularity Games</strong>
+          <small>奇点游戏</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="主导航">
+        <a href="./index.html#home" data-i18n="navHome">首页</a>
+        <a class="is-current" href="./index.html#products" data-i18n="navProducts">产品</a>
+        <a href="./about.html" data-i18n="navAbout">关于我们</a>
+        <a href="./contact.html" data-i18n="navContact">联系我们</a>
+      </nav>
+
+      <div class="language-switch" aria-label="语言切换">
+        <button class="is-active" type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="en">English</button>
+        <button type="button" data-lang="ja">日本語</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="game-detail-hero">
+        <div class="game-detail-hero-shell">
+          <div class="game-detail-copy" data-reveal>
+            <div class="about-breadcrumb game-breadcrumb" aria-label="当前位置">
+              <a href="./index.html#home" data-i18n="breadcrumbHome">首页</a>
+              <span>/</span>
+              <a href="./index.html#products" data-i18n="navProducts">产品</a>
+              <span>/</span>
+              <span data-i18n="gameTitle">荒岛大赢家</span>
+            </div>
+            <span class="section-kicker" data-i18n="gameKicker">SURVIVAL ADVENTURE</span>
+            <h1 data-i18n="gameTitle">荒岛大赢家</h1>
+            <p data-i18n="gameLead">
+              一款充满挑战的放置类冒险游戏，在神秘荒岛上求生存。
+            </p>
+
+            <div class="game-detail-actions">
+              <a class="neon-button primary" href="#game-features" data-burst data-i18n="gamePrimaryAction">查看游戏特色</a>
+              <a class="neon-button secondary" href="#game-gallery" data-burst data-i18n="gameSecondaryAction">游戏画面</a>
+            </div>
+
+            <div class="game-signal-grid" aria-label="荒岛大赢家玩法标签">
+              <div>
+                <strong>01</strong>
+                <span data-i18n="gameSignal1">荒岛求生</span>
+              </div>
+              <div>
+                <strong>09</strong>
+                <span data-i18n="gameSignal2">核心玩法</span>
+              </div>
+              <div>
+                <strong>∞</strong>
+                <span data-i18n="gameSignal3">探索成长</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-hero-media reveal-card">
+            <img
+              src="./assets/island-winner/hero.png"
+              alt="荒岛大赢家主视觉"
+              loading="eager"
+            />
+            <div class="game-hero-hud" aria-hidden="true">
+              <span>ISLAND.SIGNAL ONLINE</span>
+              <strong>絶境孤島</strong>
+              <small>SURVIVAL LOOP / ALLIES / RELICS</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="game-story" class="section game-story-section">
+        <div class="game-story-grid">
+          <div class="story-copy game-story-copy" data-reveal>
+            <span class="section-kicker" data-i18n="gameStoryKicker">GAME BACKGROUND</span>
+            <h2 data-i18n="gameStoryTitle">游戏背景</h2>
+            <p data-i18n="gameStoryBody1">
+              在这款充满挑战的放置类冒险游戏中，你将化身一位执着追寻世界未解之谜的探险家。命运却给了你一个残酷的考验，一场突如其来的暴风雨将你的船只彻底吞噬。
+            </p>
+            <p data-i18n="gameStoryBody2">
+              当你从昏迷中苏醒时，发现自己孤身一人躺在陌生岛屿的沙滩上。这里表面风平浪静，实则暗藏杀机，凶猛的野兽、未知的遗迹和稀缺资源都在考验你的选择。
+            </p>
+            <p data-i18n="gameStoryBody3">
+              你需要管理资源、建造庇护所、制作工具、招募同盟，并在危机四伏的荒野中求生存。通过持续探索，逐步揭开岛屿背后的秘密。
+            </p>
+            <p data-i18n="gameStoryBody4">
+              随着技能不断提升，你将面对更强大的对手和更险恶的环境。每一次挑战都是成长的契机，也让你离荒岛真正的王者更近一步。
+            </p>
+          </div>
+
+          <aside class="game-hud-panel reveal-card" aria-label="荒岛大赢家玩法态势">
+            <span class="game-hud-label">SURVIVAL HUD</span>
+            <div class="game-radar" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="game-hud-lines">
+              <span>RESOURCE.SCAN / ACTIVE</span>
+              <span>ALLY.RECRUIT / READY</span>
+              <span>RELIC.CIPHER / LOCKED</span>
+              <span>BEAST.THREAT / RISING</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="game-features" class="section game-feature-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="gameFeaturesKicker">FEATURE MATRIX</span>
+          <h2 data-i18n="gameFeaturesTitle">游戏特色</h2>
+          <p data-i18n="gameFeaturesLead">
+            从孤岛生存、同盟招募到遗迹探索，每个系统都围绕“资源争夺、角色成长、荒岛解谜”展开。
+          </p>
+        </div>
+
+        <div class="game-showcase-grid">
+          <article class="game-shot-card reveal-card" tabindex="0" style="--accent: 22 100% 60%">
+            <img src="./assets/island-winner/recruit-allies.png" alt="招募同盟玩法画面" loading="lazy" />
+            <div>
+              <span>ALLY NODE</span>
+              <h3 data-i18n="gameShowcase1Title">招募同盟</h3>
+              <p data-i18n="gameShowcase1Body">集结可靠伙伴，携手面对绝境求生挑战。</p>
+            </div>
+          </article>
+          <article class="game-shot-card reveal-card" tabindex="0" style="--accent: 188 100% 62%">
+            <img src="./assets/island-winner/eye-power.png" alt="天眼之力玩法画面" loading="lazy" />
+            <div>
+              <span>VISION CORE</span>
+              <h3 data-i18n="gameShowcase2Title">天眼之力</h3>
+              <p data-i18n="gameShowcase2Body">看破弱点，在战斗中智斗强敌。</p>
+            </div>
+          </article>
+          <article class="game-shot-card reveal-card" tabindex="0" style="--accent: 318 100% 68%">
+            <img src="./assets/island-winner/unknown-adventure.png" alt="未知冒险玩法画面" loading="lazy" />
+            <div>
+              <span>RUIN SIGNAL</span>
+              <h3 data-i18n="gameShowcase3Title">未知冒险</h3>
+              <p data-i18n="gameShowcase3Body">深入洞穴与废弃建筑，揭开荒岛隐藏的秘密。</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="game-feature-grid">
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>01</span>
+            <h3 data-i18n="gameFeature1Title">绝境孤岛</h3>
+            <p data-i18n="gameFeature1Body">面对饥饿、口渴、疲劳等生存压力，合理管理资源，在孤岛上扎稳根基。</p>
+          </article>
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>02</span>
+            <h3 data-i18n="gameFeature2Title">招募同盟</h3>
+            <p data-i18n="gameFeature2Body">寻找并招募可靠伙伴，组建你的生存团队，用不同角色能力应对挑战。</p>
+          </article>
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>03</span>
+            <h3 data-i18n="gameFeature3Title">未知冒险</h3>
+            <p data-i18n="gameFeature3Body">探索神秘岛屿角落，黑暗洞穴和废弃建筑会不断揭开荒岛真相。</p>
+          </article>
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>04</span>
+            <h3 data-i18n="gameFeature4Title">天眼之力</h3>
+            <p data-i18n="gameFeature4Body">掌握特殊能力，看破强敌弱点，在战略战斗中提升属性与能力。</p>
+          </article>
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>05</span>
+            <h3 data-i18n="gameFeature5Title">万卷秘典</h3>
+            <p data-i18n="gameFeature5Body">收集古老秘典与知识，学习强大技能，掌握秘技决定最终胜局。</p>
+          </article>
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>06</span>
+            <h3 data-i18n="gameFeature6Title">制作系统</h3>
+            <p data-i18n="gameFeature6Body">收集材料，制作工具、武器、装备与生存必需品，提升战斗和生存能力。</p>
+          </article>
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>07</span>
+            <h3 data-i18n="gameFeature7Title">危险挑战</h3>
+            <p data-i18n="gameFeature7Body">与岛上的野兽和其他危险生物战斗，每一次战斗都是生死抉择。</p>
+          </article>
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>08</span>
+            <h3 data-i18n="gameFeature8Title">技能成长</h3>
+            <p data-i18n="gameFeature8Body">通过不断实践提升技能，解锁新制作配方和能力，成为荒岛生存专家。</p>
+          </article>
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>09</span>
+            <h3 data-i18n="gameFeature9Title">解谜元素</h3>
+            <p data-i18n="gameFeature9Body">解开岛上的谜题与秘密，发现遗迹真相，每个谜题都是故事的一部分。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="game-gallery" class="section game-gallery-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="gameGalleryKicker">VISUAL ARCHIVE</span>
+          <h2 data-i18n="gameGalleryTitle">游戏画面</h2>
+          <p data-i18n="gameGalleryLead">点击缩略图切换预览，快速浏览荒岛大赢家的关键场景。</p>
+        </div>
+
+        <div class="game-gallery-layout" data-reveal>
+          <div class="game-gallery-viewer">
+            <img
+              id="gameGalleryImage"
+              src="./assets/island-winner/hero.png"
+              alt="荒岛大赢家游戏画面预览"
+            />
+            <div class="game-gallery-caption">
+              <span>LIVE PREVIEW</span>
+              <h3 id="gameGalleryTitleText" data-i18n="gameGallery1Title">绝境孤岛</h3>
+              <p id="gameGalleryBodyText" data-i18n="gameGallery1Body">荒岛冒险争资源，独狼突围夺生机。</p>
+            </div>
+          </div>
+
+          <div class="game-gallery-thumbs" aria-label="游戏画面缩略图">
+            <button
+              class="is-active"
+              type="button"
+              data-gallery-image="./assets/island-winner/hero.png"
+              data-gallery-title="gameGallery1Title"
+              data-gallery-body="gameGallery1Body"
+              data-burst
+            >
+              <img src="./assets/island-winner/hero.png" alt="绝境孤岛缩略图" loading="lazy" />
+            </button>
+            <button
+              type="button"
+              data-gallery-image="./assets/island-winner/recruit-allies.png"
+              data-gallery-title="gameGallery2Title"
+              data-gallery-body="gameGallery2Body"
+              data-burst
+            >
+              <img src="./assets/island-winner/recruit-allies.png" alt="招募同盟缩略图" loading="lazy" />
+            </button>
+            <button
+              type="button"
+              data-gallery-image="./assets/island-winner/eye-power.png"
+              data-gallery-title="gameGallery3Title"
+              data-gallery-body="gameGallery3Body"
+              data-burst
+            >
+              <img src="./assets/island-winner/eye-power.png" alt="天眼之力缩略图" loading="lazy" />
+            </button>
+            <button
+              type="button"
+              data-gallery-image="./assets/island-winner/unknown-adventure.png"
+              data-gallery-title="gameGallery4Title"
+              data-gallery-body="gameGallery4Body"
+              data-burst
+            >
+              <img src="./assets/island-winner/unknown-adventure.png" alt="未知冒险缩略图" loading="lazy" />
+            </button>
+            <button
+              type="button"
+              data-gallery-image="./assets/island-winner/secret-scrolls.png"
+              data-gallery-title="gameGallery5Title"
+              data-gallery-body="gameGallery5Body"
+              data-burst
+            >
+              <img src="./assets/island-winner/secret-scrolls.png" alt="万卷秘典缩略图" loading="lazy" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section game-detail-cta" data-reveal>
+        <div class="cta-energy" aria-hidden="true">
+          <span class="cta-orbit cta-orbit-one"></span>
+          <span class="cta-orbit cta-orbit-two"></span>
+          <span class="cta-beam"></span>
+          <span class="cta-core"></span>
+        </div>
+        <div class="cta-inner">
+          <span class="section-kicker" data-i18n="gameCtaKicker">READY FOR THE ISLAND</span>
+          <h2 data-i18n="gameCtaTitle">踏上荒岛，赢下你的生存战。</h2>
+          <p data-i18n="gameCtaLead">查看产品矩阵，继续探索 Singularity Games 的更多动态世界。</p>
+          <a class="neon-button primary" href="./index.html#products" data-burst data-i18n="gameCtaButton">返回产品</a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="footer-scan" aria-hidden="true"></div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">
+            <span></span>
+          </span>
+          <div>
+            <strong>Singularity Games / 奇点游戏</strong>
+            <p data-i18n="footerTagline">创新游戏与 AI 体验的领导者</p>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <strong data-i18n="footerContact">联系我们</strong>
+          <a href="mailto:sgames@hanlian.com">sgames@hanlian.com</a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Singularity Games. 保留所有权利。</p>
+    </footer>
+
+    <script src="./app.js?v=game-detail-1"></script>
+  </body>
+</html>

@@ -29,7 +29,7 @@ const translations = {
     product1Body: "探索神秘的奇幻岛屿，体验前所未有的冒险与挑战。",
     product2Title: "AI 对话画家",
     product2Body: "利用先进的 AI 技术，智能将创意转化为精美的艺术作品。",
-    product3Title: "荒岛大玩家",
+    product3Title: "荒岛大赢家",
     product3Body: "在这款充满挑战的荒岛冒险游戏中，你将化身一名探险家，在神秘岛屿上求生存。",
     product4Body: "日本正在专为国人设计的聊天键盘与 AI 聊天助手，助你在日本语境场景中自信交流。",
     product5Body: "专为中小型房地产公司设计的 SaaS 管理系统，提供房源、租赁、合同等一体化管理解决方案。",
@@ -128,6 +128,69 @@ const translations = {
     ctaButton: "立即探索",
     footerTagline: "创新游戏与 AI 体验的领导者",
     footerContact: "联系我们",
+    gameKicker: "SURVIVAL ADVENTURE",
+    gameTitle: "荒岛大赢家",
+    gameLead: "一款充满挑战的放置类冒险游戏，在神秘荒岛上求生存。",
+    gamePrimaryAction: "查看游戏特色",
+    gameSecondaryAction: "游戏画面",
+    gameSignal1: "荒岛求生",
+    gameSignal2: "核心玩法",
+    gameSignal3: "探索成长",
+    gameStoryKicker: "GAME BACKGROUND",
+    gameStoryTitle: "游戏背景",
+    gameStoryBody1:
+      "在这款充满挑战的放置类冒险游戏中，你将化身一位执着追寻世界未解之谜的探险家。命运却给了你一个残酷的考验，一场突如其来的暴风雨将你的船只彻底吞噬。",
+    gameStoryBody2:
+      "当你从昏迷中苏醒时，发现自己孤身一人躺在陌生岛屿的沙滩上。这里表面风平浪静，实则暗藏杀机，凶猛的野兽、未知的遗迹和稀缺资源都在考验你的选择。",
+    gameStoryBody3:
+      "你需要管理资源、建造庇护所、制作工具、招募同盟，并在危机四伏的荒野中求生存。通过持续探索，逐步揭开岛屿背后的秘密。",
+    gameStoryBody4:
+      "随着技能不断提升，你将面对更强大的对手和更险恶的环境。每一次挑战都是成长的契机，也让你离荒岛真正的王者更近一步。",
+    gameFeaturesKicker: "FEATURE MATRIX",
+    gameFeaturesTitle: "游戏特色",
+    gameFeaturesLead:
+      "从孤岛生存、同盟招募到遗迹探索，每个系统都围绕“资源争夺、角色成长、荒岛解谜”展开。",
+    gameShowcase1Title: "招募同盟",
+    gameShowcase1Body: "集结可靠伙伴，携手面对绝境求生挑战。",
+    gameShowcase2Title: "天眼之力",
+    gameShowcase2Body: "看破弱点，在战斗中智斗强敌。",
+    gameShowcase3Title: "未知冒险",
+    gameShowcase3Body: "深入洞穴与废弃建筑，揭开荒岛隐藏的秘密。",
+    gameFeature1Title: "绝境孤岛",
+    gameFeature1Body: "面对饥饿、口渴、疲劳等生存压力，合理管理资源，在孤岛上扎稳根基。",
+    gameFeature2Title: "招募同盟",
+    gameFeature2Body: "寻找并招募可靠伙伴，组建你的生存团队，用不同角色能力应对挑战。",
+    gameFeature3Title: "未知冒险",
+    gameFeature3Body: "探索神秘岛屿角落，黑暗洞穴和废弃建筑会不断揭开荒岛真相。",
+    gameFeature4Title: "天眼之力",
+    gameFeature4Body: "掌握特殊能力，看破强敌弱点，在战略战斗中提升属性与能力。",
+    gameFeature5Title: "万卷秘典",
+    gameFeature5Body: "收集古老秘典与知识，学习强大技能，掌握秘技决定最终胜局。",
+    gameFeature6Title: "制作系统",
+    gameFeature6Body: "收集材料，制作工具、武器、装备与生存必需品，提升战斗和生存能力。",
+    gameFeature7Title: "危险挑战",
+    gameFeature7Body: "与岛上的野兽和其他危险生物战斗，每一次战斗都是生死抉择。",
+    gameFeature8Title: "技能成长",
+    gameFeature8Body: "通过不断实践提升技能，解锁新制作配方和能力，成为荒岛生存专家。",
+    gameFeature9Title: "解谜元素",
+    gameFeature9Body: "解开岛上的谜题与秘密，发现遗迹真相，每个谜题都是故事的一部分。",
+    gameGalleryKicker: "VISUAL ARCHIVE",
+    gameGalleryTitle: "游戏画面",
+    gameGalleryLead: "点击缩略图切换预览，快速浏览荒岛大赢家的关键场景。",
+    gameGallery1Title: "绝境孤岛",
+    gameGallery1Body: "荒岛冒险争资源，独狼突围夺生机。",
+    gameGallery2Title: "招募同盟",
+    gameGallery2Body: "集结可靠伙伴，携手绝境求生。",
+    gameGallery3Title: "天眼之力",
+    gameGallery3Body: "看破强敌弱点，用智慧突破危局。",
+    gameGallery4Title: "未知冒险",
+    gameGallery4Body: "不停探索洞穴与遗迹，揭开荒岛生存史。",
+    gameGallery5Title: "万卷秘典",
+    gameGallery5Body: "博览群书掌握秘技，向荒野称王迈进。",
+    gameCtaKicker: "READY FOR THE ISLAND",
+    gameCtaTitle: "踏上荒岛，赢下你的生存战。",
+    gameCtaLead: "查看产品矩阵，继续探索 Singularity Games 的更多动态世界。",
+    gameCtaButton: "返回产品",
   },
   en: {
     navHome: "Home",
@@ -155,7 +218,7 @@ const translations = {
     product1Body: "Explore mysterious islands and experience a new generation of adventure and challenge.",
     product2Title: "AI Dialogue Painter",
     product2Body: "Turn ideas into polished artwork through advanced conversational AI creation.",
-    product3Title: "Island Master",
+    product3Title: "Island Winner",
     product3Body: "Collect legendary explorers and survive on mysterious islands in an adventure game.",
     product4Body:
       "A Japanese chat keyboard and AI assistant designed to make everyday communication feel natural.",
@@ -261,6 +324,70 @@ const translations = {
     ctaButton: "Start Exploring",
     footerTagline: "Leader in innovative games and AI experiences",
     footerContact: "Contact Us",
+    gameKicker: "SURVIVAL ADVENTURE",
+    gameTitle: "Island Winner",
+    gameLead:
+      "A challenging idle adventure where you survive, recruit allies, and uncover a mysterious island.",
+    gamePrimaryAction: "View Features",
+    gameSecondaryAction: "Game Screens",
+    gameSignal1: "Island Survival",
+    gameSignal2: "Core Systems",
+    gameSignal3: "Explore and Grow",
+    gameStoryKicker: "GAME BACKGROUND",
+    gameStoryTitle: "Game Background",
+    gameStoryBody1:
+      "In this challenging idle adventure, you become an explorer obsessed with the world's unsolved mysteries. A sudden storm destroys your ship and throws you into a brutal test.",
+    gameStoryBody2:
+      "When you wake, you are alone on the shore of an unfamiliar island. The calm surface hides predators, ruins, scarce resources, and difficult choices.",
+    gameStoryBody3:
+      "Manage resources, build shelter, craft tools, recruit allies, and survive in a wilderness full of danger. Each expedition reveals more of the island's secrets.",
+    gameStoryBody4:
+      "As your skills grow, stronger enemies and harsher environments appear. Every challenge becomes a step toward becoming the island's true winner.",
+    gameFeaturesKicker: "FEATURE MATRIX",
+    gameFeaturesTitle: "Game Features",
+    gameFeaturesLead:
+      "Survival, allies, ruins, crafting, combat, and puzzle discovery combine into one looping island adventure.",
+    gameShowcase1Title: "Recruit Allies",
+    gameShowcase1Body: "Gather reliable partners and face survival challenges together.",
+    gameShowcase2Title: "Eye Power",
+    gameShowcase2Body: "Read enemy weaknesses and outsmart powerful threats.",
+    gameShowcase3Title: "Unknown Adventure",
+    gameShowcase3Body: "Enter caves and abandoned structures to uncover island secrets.",
+    gameFeature1Title: "Desperate Island",
+    gameFeature1Body: "Manage hunger, thirst, fatigue, and limited resources to establish a foothold.",
+    gameFeature2Title: "Recruit Allies",
+    gameFeature2Body: "Find reliable companions and combine their unique abilities against danger.",
+    gameFeature3Title: "Unknown Adventure",
+    gameFeature3Body: "Explore hidden corners, dark caves, and ruins that reveal the island's truth.",
+    gameFeature4Title: "Eye Power",
+    gameFeature4Body: "Use special vision to detect enemy weaknesses and improve combat strategy.",
+    gameFeature5Title: "Secret Scrolls",
+    gameFeature5Body: "Collect ancient knowledge, learn powerful skills, and master decisive techniques.",
+    gameFeature6Title: "Crafting System",
+    gameFeature6Body: "Gather materials to create tools, weapons, gear, and survival supplies.",
+    gameFeature7Title: "Dangerous Trials",
+    gameFeature7Body: "Fight wild beasts and island threats where every battle can decide survival.",
+    gameFeature8Title: "Skill Growth",
+    gameFeature8Body: "Improve skills through practice, unlock recipes, and become a survival expert.",
+    gameFeature9Title: "Puzzle Elements",
+    gameFeature9Body: "Solve island mysteries and discover how each puzzle connects to the story.",
+    gameGalleryKicker: "VISUAL ARCHIVE",
+    gameGalleryTitle: "Game Screens",
+    gameGalleryLead: "Click a thumbnail to switch the preview and scan key island scenes.",
+    gameGallery1Title: "Desperate Island",
+    gameGallery1Body: "Compete for resources and fight for a way out.",
+    gameGallery2Title: "Recruit Allies",
+    gameGallery2Body: "Build a reliable team for the hardest survival loops.",
+    gameGallery3Title: "Eye Power",
+    gameGallery3Body: "Break through danger by reading enemy weaknesses.",
+    gameGallery4Title: "Unknown Adventure",
+    gameGallery4Body: "Explore caves and ruins to reveal the island's hidden past.",
+    gameGallery5Title: "Secret Scrolls",
+    gameGallery5Body: "Study ancient scrolls and move toward ruling the wilds.",
+    gameCtaKicker: "READY FOR THE ISLAND",
+    gameCtaTitle: "Step onto the island and win your survival run.",
+    gameCtaLead: "Return to the product matrix and explore more dynamic worlds from Singularity Games.",
+    gameCtaButton: "Back to Products",
   },
   ja: {
     navHome: "ホーム",
@@ -287,7 +414,7 @@ const translations = {
     product1Body: "神秘的な島を探索し、これまでにない冒険と挑戦を体験できます。",
     product2Title: "AI 対話ペインター",
     product2Body: "先進的な AI 技術で、アイデアを美しいアート作品へ変換します。",
-    product3Title: "アイランドマスター",
+    product3Title: "アイランドウィナー",
     product3Body: "謎の島を舞台に、探索者としてサバイバルに挑むアドベンチャーゲームです。",
     product4Body:
       "日本語シーンで自然に交流できる、チャットキーボードと AI チャットアシスタントです。",
@@ -390,6 +517,70 @@ const translations = {
     ctaButton: "今すぐ探索",
     footerTagline: "革新的なゲームと AI 体験のリーダー",
     footerContact: "お問い合わせ",
+    gameKicker: "SURVIVAL ADVENTURE",
+    gameTitle: "アイランドウィナー",
+    gameLead:
+      "謎の荒島で生き残り、仲間を集め、秘密を解き明かす放置系アドベンチャーゲームです。",
+    gamePrimaryAction: "ゲーム特色を見る",
+    gameSecondaryAction: "ゲーム画面",
+    gameSignal1: "荒島サバイバル",
+    gameSignal2: "コアシステム",
+    gameSignal3: "探索と成長",
+    gameStoryKicker: "GAME BACKGROUND",
+    gameStoryTitle: "ゲーム背景",
+    gameStoryBody1:
+      "この挑戦的な放置系アドベンチャーで、あなたは世界の未解決の謎を追う探索者です。突然の嵐に船を飲み込まれ、過酷な試練が始まります。",
+    gameStoryBody2:
+      "目を覚ますと、見知らぬ島の浜辺にひとり。穏やかな景色の裏には、凶暴な獣、未知の遺跡、限られた資源が潜んでいます。",
+    gameStoryBody3:
+      "資源を管理し、避難所を建て、道具を作り、仲間を集めながら危険な荒野で生き延びます。探索を重ねるほど島の秘密が明らかになります。",
+    gameStoryBody4:
+      "スキルが成長するほど、より強い敵と厳しい環境が現れます。すべての挑戦が、荒島の真の勝者へ近づく一歩です。",
+    gameFeaturesKicker: "FEATURE MATRIX",
+    gameFeaturesTitle: "ゲーム特色",
+    gameFeaturesLead:
+      "サバイバル、仲間集め、遺跡探索、クラフト、戦闘、謎解きが一体となった荒島アドベンチャーです。",
+    gameShowcase1Title: "仲間を集める",
+    gameShowcase1Body: "頼れる仲間を集め、絶境のサバイバルに挑みます。",
+    gameShowcase2Title: "天眼の力",
+    gameShowcase2Body: "敵の弱点を見抜き、強敵に知略で立ち向かいます。",
+    gameShowcase3Title: "未知の冒険",
+    gameShowcase3Body: "洞窟や廃墟に踏み込み、島に隠された秘密を解き明かします。",
+    gameFeature1Title: "絶境孤島",
+    gameFeature1Body: "飢え、渇き、疲労と限られた資源を管理し、島で生存基盤を築きます。",
+    gameFeature2Title: "仲間募集",
+    gameFeature2Body: "頼れる仲間を探し、各キャラクターの能力を組み合わせて危機に対応します。",
+    gameFeature3Title: "未知の冒険",
+    gameFeature3Body: "島の奥地、暗い洞窟、廃墟を探索し、隠された真実に近づきます。",
+    gameFeature4Title: "天眼の力",
+    gameFeature4Body: "特殊な力で敵の弱点を見抜き、戦略的な戦闘で能力を高めます。",
+    gameFeature5Title: "万巻秘典",
+    gameFeature5Body: "古い秘典と知識を集め、強力なスキルを習得して勝機をつかみます。",
+    gameFeature6Title: "クラフト",
+    gameFeature6Body: "材料を集め、道具、武器、装備、生存用品を作り戦闘力を高めます。",
+    gameFeature7Title: "危険な挑戦",
+    gameFeature7Body: "島の獣や危険生物と戦い、すべての戦闘で生死の選択を迫られます。",
+    gameFeature8Title: "スキル成長",
+    gameFeature8Body: "実践を通じてスキルを伸ばし、新しいレシピと能力を解放します。",
+    gameFeature9Title: "謎解き要素",
+    gameFeature9Body: "島の謎と秘密を解き、遺跡の真相と物語のつながりを発見します。",
+    gameGalleryKicker: "VISUAL ARCHIVE",
+    gameGalleryTitle: "ゲーム画面",
+    gameGalleryLead: "サムネイルをクリックして、荒島の主要シーンを切り替えられます。",
+    gameGallery1Title: "絶境孤島",
+    gameGallery1Body: "資源を奪い合い、孤島からの突破口を探します。",
+    gameGallery2Title: "仲間募集",
+    gameGallery2Body: "頼れる仲間とチームを組み、過酷な生存に挑みます。",
+    gameGallery3Title: "天眼の力",
+    gameGallery3Body: "強敵の弱点を見抜き、危機を突破します。",
+    gameGallery4Title: "未知の冒険",
+    gameGallery4Body: "洞窟と遺跡を探索し、島の隠された過去を明らかにします。",
+    gameGallery5Title: "万巻秘典",
+    gameGallery5Body: "古代の秘典を学び、荒野を制する力を得ます。",
+    gameCtaKicker: "READY FOR THE ISLAND",
+    gameCtaTitle: "荒島へ踏み出し、生存戦に勝利しよう。",
+    gameCtaLead: "プロダクト一覧に戻り、Singularity Games のさらに多くの世界を探索しましょう。",
+    gameCtaButton: "プロダクトへ戻る",
   },
 };
 
@@ -679,7 +870,9 @@ function spawnBurst(target, amount = 22) {
 }
 
 function setupTiltCards() {
-  document.querySelectorAll(".product-card, .value-card, .team-card, .contact-card, .contact-minimal-panel").forEach((card) => {
+  document.querySelectorAll(
+    ".product-card, .value-card, .team-card, .contact-card, .contact-minimal-panel, .game-hud-panel, .game-shot-card, .game-feature-card, .game-gallery-viewer",
+  ).forEach((card) => {
     card.addEventListener("pointermove", (event) => {
       const rect = card.getBoundingClientRect();
       const x = event.clientX - rect.left;
@@ -743,6 +936,7 @@ function applyLanguage(lang, burstTarget = null) {
 
   updateHeroTitleEffects(nextLang);
   updateTeamDetail(activeMemberKey);
+  updateGameGalleryText();
   updateCopyStatus(dictionary.contactCopyIdle);
   storeLanguage(nextLang);
   if (burstTarget) spawnBurst(burstTarget, 20);
@@ -887,6 +1081,45 @@ function setupEmailCopy() {
   });
 }
 
+function updateGameGalleryText() {
+  const active = document.querySelector(".game-gallery-thumbs button.is-active");
+  const title = document.getElementById("gameGalleryTitleText");
+  const body = document.getElementById("gameGalleryBodyText");
+  if (!active || !title || !body) return;
+
+  const titleKey = active.dataset.galleryTitle;
+  const bodyKey = active.dataset.galleryBody;
+  const dictionary = translations[currentLang] || translations.zh;
+  title.dataset.i18n = titleKey;
+  body.dataset.i18n = bodyKey;
+  title.textContent = dictionary[titleKey] || translations.zh[titleKey] || title.textContent;
+  body.textContent = dictionary[bodyKey] || translations.zh[bodyKey] || body.textContent;
+}
+
+function setupGameGallery() {
+  const viewer = document.getElementById("gameGalleryImage");
+  const buttons = document.querySelectorAll(".game-gallery-thumbs button");
+  if (!viewer || !buttons.length) return;
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const image = button.dataset.galleryImage;
+      if (!image) return;
+
+      buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+      viewer.classList.add("is-switching");
+      window.setTimeout(() => {
+        viewer.src = image;
+        updateGameGalleryText();
+        viewer.classList.remove("is-switching");
+      }, 120);
+      spawnBurst(button, 18);
+    });
+  });
+
+  updateGameGalleryText();
+}
+
 resizeCanvas();
 setupPointer();
 setupTiltCards();
@@ -894,6 +1127,7 @@ setupReveal();
 setupLanguage();
 setupTeamDirectory();
 setupEmailCopy();
+setupGameGallery();
 updateHeroTitleEffects(currentLang);
 setupVideoFallback();
 
