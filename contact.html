@@ -8,7 +8,7 @@
       content="野蛮僧侣技术支持与联系方式。"
     />
     <title>联系我们 - Singularity Games / 奇点游戏</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=contact-layout-3" />
   </head>
   <body>
     <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
@@ -57,107 +57,36 @@
 
     <main>
       <section id="contact-page" class="section contact-section">
-        <div class="contact-hero-panel" data-reveal>
-          <div class="about-breadcrumb" aria-label="当前位置">
-            <a href="./index.html#home" data-i18n="breadcrumbHome">首页</a>
-            <span>/</span>
-            <span data-i18n="navContact">联系我们</span>
-          </div>
-          <div class="contact-hero-copy">
-            <span class="section-kicker" data-i18n="contactKicker">TECHNICAL SUPPORT</span>
-            <h1 data-i18n="contactTitle">联系我们</h1>
-            <p data-i18n="contactLead">游戏支持 / 错误报告 / 功能请求</p>
-          </div>
-          <div class="contact-orbit" aria-hidden="true">
-            <span></span>
-            <span></span>
-          </div>
-        </div>
+        <article class="contact-minimal-panel reveal-card" data-reveal>
+          <span class="contact-glow-dot" aria-hidden="true"></span>
+          <h1 data-i18n="contactTitle">联系我们</h1>
 
-        <div class="contact-grid">
-          <div class="contact-info-stack">
-            <article class="contact-card contact-primary reveal-card" style="--accent: 10 100% 66%">
-              <div class="contact-card-topline">
-                <span data-i18n="contactBlock1Label">SUPPORT PORTAL</span>
-                <span>ONLINE</span>
-              </div>
-              <h2 data-i18n="contactBlock1Title">联系我们</h2>
-              <p class="contact-card-subtitle" data-i18n="contactBlock1Subtitle">
-                游戏问题、错误报告或请求
-              </p>
-              <p class="contact-jp" data-i18n="contactPrimaryBody">
-                如有任何关于游戏的问题、错误报告或请求，请发送至以下电子邮件地址。
-              </p>
-              <p data-i18n="contactSupportBody">
-                如有任何疑问、错误报告或功能请求，请发送电子邮件至：
-              </p>
-              <div class="contact-mail-row">
-                <a href="mailto:sgames@hanlian.com">sgames@hanlian.com</a>
-                <button type="button" data-copy-email="sgames@hanlian.com" data-burst data-i18n="contactCopy">
-                  复制邮箱
-                </button>
-              </div>
-            </article>
-
-            <article class="contact-card contact-reference-panel reveal-card" style="--accent: 190 100% 62%">
-              <div class="contact-reference-row">
-                <span class="contact-card-label" data-i18n="contactBlock2Label">LANGUAGE MATRIX</span>
-                <h3 data-i18n="contactLanguagesTitle">支持的语言</h3>
-                <p data-i18n="contactLanguagesValue">日语/中文/英语</p>
-              </div>
-
-              <div class="contact-reference-row">
-                <span class="contact-card-label" data-i18n="contactBlock3Label">DEVELOPER NODE</span>
-                <h3 data-i18n="contactDeveloperTitle">开发者</h3>
-                <p data-i18n="contactDeveloperValue">汉联游戏</p>
-              </div>
-
-              <div class="contact-reference-footer">
-                <span data-i18n="contactFooterNote">《野蛮僧侣》 © 2026 汉联游戏</span>
-              </div>
-            </article>
+          <div class="contact-minimal-copy">
+            <p data-i18n="contactPrimaryBody">
+              如有任何关于游戏的问题、错误报告或请求，请发送至以下电子邮件地址。
+            </p>
+            <p data-i18n="contactSupportBody">
+              如有任何疑问、错误报告或功能请求，请发送电子邮件至：
+            </p>
+            <a class="contact-minimal-mail" href="mailto:sgames@hanlian.com">sgames@hanlian.com</a>
           </div>
 
-          <aside class="contact-visual reveal-card" aria-label="野蛮僧侣支持场景">
-            <img
-              src="./assets/products/roast-master.png"
-              alt="野蛮僧侣产品视觉"
-              loading="lazy"
-            />
-            <div class="contact-console">
-              <span>SUPPORT.HANLIAN / ONLINE</span>
-              <strong>WILD MONK</strong>
-              <small>BUG REPORTS + FEATURE REQUESTS</small>
+          <div class="contact-minimal-meta">
+            <div class="contact-minimal-group">
+              <h2 data-i18n="contactLanguagesTitle">支持的语言</h2>
+              <p data-i18n="contactLanguagesValue">日语/中文/英语</p>
             </div>
-          </aside>
-        </div>
 
-        <div class="contact-status reveal-card" aria-live="polite">
-          <span data-i18n="contactStatusLabel">SUPPORT CHANNEL / COPY STATUS</span>
-          <span id="copyStatus" data-i18n="contactCopyIdle">邮箱已准备就绪</span>
-        </div>
+            <div class="contact-minimal-group">
+              <h2 data-i18n="contactDeveloperTitle">开发者</h2>
+              <p data-i18n="contactDeveloperValue">汉联游戏</p>
+            </div>
+          </div>
+
+          <p class="contact-minimal-footer" data-i18n="contactFooterNote">《野蛮僧侣》 © 2026 汉联游戏</p>
+        </article>
       </section>
     </main>
-
-    <footer id="contact" class="site-footer">
-      <div class="footer-scan" aria-hidden="true"></div>
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <span class="brand-mark">
-            <span></span>
-          </span>
-          <div>
-            <strong>Singularity Games / 奇点游戏</strong>
-            <p data-i18n="footerTagline">创新游戏与 AI 体验的领导者</p>
-          </div>
-        </div>
-        <div class="footer-contact">
-          <strong data-i18n="footerContact">联系我们</strong>
-          <a href="mailto:sgames@hanlian.com">sgames@hanlian.com</a>
-        </div>
-      </div>
-      <p class="copyright">© 2026 Singularity Games. 保留所有权利。</p>
-    </footer>
 
     <script src="./app.js"></script>
   </body>

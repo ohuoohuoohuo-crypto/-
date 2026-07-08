@@ -478,7 +478,7 @@ function spawnBurst(target, amount = 22) {
 }
 
 function setupTiltCards() {
-  document.querySelectorAll(".product-card, .value-card, .team-card, .contact-card").forEach((card) => {
+  document.querySelectorAll(".product-card, .value-card, .team-card, .contact-card, .contact-minimal-panel").forEach((card) => {
     card.addEventListener("pointermove", (event) => {
       const rect = card.getBoundingClientRect();
       const x = event.clientX - rect.left;
