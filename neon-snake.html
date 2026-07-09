@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="蛇蛇·贪吃蛇，霓虹风格的休闲贪吃蛇限时挑战。"
+    />
+    <title>蛇蛇·贪吃蛇 - Singularity Games / 奇点游戏</title>
+    <link rel="stylesheet" href="./styles.css?v=neon-snake-1" />
+  </head>
+  <body>
+    <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+    <div id="burstLayer" class="burst-layer" aria-hidden="true"></div>
+
+    <div class="stage-bg" aria-hidden="true">
+      <video
+        class="stage-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="./assets/homepage-pipe-animation.mp4" type="video/mp4" />
+      </video>
+      <div class="video-shade"></div>
+      <div class="grid-plane"></div>
+      <div class="light-trails"></div>
+      <div class="scan-field"></div>
+    </div>
+
+    <header class="site-header" data-reveal>
+      <a class="brand" href="./index.html#home" aria-label="Singularity Games home">
+        <span class="brand-mark">
+          <span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Singularity Games</strong>
+          <small>奇点游戏</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="主导航">
+        <a href="./index.html#home" data-i18n="navHome">首页</a>
+        <a class="is-current" href="./index.html#products" data-i18n="navProducts">产品</a>
+        <a href="./about.html" data-i18n="navAbout">关于我们</a>
+        <a href="./contact.html" data-i18n="navContact">联系我们</a>
+      </nav>
+
+      <div class="language-switch" aria-label="语言切换">
+        <button class="is-active" type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="en">English</button>
+        <button type="button" data-lang="ja">日本語</button>
+      </div>
+    </header>
+
+    <main class="snake-detail">
+      <section class="game-detail-hero snake-hero">
+        <div class="snake-hero-backdrop" aria-hidden="true">
+          <img src="./assets/snake/pressure-field.jpg" alt="" />
+        </div>
+
+        <div class="game-detail-hero-shell snake-hero-shell">
+          <div class="game-detail-copy snake-detail-copy" data-reveal>
+            <div class="about-breadcrumb game-breadcrumb" aria-label="当前位置">
+              <a href="./index.html#home" data-i18n="breadcrumbHome">首页</a>
+              <span>/</span>
+              <a href="./index.html#products" data-i18n="navProducts">产品</a>
+              <span>/</span>
+              <span data-i18n="snakeTitle">蛇蛇·贪吃蛇</span>
+            </div>
+            <span class="section-kicker" data-i18n="snakeKicker">NEON SNAKE ARENA</span>
+            <h1 data-i18n="snakeTitle">蛇蛇·贪吃蛇</h1>
+            <p data-i18n="snakeLead">
+              霓虹风格的休闲贪吃蛇，吃掉发光能量点延长身体，抓住加速时机穿过复杂蛇阵，在限时挑战中坚持更久。
+            </p>
+
+            <div class="game-detail-actions">
+              <a class="neon-button primary snake-primary" href="#snake-features" data-burst data-i18n="snakePrimaryAction">玩法特色</a>
+              <a class="neon-button secondary" href="#game-gallery" data-burst data-i18n="snakeSecondaryAction">游戏画面</a>
+            </div>
+
+            <div class="game-signal-grid snake-signal-grid" aria-label="蛇蛇贪吃蛇玩法标签">
+              <div>
+                <strong>05</strong>
+                <span data-i18n="snakeSignal1">限时挑战</span>
+              </div>
+              <div>
+                <strong>06</strong>
+                <span data-i18n="snakeSignal2">实机画面</span>
+              </div>
+              <div>
+                <strong>BOOST</strong>
+                <span data-i18n="snakeSignal3">加速走位</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="snake-hero-media reveal-card" data-reveal>
+            <div class="snake-orbit-rings" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img
+              class="snake-hero-shot"
+              src="./assets/snake/speed-run.jpg"
+              alt="蛇蛇·贪吃蛇高速穿行游戏画面"
+              loading="eager"
+            />
+            <img
+              class="snake-hero-model"
+              src="./assets/products/neon-snake.png"
+              alt="蛇蛇·贪吃蛇霓虹模型"
+              loading="eager"
+            />
+            <div class="snake-hero-hud" aria-hidden="true">
+              <span>SNAKE.NODE ONLINE</span>
+              <strong>ENERGY + BOOST</strong>
+              <small>LIMITED TIME / POSITIONING / RISK CONTROL</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="snake-intro" class="section snake-story-section">
+        <div class="game-story-grid snake-story-grid">
+          <div class="story-copy game-story-copy snake-story-copy" data-reveal>
+            <span class="section-kicker" data-i18n="snakeIntroKicker">GAME INTRO</span>
+            <h2 data-i18n="snakeIntroTitle">游戏介绍</h2>
+            <p data-i18n="snakeIntroBody1">
+              《蛇蛇·贪吃蛇》把经典贪吃蛇玩法做成更轻快的限时挑战。玩家操控自己的蛇在深色六边形地图中移动，收集散落的彩色光点，不断变长，并尽量避免蛇头撞上其他蛇身或危险路线。
+            </p>
+            <p data-i18n="snakeIntroBody2">
+              游戏采用左侧虚拟摇杆控制方向，右侧闪电按钮用于短时加速。地图上会出现多条蛇和不同外观，蛇身、头像、名称与地区标签让画面更有游乐场氛围。
+            </p>
+            <p data-i18n="snakeIntroBody3">
+              核心策略不只是吃点成长，而是在越来越拥挤的路线中保持蛇头安全。身体变长后转向空间会变少，加速能帮你穿过空隙，也会让操作风险上升。每一次冲刺都需要判断空间、角度和节奏。
+            </p>
+          </div>
+
+          <aside class="snake-control-panel reveal-card" data-snake-panel aria-label="蛇蛇贪吃蛇操作演示">
+            <span class="game-hud-label" data-i18n="snakePanelKicker">BOOST ROUTE TEST</span>
+            <div class="snake-route-screen">
+              <div class="snake-route-orb" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <strong id="snakeRouteTitle" data-i18n="snakeRouteDirectionTitle">控制方向</strong>
+              <p id="snakeRouteBody" data-i18n="snakeRouteDirectionBody">使用左侧虚拟摇杆控制蛇身转向，优先保持节奏，不要急转撞上蛇身。</p>
+              <div class="snake-route-meter" aria-hidden="true">
+                <span></span>
+              </div>
+              <small id="snakeRouteStatus" data-i18n="snakeRouteStatusDirection">ROUTE / STABLE</small>
+            </div>
+            <div class="snake-route-tabs" aria-label="操作策略切换">
+              <button class="is-active" type="button" data-snake-route="direction" data-burst data-i18n="snakeRouteDirection">方向</button>
+              <button type="button" data-snake-route="energy" data-burst data-i18n="snakeRouteEnergy">吃点</button>
+              <button type="button" data-snake-route="boost" data-burst data-i18n="snakeRouteBoost">加速</button>
+              <button type="button" data-snake-route="risk" data-burst data-i18n="snakeRouteRisk">控险</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="snake-features" class="section snake-feature-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="snakeFeaturesKicker">FEATURE MATRIX</span>
+          <h2 data-i18n="snakeFeaturesTitle">玩法特色</h2>
+          <p data-i18n="snakeFeaturesLead">
+            从能量点收集、短时加速到路线预判，每个系统都围绕“轻快成长、即时风险、限时生存”展开。
+          </p>
+        </div>
+
+        <div class="game-showcase-grid snake-showcase-grid">
+          <article class="game-shot-card snake-shot-card reveal-card" tabindex="0" style="--accent: 102 100% 58%">
+            <img src="./assets/snake/energy-pickup.jpg" alt="能量点收集游戏画面" loading="lazy" />
+            <div>
+              <span>ENERGY FIELD</span>
+              <h3 data-i18n="snakeShowcase1Title">发光能量点</h3>
+              <p data-i18n="snakeShowcase1Body">收集彩色光点让蛇身变长，路线越长，回避难度也越高。</p>
+            </div>
+          </article>
+          <article class="game-shot-card snake-shot-card reveal-card" tabindex="0" style="--accent: 193 100% 62%">
+            <img src="./assets/snake/joystick-boost.jpg" alt="摇杆与加速操作画面" loading="lazy" />
+            <div>
+              <span>BOOST INPUT</span>
+              <h3 data-i18n="snakeShowcase2Title">加速冲刺</h3>
+              <p data-i18n="snakeShowcase2Body">短按闪电按钮瞬间提速，穿过空隙或摆脱危险路线。</p>
+            </div>
+          </article>
+          <article class="game-shot-card snake-shot-card reveal-card" tabindex="0" style="--accent: 314 100% 68%">
+            <img src="./assets/snake/multi-snake-grid.jpg" alt="多蛇同屏蛇阵画面" loading="lazy" />
+            <div>
+              <span>CROWD ROUTE</span>
+              <h3 data-i18n="snakeShowcase3Title">高压蛇阵</h3>
+              <p data-i18n="snakeShowcase3Body">多条蛇同时移动，观察路线与空隙，寻找更安全的成长空间。</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="game-feature-grid snake-feature-grid">
+          <article class="game-feature-card snake-feature-card reveal-card" tabindex="0">
+            <span>01</span>
+            <h3 data-i18n="snakeFeature1Title">轻快蛇阵挑战</h3>
+            <p data-i18n="snakeFeature1Body">在布满蛇身和能量点的霓虹地图中移动，寻找空隙、保持节奏，体验更紧张的休闲贪吃蛇。</p>
+          </article>
+          <article class="game-feature-card snake-feature-card reveal-card" tabindex="0">
+            <span>02</span>
+            <h3 data-i18n="snakeFeature2Title">加速冲刺</h3>
+            <p data-i18n="snakeFeature2Body">右侧闪电按钮带来瞬间爆发，可用于穿过空隙、快速吃点或脱离危险路线，也会提高操作风险。</p>
+          </article>
+          <article class="game-feature-card snake-feature-card reveal-card" tabindex="0">
+            <span>03</span>
+            <h3 data-i18n="snakeFeature3Title">发光能量点</h3>
+            <p data-i18n="snakeFeature3Body">地图上密集分布彩色光点，收集后蛇身变长。路线越长，转向和回避的难度也越高。</p>
+          </article>
+          <article class="game-feature-card snake-feature-card reveal-card" tabindex="0">
+            <span>04</span>
+            <h3 data-i18n="snakeFeature4Title">定位与回避</h3>
+            <p data-i18n="snakeFeature4Body">观察前方蛇身和能量点分布，选择安全路线。贪吃一点可能收获更多，也可能把自己送进死角。</p>
+          </article>
+          <article class="game-feature-card snake-feature-card reveal-card" tabindex="0">
+            <span>05</span>
+            <h3 data-i18n="snakeFeature5Title">多样蛇皮肤</h3>
+            <p data-i18n="snakeFeature5Body">截图中包含机械头、皇冠灰蛇、红黄蛇、金龙蛇等不同外观，让每一局都有更鲜明的视觉变化。</p>
+          </article>
+          <article class="game-feature-card snake-feature-card reveal-card" tabindex="0">
+            <span>06</span>
+            <h3 data-i18n="snakeFeature6Title">限时生存节奏</h3>
+            <p data-i18n="snakeFeature6Body">顶部倒计时持续推动节奏，玩家需要在有限时间内吃到更多能量，同时保持蛇头安全。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section snake-rhythm-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="snakeRhythmKicker">CONTROL LOOP</span>
+          <h2 data-i18n="snakeRhythmTitle">操作与对局节奏</h2>
+          <p data-i18n="snakeRhythmLead">简单操作形成高压判断：控制方向、吃点成长、加速穿行，再用路线意识控制风险。</p>
+        </div>
+
+        <div class="sayly-steps-grid snake-steps-grid">
+          <article class="sayly-step-card snake-step-card reveal-card" tabindex="0">
+            <span>1</span>
+            <h3 data-i18n="snakeStep1Title">控制方向</h3>
+            <p data-i18n="snakeStep1Body">使用左下角虚拟摇杆控制蛇身方向，保持平滑转向，避免蛇头撞上其他蛇身。</p>
+          </article>
+          <article class="sayly-step-card snake-step-card reveal-card" tabindex="0">
+            <span>2</span>
+            <h3 data-i18n="snakeStep2Title">吃点成长</h3>
+            <p data-i18n="snakeStep2Body">优先收集密集的彩色光点，让身体长度快速提升，同时留意下一次转向空间。</p>
+          </article>
+          <article class="sayly-step-card snake-step-card reveal-card" tabindex="0">
+            <span>3</span>
+            <h3 data-i18n="snakeStep3Title">加速穿行</h3>
+            <p data-i18n="snakeStep3Body">遇到狭窄空隙或远处能量点时短按加速，但要提前判断路线，避免冲进蛇身。</p>
+          </article>
+          <article class="sayly-step-card snake-step-card reveal-card" tabindex="0">
+            <span>4</span>
+            <h3 data-i18n="snakeStep4Title">控制风险</h3>
+            <p data-i18n="snakeStep4Body">身体越长越容易限制自己的回旋空间。不要盲目加速，尽量利用开阔区域调整方向。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="game-gallery" class="section game-gallery-section snake-gallery-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="snakeGalleryKicker">VISUAL ARCHIVE</span>
+          <h2 data-i18n="snakeGalleryTitle">游戏画面</h2>
+          <p data-i18n="snakeGalleryLead">点击缩略图切换预览，浏览能量收集、加速冲刺、多蛇蛇阵与高压控场。</p>
+        </div>
+
+        <div class="game-gallery-layout snake-gallery-layout" data-reveal>
+          <div class="game-gallery-viewer snake-gallery-viewer">
+            <img
+              id="gameGalleryImage"
+              src="./assets/snake/energy-pickup.jpg"
+              alt="蛇蛇·贪吃蛇游戏画面预览"
+            />
+            <div class="game-gallery-caption">
+              <span>LIVE PREVIEW</span>
+              <h3 id="gameGalleryTitleText" data-i18n="snakeGallery1Title">能量点收集</h3>
+              <p id="gameGalleryBodyText" data-i18n="snakeGallery1Body">在六边形地图里收集彩色光点，身体不断延长。</p>
+            </div>
+          </div>
+
+          <div class="game-gallery-thumbs snake-gallery-thumbs" aria-label="蛇蛇贪吃蛇游戏截图缩略图">
+            <button class="is-active" type="button" data-gallery-image="./assets/snake/energy-pickup.jpg" data-gallery-title="snakeGallery1Title" data-gallery-body="snakeGallery1Body" data-burst>
+              <img src="./assets/snake/energy-pickup.jpg" alt="能量点收集缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/snake/long-control.jpg" data-gallery-title="snakeGallery2Title" data-gallery-body="snakeGallery2Body" data-burst>
+              <img src="./assets/snake/long-control.jpg" alt="长蛇控场缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/snake/pressure-field.jpg" data-gallery-title="snakeGallery3Title" data-gallery-body="snakeGallery3Body" data-burst>
+              <img src="./assets/snake/pressure-field.jpg" alt="高压蛇阵画面缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/snake/multi-snake-grid.jpg" data-gallery-title="snakeGallery4Title" data-gallery-body="snakeGallery4Body" data-burst>
+              <img src="./assets/snake/multi-snake-grid.jpg" alt="多蛇同屏蛇阵缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/snake/joystick-boost.jpg" data-gallery-title="snakeGallery5Title" data-gallery-body="snakeGallery5Body" data-burst>
+              <img src="./assets/snake/joystick-boost.jpg" alt="摇杆与加速操作缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/snake/speed-run.jpg" data-gallery-title="snakeGallery6Title" data-gallery-body="snakeGallery6Body" data-burst>
+              <img src="./assets/snake/speed-run.jpg" alt="高速穿行缩略图" loading="lazy" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section game-detail-cta snake-download-cta" data-reveal>
+        <div class="cta-energy" aria-hidden="true">
+          <span class="cta-orbit cta-orbit-one"></span>
+          <span class="cta-orbit cta-orbit-two"></span>
+          <span class="cta-beam"></span>
+          <span class="cta-core"></span>
+        </div>
+        <div class="cta-inner">
+          <span class="section-kicker" data-i18n="snakeCtaKicker">ENTER THE NEON GRID</span>
+          <h2 data-i18n="snakeCtaTitle">进入霓虹蛇阵</h2>
+          <p data-i18n="snakeCtaLead">用定位、加速和判断力，在限定时间内吃掉更多能量，让蛇蛇不断变长并安全活到最后。</p>
+          <div class="sayly-download-actions snake-download-actions">
+            <a class="neon-button primary snake-primary" href="./contact.html" data-burst data-i18n="snakeCtaPrimary">联系与支持</a>
+            <a class="neon-button secondary" href="./index.html#products" data-burst data-i18n="snakeCtaSecondary">返回产品</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="footer-scan" aria-hidden="true"></div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">
+            <span></span>
+          </span>
+          <div>
+            <strong>Singularity Games / 奇点游戏</strong>
+            <p data-i18n="footerTagline">创新游戏与 AI 体验的领导者</p>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <strong data-i18n="footerContact">联系我们</strong>
+          <a href="mailto:sgames@hanlian.com">sgames@hanlian.com</a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Singularity Games. 保留所有权利。</p>
+    </footer>
+
+    <script src="./app.js?v=neon-snake-1"></script>
+  </body>
+</html>

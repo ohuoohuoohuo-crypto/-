@@ -1304,6 +1304,274 @@ Object.entries(savageTranslations).forEach(([lang, dictionary]) => {
   Object.assign(translations[lang], dictionary);
 });
 
+const snakeTranslations = {
+  zh: {
+    snakeKicker: "NEON SNAKE ARENA",
+    snakeTitle: "蛇蛇·贪吃蛇",
+    snakeLead: "霓虹风格的休闲贪吃蛇，吃掉发光能量点延长身体，抓住加速时机穿过复杂蛇阵，在限时挑战中坚持更久。",
+    snakePrimaryAction: "玩法特色",
+    snakeSecondaryAction: "游戏画面",
+    snakeSignal1: "限时挑战",
+    snakeSignal2: "实机画面",
+    snakeSignal3: "加速走位",
+    snakeIntroKicker: "GAME INTRO",
+    snakeIntroTitle: "游戏介绍",
+    snakeIntroBody1:
+      "《蛇蛇·贪吃蛇》把经典贪吃蛇玩法做成更轻快的限时挑战。玩家操控自己的蛇在深色六边形地图中移动，收集散落的彩色光点，不断变长，并尽量避免蛇头撞上其他蛇身或危险路线。",
+    snakeIntroBody2:
+      "游戏采用左侧虚拟摇杆控制方向，右侧闪电按钮用于短时加速。地图上会出现多条蛇和不同外观，蛇身、头像、名称与地区标签让画面更有游乐场氛围。",
+    snakeIntroBody3:
+      "核心策略不只是吃点成长，而是在越来越拥挤的路线中保持蛇头安全。身体变长后转向空间会变少，加速能帮你穿过空隙，也会让操作风险上升。每一次冲刺都需要判断空间、角度和节奏。",
+    snakePanelKicker: "BOOST ROUTE TEST",
+    snakeRouteDirection: "方向",
+    snakeRouteEnergy: "吃点",
+    snakeRouteBoost: "加速",
+    snakeRouteRisk: "控险",
+    snakeRouteDirectionTitle: "控制方向",
+    snakeRouteDirectionBody: "使用左侧虚拟摇杆控制蛇身转向，优先保持节奏，不要急转撞上蛇身。",
+    snakeRouteStatusDirection: "ROUTE / STABLE",
+    snakeRouteEnergyTitle: "吃点成长",
+    snakeRouteEnergyBody: "优先收集密集的彩色光点，让蛇身快速延长，同时给下一次转向留出空间。",
+    snakeRouteStatusEnergy: "ENERGY / GROWING",
+    snakeRouteBoostTitle: "加速穿行",
+    snakeRouteBoostBody: "短按闪电按钮完成瞬间提速，适合穿过空隙、抢能量点或摆脱危险。",
+    snakeRouteStatusBoost: "BOOST / ACTIVE",
+    snakeRouteRiskTitle: "控制风险",
+    snakeRouteRiskBody: "身体越长越容易被自己的路线限制，提前判断角度，尽量把风险留在身后。",
+    snakeRouteStatusRisk: "RISK / WATCHING",
+    snakeFeaturesKicker: "FEATURE MATRIX",
+    snakeFeaturesTitle: "玩法特色",
+    snakeFeaturesLead: "从能量点收集、短时加速到路线预判，每个系统都围绕“轻快成长、即时风险、限时生存”展开。",
+    snakeShowcase1Title: "发光能量点",
+    snakeShowcase1Body: "收集彩色光点让蛇身变长，路线越长，回避难度也越高。",
+    snakeShowcase2Title: "加速冲刺",
+    snakeShowcase2Body: "短按闪电按钮瞬间提速，穿过空隙或摆脱危险路线。",
+    snakeShowcase3Title: "高压蛇阵",
+    snakeShowcase3Body: "多条蛇同时移动，观察路线与空隙，寻找更安全的成长空间。",
+    snakeFeature1Title: "轻快蛇阵挑战",
+    snakeFeature1Body: "在布满蛇身和能量点的霓虹地图中移动，寻找空隙、保持节奏，体验更紧张的休闲贪吃蛇。",
+    snakeFeature2Title: "加速冲刺",
+    snakeFeature2Body: "右侧闪电按钮带来瞬间爆发，可用于穿过空隙、快速吃点或脱离危险路线，也会提高操作风险。",
+    snakeFeature3Title: "发光能量点",
+    snakeFeature3Body: "地图上密集分布彩色光点，收集后蛇身变长。路线越长，转向和回避的难度也越高。",
+    snakeFeature4Title: "定位与回避",
+    snakeFeature4Body: "观察前方蛇身和能量点分布，选择安全路线。贪吃一点可能收获更多，也可能把自己送进死角。",
+    snakeFeature5Title: "多样蛇皮肤",
+    snakeFeature5Body: "截图中包含机械头、皇冠灰蛇、红黄蛇、金龙蛇等不同外观，让每一局都有更鲜明的视觉变化。",
+    snakeFeature6Title: "限时生存节奏",
+    snakeFeature6Body: "顶部倒计时持续推动节奏，玩家需要在有限时间内吃到更多能量，同时保持蛇头安全。",
+    snakeRhythmKicker: "CONTROL LOOP",
+    snakeRhythmTitle: "操作与对局节奏",
+    snakeRhythmLead: "简单操作形成高压判断：控制方向、吃点成长、加速穿行，再用路线意识控制风险。",
+    snakeStep1Title: "控制方向",
+    snakeStep1Body: "使用左下角虚拟摇杆控制蛇身方向，保持平滑转向，避免蛇头撞上其他蛇身。",
+    snakeStep2Title: "吃点成长",
+    snakeStep2Body: "优先收集密集的彩色光点，让身体长度快速提升，同时留意下一次转向空间。",
+    snakeStep3Title: "加速穿行",
+    snakeStep3Body: "遇到狭窄空隙或远处能量点时短按加速，但要提前判断路线，避免冲进蛇身。",
+    snakeStep4Title: "控制风险",
+    snakeStep4Body: "身体越长越容易限制自己的回旋空间。不要盲目加速，尽量利用开阔区域调整方向。",
+    snakeGalleryKicker: "VISUAL ARCHIVE",
+    snakeGalleryTitle: "游戏画面",
+    snakeGalleryLead: "点击缩略图切换预览，浏览能量收集、加速冲刺、多蛇蛇阵与高压控场。",
+    snakeGallery1Title: "能量点收集",
+    snakeGallery1Body: "在六边形地图里收集彩色光点，身体不断延长。",
+    snakeGallery2Title: "长蛇控场",
+    snakeGallery2Body: "蛇身变长后，转向空间变小，更考验路线控制。",
+    snakeGallery3Title: "高压蛇阵",
+    snakeGallery3Body: "在复杂蛇阵中抓住空隙，避免蛇头撞上危险路线。",
+    snakeGallery4Title: "多蛇同屏",
+    snakeGallery4Body: "多条蛇同时移动，局面更拥挤，判断也更刺激。",
+    snakeGallery5Title: "摇杆与加速",
+    snakeGallery5Body: "左侧控制方向，右侧闪电加速，形成清晰的双手操作。",
+    snakeGallery6Title: "高速穿行",
+    snakeGallery6Body: "利用加速穿过关键空隙，争取更长的存活时间。",
+    snakeCtaKicker: "ENTER THE NEON GRID",
+    snakeCtaTitle: "进入霓虹蛇阵",
+    snakeCtaLead: "用定位、加速和判断力，在限定时间内吃掉更多能量，让蛇蛇不断变长并安全活到最后。",
+    snakeCtaPrimary: "联系与支持",
+    snakeCtaSecondary: "返回产品",
+  },
+  en: {
+    snakeKicker: "NEON SNAKE ARENA",
+    snakeTitle: "Snake · Neon Bite",
+    snakeLead: "A neon-style casual snake challenge. Eat glowing energy points to grow longer, boost through dense routes, and survive longer in timed rounds.",
+    snakePrimaryAction: "Game Features",
+    snakeSecondaryAction: "Screens",
+    snakeSignal1: "Timed Runs",
+    snakeSignal2: "Screens",
+    snakeSignal3: "Boost Routes",
+    snakeIntroKicker: "GAME INTRO",
+    snakeIntroTitle: "Game Intro",
+    snakeIntroBody1:
+      "Snake · Neon Bite turns classic snake gameplay into a faster timed challenge. Move across a dark hex-grid arena, collect scattered colored energy points, keep growing, and avoid crashing into other bodies or risky routes.",
+    snakeIntroBody2:
+      "The left virtual stick controls direction, while the lightning button on the right triggers a short boost. Multiple snakes, skins, avatars, names, and region tags make each match feel like a bright arcade arena.",
+    snakeIntroBody3:
+      "The core strategy is not only eating points, but keeping the head safe as the route becomes crowded. A longer body leaves less turning space. Boosting can cut through gaps, but it also raises the risk of a mistake.",
+    snakePanelKicker: "BOOST ROUTE TEST",
+    snakeRouteDirection: "Turn",
+    snakeRouteEnergy: "Energy",
+    snakeRouteBoost: "Boost",
+    snakeRouteRisk: "Risk",
+    snakeRouteDirectionTitle: "Control Direction",
+    snakeRouteDirectionBody: "Use the left virtual stick to steer smoothly. Keep rhythm first and avoid sharp turns into snake bodies.",
+    snakeRouteStatusDirection: "ROUTE / STABLE",
+    snakeRouteEnergyTitle: "Eat To Grow",
+    snakeRouteEnergyBody: "Prioritize dense clusters of colored energy points so the body grows quickly while leaving room for the next turn.",
+    snakeRouteStatusEnergy: "ENERGY / GROWING",
+    snakeRouteBoostTitle: "Boost Through",
+    snakeRouteBoostBody: "Tap the lightning button for a quick burst, useful for crossing gaps, grabbing energy, or escaping danger.",
+    snakeRouteStatusBoost: "BOOST / ACTIVE",
+    snakeRouteRiskTitle: "Control Risk",
+    snakeRouteRiskBody: "The longer the body, the easier it is to trap yourself. Read angles early and keep danger behind you.",
+    snakeRouteStatusRisk: "RISK / WATCHING",
+    snakeFeaturesKicker: "FEATURE MATRIX",
+    snakeFeaturesTitle: "Game Features",
+    snakeFeaturesLead: "Energy collection, short boosts, and route reading all support a loop of quick growth, immediate risk, and timed survival.",
+    snakeShowcase1Title: "Glowing Energy",
+    snakeShowcase1Body: "Collect colored points to grow longer. The longer the route, the harder the escape.",
+    snakeShowcase2Title: "Boost Dash",
+    snakeShowcase2Body: "Tap the lightning button to speed through gaps or escape dangerous routes.",
+    snakeShowcase3Title: "Crowded Arena",
+    snakeShowcase3Body: "Multiple snakes move at once, forcing you to read open space and safer routes.",
+    snakeFeature1Title: "Fast Snake Challenge",
+    snakeFeature1Body: "Move through a neon map filled with bodies and energy points, find gaps, and keep a tense casual rhythm.",
+    snakeFeature2Title: "Boost Dash",
+    snakeFeature2Body: "The lightning button creates a burst of speed for gaps, fast pickups, and escapes, while increasing control risk.",
+    snakeFeature3Title: "Glowing Energy Points",
+    snakeFeature3Body: "Dense colored points are scattered across the arena. Collect them to grow, but longer routes make turns harder.",
+    snakeFeature4Title: "Positioning And Avoidance",
+    snakeFeature4Body: "Read nearby bodies and energy clusters before choosing a path. Greed can gain more, or corner you.",
+    snakeFeature5Title: "Snake Skins",
+    snakeFeature5Body: "Mechanical heads, crowned gray snakes, red-yellow snakes, and golden dragon looks make each run visually distinct.",
+    snakeFeature6Title: "Timed Survival Rhythm",
+    snakeFeature6Body: "The countdown keeps pressure high. Eat more energy within the limit while keeping the head safe.",
+    snakeRhythmKicker: "CONTROL LOOP",
+    snakeRhythmTitle: "Control And Match Rhythm",
+    snakeRhythmLead: "Simple inputs create high-pressure decisions: steer, grow, boost through, then manage risk with route awareness.",
+    snakeStep1Title: "Control Direction",
+    snakeStep1Body: "Use the lower-left virtual stick to steer smoothly and avoid hitting other snake bodies.",
+    snakeStep2Title: "Eat To Grow",
+    snakeStep2Body: "Collect dense energy clusters to increase body length while watching the next turn space.",
+    snakeStep3Title: "Boost Through",
+    snakeStep3Body: "Tap boost near narrow gaps or far energy points, but read the route before rushing forward.",
+    snakeStep4Title: "Control Risk",
+    snakeStep4Body: "Long bodies reduce turning room. Avoid blind boosts and use open zones to reset direction.",
+    snakeGalleryKicker: "VISUAL ARCHIVE",
+    snakeGalleryTitle: "Game Screens",
+    snakeGalleryLead: "Click thumbnails to preview energy pickup, boost movement, multi-snake fields, and pressure routes.",
+    snakeGallery1Title: "Energy Pickup",
+    snakeGallery1Body: "Collect colored points across the hex grid and keep growing.",
+    snakeGallery2Title: "Long Body Control",
+    snakeGallery2Body: "A longer snake leaves less room to turn and demands cleaner positioning.",
+    snakeGallery3Title: "Pressure Field",
+    snakeGallery3Body: "Use gaps in dense snake routes to keep the head out of danger.",
+    snakeGallery4Title: "Multi-Snake Screen",
+    snakeGallery4Body: "Several snakes move together, creating a tighter and more exciting board.",
+    snakeGallery5Title: "Stick And Boost",
+    snakeGallery5Body: "Direction on the left, lightning boost on the right, built for clear two-handed play.",
+    snakeGallery6Title: "High-Speed Run",
+    snakeGallery6Body: "Use boost to cross key openings and survive longer.",
+    snakeCtaKicker: "ENTER THE NEON GRID",
+    snakeCtaTitle: "Enter The Neon Snake Grid",
+    snakeCtaLead: "Use positioning, boosts, and judgment to eat more energy within the limit, grow longer, and survive to the end.",
+    snakeCtaPrimary: "Contact Support",
+    snakeCtaSecondary: "Back To Products",
+  },
+  ja: {
+    snakeKicker: "NEON SNAKE ARENA",
+    snakeTitle: "ヘビ・もぐもぐ",
+    snakeLead: "ネオン風のカジュアルスネーク。光るエネルギーを食べて体を伸ばし、加速のタイミングで複雑な蛇陣を抜け、制限時間内でより長く生き残ります。",
+    snakePrimaryAction: "ゲーム特徴",
+    snakeSecondaryAction: "ゲーム画面",
+    snakeSignal1: "制限時間",
+    snakeSignal2: "実機画面",
+    snakeSignal3: "加速ルート",
+    snakeIntroKicker: "GAME INTRO",
+    snakeIntroTitle: "ゲーム紹介",
+    snakeIntroBody1:
+      "『ヘビ・もぐもぐ』は、クラシックなスネーク遊びをテンポのよい制限時間チャレンジにしたゲームです。暗い六角形マップを移動し、散らばる色とりどりの光点を集めて体を伸ばし、ほかの蛇や危険なルートへの衝突を避けます。",
+    snakeIntroBody2:
+      "左側の仮想スティックで方向を操作し、右側の稲妻ボタンで短時間加速します。複数の蛇や外観、アイコン、名前、地域ラベルが表示され、明るいアーケード感を作ります。",
+    snakeIntroBody3:
+      "大切なのは点を食べるだけでなく、混み合うルートの中で頭を安全に保つことです。体が長くなるほど曲がる空間は減ります。加速は隙間を抜ける助けになりますが、操作ミスのリスクも高まります。",
+    snakePanelKicker: "BOOST ROUTE TEST",
+    snakeRouteDirection: "方向",
+    snakeRouteEnergy: "光点",
+    snakeRouteBoost: "加速",
+    snakeRouteRisk: "危険",
+    snakeRouteDirectionTitle: "方向を制御",
+    snakeRouteDirectionBody: "左側の仮想スティックで滑らかに向きを変えます。急旋回で蛇身にぶつからないよう、まずリズムを保ちます。",
+    snakeRouteStatusDirection: "ROUTE / STABLE",
+    snakeRouteEnergyTitle: "食べて成長",
+    snakeRouteEnergyBody: "密集した色付きエネルギーを優先して集め、体を早く伸ばしながら次の旋回スペースを残します。",
+    snakeRouteStatusEnergy: "ENERGY / GROWING",
+    snakeRouteBoostTitle: "加速で突破",
+    snakeRouteBoostBody: "稲妻ボタンを押して一瞬だけ加速。隙間を抜ける、光点を取りに行く、危険から逃げる時に有効です。",
+    snakeRouteStatusBoost: "BOOST / ACTIVE",
+    snakeRouteRiskTitle: "リスク制御",
+    snakeRouteRiskBody: "体が長いほど自分のルートに閉じ込められやすくなります。早めに角度を読み、危険を後ろへ流しましょう。",
+    snakeRouteStatusRisk: "RISK / WATCHING",
+    snakeFeaturesKicker: "FEATURE MATRIX",
+    snakeFeaturesTitle: "ゲーム特徴",
+    snakeFeaturesLead: "エネルギー収集、短時間加速、ルート読みが、素早い成長、即時リスク、制限時間サバイバルを支えます。",
+    snakeShowcase1Title: "光るエネルギー",
+    snakeShowcase1Body: "色付きの光点を集めて体を伸ばします。長くなるほど回避は難しくなります。",
+    snakeShowcase2Title: "加速ダッシュ",
+    snakeShowcase2Body: "稲妻ボタンで一気に加速し、隙間を抜けたり危険なルートから離れます。",
+    snakeShowcase3Title: "高圧の蛇陣",
+    snakeShowcase3Body: "複数の蛇が同時に動き、空きスペースと安全なルートを読む必要があります。",
+    snakeFeature1Title: "軽快な蛇陣チャレンジ",
+    snakeFeature1Body: "蛇身とエネルギーに満ちたネオンマップで、隙間を探しながら緊張感あるカジュアル体験を楽しめます。",
+    snakeFeature2Title: "加速ダッシュ",
+    snakeFeature2Body: "右側の稲妻ボタンで瞬間加速。隙間突破、素早い回収、危険回避に使えますが、操作リスクも上がります。",
+    snakeFeature3Title: "光るエネルギー点",
+    snakeFeature3Body: "マップには色付き光点が密集しています。集めるほど長くなり、旋回と回避の難度も高まります。",
+    snakeFeature4Title: "位置取りと回避",
+    snakeFeature4Body: "前方の蛇身と光点配置を観察して安全なルートを選択します。欲張るほど報酬も危険も大きくなります。",
+    snakeFeature5Title: "多彩な蛇スキン",
+    snakeFeature5Body: "機械ヘッド、王冠付きの灰色蛇、赤黄の蛇、金龍風など、毎回違う見た目を楽しめます。",
+    snakeFeature6Title: "制限時間のリズム",
+    snakeFeature6Body: "上部のカウントダウンがテンポを作ります。限られた時間でより多く食べ、頭を安全に保ちます。",
+    snakeRhythmKicker: "CONTROL LOOP",
+    snakeRhythmTitle: "操作と対局テンポ",
+    snakeRhythmLead: "シンプルな操作が高圧判断を生みます。方向制御、成長、加速突破、そしてリスク管理。",
+    snakeStep1Title: "方向を制御",
+    snakeStep1Body: "左下の仮想スティックで蛇の方向を操作し、滑らかに曲がってほかの蛇身を避けます。",
+    snakeStep2Title: "食べて成長",
+    snakeStep2Body: "密集したエネルギーを集め、体を伸ばしながら次の旋回スペースを確認します。",
+    snakeStep3Title: "加速で突破",
+    snakeStep3Body: "狭い隙間や遠い光点へ向かう時に加速。ただし突っ込む前にルートを読みます。",
+    snakeStep4Title: "リスク制御",
+    snakeStep4Body: "長い体は回り込みを制限します。無理な加速を避け、開けた場所で方向を整えます。",
+    snakeGalleryKicker: "VISUAL ARCHIVE",
+    snakeGalleryTitle: "ゲーム画面",
+    snakeGalleryLead: "サムネイルをクリックして、エネルギー回収、加速移動、複数蛇の盤面、高圧ルートを確認できます。",
+    snakeGallery1Title: "エネルギー回収",
+    snakeGallery1Body: "六角形マップで色付き光点を集め、体を伸ばします。",
+    snakeGallery2Title: "長い体の制御",
+    snakeGallery2Body: "蛇が長くなるほど曲がる空間が減り、位置取りが重要になります。",
+    snakeGallery3Title: "高圧蛇陣",
+    snakeGallery3Body: "密集したルートの隙間を使い、頭を危険から守ります。",
+    snakeGallery4Title: "複数蛇の画面",
+    snakeGallery4Body: "複数の蛇が同時に動き、盤面はさらに緊張感を増します。",
+    snakeGallery5Title: "スティックと加速",
+    snakeGallery5Body: "左で方向、右で稲妻加速。わかりやすい両手操作です。",
+    snakeGallery6Title: "高速突破",
+    snakeGallery6Body: "加速で重要な隙間を抜け、より長く生き残ります。",
+    snakeCtaKicker: "ENTER THE NEON GRID",
+    snakeCtaTitle: "霓虹蛇陣へ入ろう",
+    snakeCtaLead: "位置取り、加速、判断力で制限時間内により多くのエネルギーを食べ、最後まで生き残りましょう。",
+    snakeCtaPrimary: "お問い合わせ",
+    snakeCtaSecondary: "プロダクトへ戻る",
+  },
+};
+
+Object.entries(snakeTranslations).forEach(([lang, dictionary]) => {
+  Object.assign(translations[lang], dictionary);
+});
+
 const teamProfiles = {
   zh: {
     ceo: {
@@ -1470,6 +1738,7 @@ let activeSavageRole = "normal";
 let activeSavageBoardState = "idle";
 let activeSavageBoardCell = "";
 let activeSavageDownloadState = "idle";
+let activeSnakeRoute = "direction";
 const languageMeta = {
   zh: "zh-CN",
   en: "en",
@@ -1597,7 +1866,7 @@ function spawnBurst(target, amount = 22) {
 
 function setupTiltCards() {
   document.querySelectorAll(
-    ".product-card, .value-card, .team-card, .contact-card, .contact-minimal-panel, .game-hud-panel, .game-shot-card, .game-feature-card, .game-gallery-viewer, .savage-hero-media, .savage-board-panel, .savage-role-card",
+    ".product-card, .value-card, .team-card, .contact-card, .contact-minimal-panel, .game-hud-panel, .game-shot-card, .game-feature-card, .game-gallery-viewer, .savage-hero-media, .savage-board-panel, .savage-role-card, .snake-hero-media, .snake-control-panel",
   ).forEach((card) => {
     card.addEventListener("pointermove", (event) => {
       const rect = card.getBoundingClientRect();
@@ -1675,6 +1944,7 @@ function applyLanguage(lang, burstTarget = null) {
   updateSavageBoardStatus();
   updateSavageRoleText();
   updateSavageDownloadStatus();
+  updateSnakeRouteText();
   updateCopyStatus(dictionary.contactCopyIdle);
   updateSubscribeStatus(dictionary.fantasySubscribeIdle, "idle");
   storeLanguage(nextLang);
@@ -2096,6 +2366,56 @@ function setupSavageDownloads() {
   updateSavageDownloadStatus();
 }
 
+function updateSnakeRouteText() {
+  const panel = document.querySelector("[data-snake-panel]");
+  const title = document.getElementById("snakeRouteTitle");
+  const body = document.getElementById("snakeRouteBody");
+  const status = document.getElementById("snakeRouteStatus");
+  if (!panel || !title || !body || !status) return;
+
+  const dictionary = translations[currentLang] || translations.zh;
+  const route = activeSnakeRoute || "direction";
+  const routeName = route[0].toUpperCase() + route.slice(1);
+  const titleKey = `snakeRoute${routeName}Title`;
+  const bodyKey = `snakeRoute${routeName}Body`;
+  const statusKey = `snakeRouteStatus${routeName}`;
+  const power = {
+    direction: "45%",
+    energy: "66%",
+    boost: "88%",
+    risk: "58%",
+  };
+
+  title.dataset.i18n = titleKey;
+  body.dataset.i18n = bodyKey;
+  status.dataset.i18n = statusKey;
+  title.textContent = dictionary[titleKey] || translations.zh[titleKey] || title.textContent;
+  body.textContent = dictionary[bodyKey] || translations.zh[bodyKey] || body.textContent;
+  status.textContent = dictionary[statusKey] || translations.zh[statusKey] || status.textContent;
+  panel.style.setProperty("--snake-route-power", power[route] || power.direction);
+
+  document.querySelectorAll("[data-snake-route]").forEach((button) => {
+    const isSelected = button.dataset.snakeRoute === route;
+    button.classList.toggle("is-active", isSelected);
+    button.setAttribute("aria-pressed", String(isSelected));
+  });
+}
+
+function setupSnakeRoutes() {
+  const buttons = document.querySelectorAll("[data-snake-route]");
+  if (!buttons.length) return;
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeSnakeRoute = button.dataset.snakeRoute || "direction";
+      updateSnakeRouteText();
+      spawnBurst(button, activeSnakeRoute === "boost" ? 30 : 18);
+    });
+  });
+
+  updateSnakeRouteText();
+}
+
 resizeCanvas();
 setupPointer();
 setupTiltCards();
@@ -2111,6 +2431,7 @@ setupSaylyDownloads();
 setupSavageBoard();
 setupSavageRoles();
 setupSavageDownloads();
+setupSnakeRoutes();
 updateHeroTitleEffects(currentLang);
 setupVideoFallback();
 

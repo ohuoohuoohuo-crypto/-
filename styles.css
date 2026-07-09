@@ -4627,6 +4627,522 @@ main,
   text-shadow: 0 0 28px rgba(4, 5, 16, 0.5);
 }
 
+.snake-detail {
+  --snake-lime: #7cff34;
+  --snake-green: #20f98b;
+  --snake-cyan: #28dcff;
+  --snake-blue: #4b7cff;
+  --snake-violet: #925cff;
+  --snake-pink: #ff5fe6;
+  --snake-ink: #050914;
+}
+
+.snake-hero {
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 16% 18%, rgba(32, 249, 139, 0.18), transparent 28rem),
+    radial-gradient(circle at 84% 26%, rgba(255, 95, 230, 0.13), transparent 30rem),
+    radial-gradient(circle at 52% 58%, rgba(40, 220, 255, 0.1), transparent 34rem),
+    linear-gradient(135deg, rgba(4, 10, 24, 0.54), rgba(4, 5, 16, 0.92));
+}
+
+.snake-hero-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.snake-hero-backdrop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(1.28) contrast(1.12) brightness(0.32) blur(1px);
+  transform: scale(1.08);
+  animation: snakeBackdropPulse 14s ease-in-out infinite alternate;
+}
+
+.snake-hero-backdrop::before,
+.snake-hero-backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.snake-hero-backdrop::before {
+  background:
+    linear-gradient(90deg, rgba(40, 220, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 46% 44%, rgba(124, 255, 52, 0.12), transparent 18rem);
+  background-size: 50px 50px, 50px 50px, auto;
+  mask-image: linear-gradient(180deg, transparent, #000 11%, #000 88%, transparent);
+}
+
+.snake-hero-backdrop::after {
+  top: 36%;
+  height: 13rem;
+  background:
+    linear-gradient(90deg, transparent, rgba(40, 220, 255, 0.24), rgba(124, 255, 52, 0.16), rgba(255, 95, 230, 0.14), transparent),
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 9px);
+  filter: blur(0.5px);
+  transform: skewY(-5deg);
+  animation: snakeSignalSweep 6s ease-in-out infinite;
+}
+
+.snake-hero-shell {
+  width: min(88rem, 100%);
+}
+
+.snake-detail-copy h1 {
+  max-width: 8em;
+  font-size: clamp(3.1rem, 5.6vw, 5.8rem);
+  background: linear-gradient(96deg, #ffffff 0%, #d4fff2 24%, var(--snake-green) 48%, var(--snake-cyan) 70%, var(--snake-pink) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 30px rgba(32, 249, 139, 0.3), 0 0 58px rgba(40, 220, 255, 0.18);
+}
+
+.snake-detail-copy > p {
+  color: #e4fff5;
+}
+
+.snake-primary {
+  background: linear-gradient(135deg, var(--snake-cyan), var(--snake-green), var(--snake-lime));
+  color: #06101d;
+}
+
+.snake-signal-grid {
+  border-color: rgba(32, 249, 139, 0.28);
+  background: rgba(32, 249, 139, 0.14);
+}
+
+.snake-signal-grid strong {
+  color: #efffe7;
+  font-size: clamp(1.08rem, 2vw, 1.72rem);
+  text-shadow: 0 0 22px rgba(32, 249, 139, 0.58);
+}
+
+.snake-hero-media {
+  --rx: 0deg;
+  --ry: 0deg;
+  position: relative;
+  min-height: clamp(28rem, 48vw, 42rem);
+  overflow: hidden;
+  border: 1px solid rgba(32, 249, 139, 0.26);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02)),
+    radial-gradient(circle at 50% 46%, rgba(32, 249, 139, 0.18), transparent 19rem),
+    rgba(5, 10, 24, 0.78);
+  box-shadow:
+    0 36px 120px rgba(0, 0, 0, 0.58),
+    0 0 86px rgba(32, 249, 139, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.snake-hero-media:hover,
+.snake-hero-media:focus-within {
+  border-color: rgba(32, 249, 139, 0.72);
+  box-shadow:
+    0 40px 126px rgba(0, 0, 0, 0.62),
+    0 0 100px rgba(32, 249, 139, 0.24),
+    0 0 54px rgba(255, 95, 230, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.snake-hero-media::before,
+.snake-hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.snake-hero-media::before {
+  z-index: 2;
+  background:
+    radial-gradient(circle at 58% 52%, rgba(124, 255, 52, 0.16), transparent 19rem),
+    linear-gradient(180deg, rgba(4, 5, 16, 0.04), rgba(4, 5, 16, 0.6)),
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.048) 0 1px, transparent 1px 8px);
+}
+
+.snake-hero-media::after {
+  z-index: 5;
+  left: -30%;
+  width: 42%;
+  background: linear-gradient(90deg, transparent, rgba(232, 255, 247, 0.32), transparent);
+  transform: skewX(-18deg);
+  animation: gameMediaSweep 4.8s ease-in-out infinite;
+}
+
+.snake-hero-shot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.18) contrast(1.08) brightness(0.72);
+  transform: scale(1.08);
+  transition: transform 420ms ease, filter 420ms ease;
+}
+
+.snake-hero-media:hover .snake-hero-shot {
+  transform: scale(1.13);
+  filter: saturate(1.28) contrast(1.12) brightness(0.82);
+}
+
+.snake-hero-model {
+  position: absolute;
+  z-index: 3;
+  right: -13%;
+  bottom: 4%;
+  width: min(78%, 34rem);
+  max-width: none;
+  filter:
+    drop-shadow(0 34px 44px rgba(0, 0, 0, 0.54))
+    drop-shadow(0 0 42px rgba(40, 220, 255, 0.2))
+    drop-shadow(0 0 30px rgba(124, 255, 52, 0.16));
+  transform: translateY(5%) rotate(-4deg) scale(1.02);
+  transition: transform 420ms ease, filter 420ms ease;
+}
+
+.snake-hero-media:hover .snake-hero-model {
+  transform: translateY(1%) rotate(-2deg) scale(1.08);
+  filter:
+    drop-shadow(0 38px 54px rgba(0, 0, 0, 0.6))
+    drop-shadow(0 0 54px rgba(40, 220, 255, 0.3))
+    drop-shadow(0 0 38px rgba(124, 255, 52, 0.24));
+}
+
+.snake-orbit-rings {
+  position: absolute;
+  inset: 5%;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.snake-orbit-rings span {
+  position: absolute;
+  inset: 8% 2%;
+  border: 1px solid rgba(40, 220, 255, 0.22);
+  border-radius: 50%;
+  transform: rotateX(67deg) rotateZ(0deg);
+  box-shadow: 0 0 30px rgba(32, 249, 139, 0.12);
+  animation: savageRingSpin 10s linear infinite;
+}
+
+.snake-orbit-rings span:nth-child(2) {
+  inset: 18% 12%;
+  border-color: rgba(124, 255, 52, 0.25);
+  animation-duration: 7.5s;
+  animation-direction: reverse;
+}
+
+.snake-orbit-rings span:nth-child(3) {
+  inset: 0 18%;
+  border-color: rgba(255, 95, 230, 0.2);
+  animation-duration: 13s;
+}
+
+.snake-hero-hud {
+  position: absolute;
+  left: clamp(1rem, 2vw, 1.5rem);
+  right: clamp(1rem, 2vw, 1.5rem);
+  bottom: clamp(1rem, 2vw, 1.5rem);
+  z-index: 6;
+  display: grid;
+  gap: 0.35rem;
+  width: min(28rem, calc(100% - 2rem));
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(32, 249, 139, 0.32);
+  border-radius: 8px;
+  background: rgba(5, 10, 24, 0.76);
+  box-shadow: 0 0 38px rgba(32, 249, 139, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.snake-hero-hud span,
+.snake-control-panel .game-hud-label {
+  color: rgba(124, 255, 52, 0.94);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.snake-hero-hud strong {
+  color: #edffe5;
+  font-size: clamp(1.28rem, 2.2vw, 1.95rem);
+  line-height: 1;
+  text-shadow: 0 0 22px rgba(32, 249, 139, 0.46);
+}
+
+.snake-hero-hud small {
+  color: #dff7ff;
+  font-weight: 760;
+}
+
+.snake-story-section,
+.snake-feature-section,
+.snake-rhythm-section,
+.snake-gallery-section {
+  background:
+    linear-gradient(180deg, rgba(5, 9, 26, 0.66), rgba(4, 5, 16, 0.9)),
+    radial-gradient(circle at 12% 22%, rgba(32, 249, 139, 0.1), transparent 30rem),
+    radial-gradient(circle at 88% 20%, rgba(40, 220, 255, 0.1), transparent 30rem);
+}
+
+.snake-story-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.8fr);
+}
+
+.snake-story-copy {
+  border-color: rgba(32, 249, 139, 0.2);
+}
+
+.snake-story-copy h2,
+.snake-feature-section .about-block-head h2,
+.snake-rhythm-section .about-block-head h2,
+.snake-gallery-section .about-block-head h2 {
+  background: linear-gradient(96deg, #ffffff, #d4fff2 28%, var(--snake-green) 60%, var(--snake-cyan));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.snake-control-panel {
+  --rx: 0deg;
+  --ry: 0deg;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  min-height: 100%;
+  padding: clamp(1.2rem, 2.4vw, 1.8rem);
+  border: 1px solid rgba(32, 249, 139, 0.24);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(32, 249, 139, 0.14), rgba(40, 220, 255, 0.08)),
+    rgba(5, 10, 24, 0.76);
+  box-shadow: var(--shadow), inset 0 0 42px rgba(32, 249, 139, 0.08);
+  backdrop-filter: blur(20px);
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.snake-control-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, rgba(32, 249, 139, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(180deg, #000, transparent 82%);
+}
+
+.snake-control-panel:hover,
+.snake-control-panel:focus-within {
+  border-color: rgba(32, 249, 139, 0.68);
+  box-shadow: 0 32px 100px rgba(0, 0, 0, 0.58), 0 0 54px rgba(32, 249, 139, 0.18);
+}
+
+.snake-control-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.snake-route-screen {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 0.75rem;
+  min-height: 17rem;
+  padding: 1.15rem;
+  border: 1px solid rgba(32, 249, 139, 0.18);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 44% 38%, rgba(124, 255, 52, 0.12), transparent 12rem),
+    rgba(3, 8, 20, 0.76);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.snake-route-orb {
+  position: relative;
+  width: 9rem;
+  aspect-ratio: 1;
+  margin: 0 auto 0.2rem;
+  border-radius: 50%;
+  border: 1px solid rgba(40, 220, 255, 0.28);
+  background:
+    radial-gradient(circle, rgba(32, 249, 139, 0.24), transparent 32%),
+    repeating-radial-gradient(circle, transparent 0 1.35rem, rgba(40, 220, 255, 0.16) 1.42rem 1.48rem);
+  box-shadow: inset 0 0 34px rgba(32, 249, 139, 0.12), 0 0 34px rgba(40, 220, 255, 0.1);
+}
+
+.snake-route-orb::before {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 48%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--snake-lime), transparent);
+  transform-origin: left center;
+  animation: gameRadarSweep 2.7s linear infinite;
+}
+
+.snake-route-orb span {
+  position: absolute;
+  width: 0.6rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--snake-cyan);
+  box-shadow: 0 0 18px var(--snake-cyan);
+}
+
+.snake-route-orb span:nth-child(1) {
+  left: 28%;
+  top: 35%;
+}
+
+.snake-route-orb span:nth-child(2) {
+  right: 23%;
+  top: 54%;
+  background: var(--snake-lime);
+  box-shadow: 0 0 18px var(--snake-lime);
+}
+
+.snake-route-orb span:nth-child(3) {
+  left: 54%;
+  bottom: 23%;
+  background: var(--snake-pink);
+  box-shadow: 0 0 18px var(--snake-pink);
+}
+
+.snake-route-screen strong {
+  color: #f1ffe9;
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.25;
+}
+
+.snake-route-screen p {
+  min-height: 4.8rem;
+  margin: 0;
+  color: #dff3ff;
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+.snake-route-meter {
+  overflow: hidden;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: rgba(184, 210, 255, 0.12);
+}
+
+.snake-route-meter span {
+  display: block;
+  width: var(--snake-route-power, 45%);
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--snake-cyan), var(--snake-green), var(--snake-lime));
+  box-shadow: 0 0 18px rgba(32, 249, 139, 0.4);
+  transition: width 240ms ease;
+}
+
+.snake-route-screen small {
+  color: rgba(124, 255, 52, 0.86);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 800;
+}
+
+.snake-route-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.58rem;
+}
+
+.snake-route-tabs button {
+  min-height: 2.75rem;
+  border: 1px solid rgba(124, 255, 52, 0.18);
+  border-radius: 8px;
+  background: rgba(8, 14, 34, 0.72);
+  color: #e8fff7;
+  font-weight: 860;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.snake-route-tabs button:hover,
+.snake-route-tabs button:focus-visible,
+.snake-route-tabs button.is-active {
+  transform: translateY(-2px);
+  border-color: rgba(32, 249, 139, 0.62);
+  background: linear-gradient(135deg, rgba(32, 249, 139, 0.22), rgba(40, 220, 255, 0.14));
+  box-shadow: 0 0 24px rgba(32, 249, 139, 0.16);
+  outline: 0;
+}
+
+.snake-showcase-grid {
+  align-items: stretch;
+}
+
+.snake-shot-card {
+  border-color: rgba(32, 249, 139, 0.2);
+}
+
+.snake-feature-grid .snake-feature-card::before {
+  background: linear-gradient(180deg, var(--snake-lime), var(--snake-green), var(--snake-cyan), var(--snake-pink));
+  box-shadow: 0 0 22px rgba(32, 249, 139, 0.42);
+}
+
+.snake-feature-grid .snake-feature-card span,
+.snake-step-card span {
+  background: linear-gradient(135deg, var(--snake-cyan), var(--snake-green), var(--snake-lime));
+}
+
+.snake-step-card {
+  border-color: rgba(32, 249, 139, 0.2);
+}
+
+.snake-step-card::before {
+  background:
+    radial-gradient(circle at var(--mx, 50%) var(--my, 40%), rgba(32, 249, 139, 0.2), transparent 13rem),
+    linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+}
+
+.snake-steps-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.snake-gallery-viewer,
+.snake-gallery-thumbs button {
+  border-color: rgba(32, 249, 139, 0.22);
+}
+
+.snake-gallery-thumbs {
+  grid-template-columns: 1fr;
+}
+
+.snake-download-cta {
+  background:
+    linear-gradient(135deg, rgba(4, 22, 38, 0.96), rgba(13, 131, 116, 0.84), rgba(124, 255, 52, 0.66)),
+    linear-gradient(180deg, rgba(5, 9, 26, 0.32), rgba(4, 5, 16, 0.54));
+}
+
+.snake-download-cta .section-kicker,
+.snake-download-cta h2,
+.snake-download-cta p {
+  color: #fff;
+  text-shadow: 0 0 28px rgba(4, 5, 16, 0.5);
+}
+
 @keyframes fantasyBackdropDrift {
   from {
     transform: scale(1.08) translate3d(0, 0, 0);
@@ -4678,6 +5194,31 @@ main,
 @keyframes savageRingSpin {
   to {
     transform: rotateX(66deg) rotateZ(360deg);
+  }
+}
+
+@keyframes snakeBackdropPulse {
+  from {
+    transform: scale(1.08) translate3d(-1%, 0, 0);
+    filter: saturate(1.18) contrast(1.08) brightness(0.28) blur(1px);
+  }
+
+  to {
+    transform: scale(1.14) translate3d(1%, -1%, 0);
+    filter: saturate(1.36) contrast(1.14) brightness(0.38) blur(1px);
+  }
+}
+
+@keyframes snakeSignalSweep {
+  0%,
+  100% {
+    transform: translateX(-5%) skewY(-5deg);
+    opacity: 0.58;
+  }
+
+  50% {
+    transform: translateX(5%) skewY(-5deg);
+    opacity: 0.9;
   }
 }
 
@@ -5130,6 +5671,14 @@ main,
     min-height: 31rem;
   }
 
+  .snake-hero-media {
+    min-height: 31rem;
+  }
+
+  .snake-steps-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .game-gallery-thumbs {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
@@ -5139,6 +5688,10 @@ main,
     max-height: none;
     overflow: visible;
     padding-right: 0;
+  }
+
+  .snake-gallery-thumbs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .game-gallery-thumbs button {
@@ -5463,7 +6016,8 @@ main,
   }
 
   .sayly-steps-grid,
-  .sayly-pricing-grid {
+  .sayly-pricing-grid,
+  .snake-steps-grid {
     grid-template-columns: 1fr;
   }
 
@@ -5481,6 +6035,10 @@ main,
     min-height: 23rem;
   }
 
+  .snake-hero-media {
+    min-height: 23rem;
+  }
+
   .savage-hero-art {
     width: 132%;
     transform: translateY(3%) scale(1);
@@ -5491,6 +6049,21 @@ main,
   }
 
   .savage-hero-hud {
+    width: auto;
+    padding: 0.8rem;
+  }
+
+  .snake-hero-shot {
+    object-position: center;
+  }
+
+  .snake-hero-model {
+    right: -20%;
+    bottom: 10%;
+    width: 88%;
+  }
+
+  .snake-hero-hud {
     width: auto;
     padding: 0.8rem;
   }
@@ -5513,6 +6086,28 @@ main,
     line-height: 1.3;
   }
 
+  .snake-signal-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .snake-signal-grid div {
+    min-height: 4.65rem;
+    padding: 0.78rem 0.62rem;
+  }
+
+  .snake-signal-grid strong {
+    font-size: clamp(0.96rem, 5.4vw, 1.32rem);
+  }
+
+  .snake-signal-grid span {
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+
+  .snake-route-tabs {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .savage-mine-board {
     gap: 0.38rem;
   }
@@ -5524,6 +6119,10 @@ main,
 
   .savage-role-card {
     min-height: 21rem;
+  }
+
+  .snake-control-panel {
+    min-height: 26rem;
   }
 
   .savage-role-tabs {
