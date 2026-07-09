@@ -25,7 +25,7 @@ const translations = {
     productsTitle: "我们的产品",
     productsLead: "",
     tagFeatured: "重点产品",
-    product1Title: "奇幻岛",
+    product1Title: "奇幻岛屿",
     product1Body: "探索神秘的奇幻岛屿，体验前所未有的冒险与挑战。",
     product2Title: "AI 对话画家",
     product2Body: "利用先进的 AI 技术，智能将创意转化为精美的艺术作品。",
@@ -214,7 +214,7 @@ const translations = {
     productsLead:
       "A cross-platform portfolio spanning games, AI conversation, intelligent creation, and SaaS systems.",
     tagFeatured: "Featured",
-    product1Title: "Fantasy Island",
+    product1Title: "Fantasy Islands",
     product1Body: "Explore mysterious islands and experience a new generation of adventure and challenge.",
     product2Title: "AI Dialogue Painter",
     product2Body: "Turn ideas into polished artwork through advanced conversational AI creation.",
@@ -584,6 +584,259 @@ const translations = {
   },
 };
 
+const fantasyTranslations = {
+  zh: {
+    fantasyKicker: "FANTASY ISLAND",
+    fantasyTitle: "奇幻岛屿",
+    fantasyLead: "探索神秘的奇幻岛屿，体验前所未有的冒险与挑战。",
+    fantasyPrimaryAction: "游戏介绍",
+    fantasySecondaryAction: "游戏截图",
+    fantasySignal1: "奇幻世界",
+    fantasySignal2: "核心特色",
+    fantasySignal3: "实机画面",
+    fantasyStoryKicker: "GAME INTRO",
+    fantasyStoryTitle: "游戏介绍",
+    fantasyStoryBody1:
+      "《奇幻岛屿》是一款充满魔法与奇幻元素的冒险游戏，玩家将踏上一段探索神秘岛屿的旅程，揭开岛上隐藏的秘密。",
+    fantasyStoryBody2:
+      "在这个奇幻世界中，岛屿上栖息着各种神奇生物，隐藏着古老的魔法遗迹和宝藏。玩家需要与岛上的居民交流，完成各种任务，解开谜题，逐步揭示岛屿的真相。",
+    fantasyStoryBody3:
+      "游戏融合了角色扮演、解谜和战斗元素，为玩家提供丰富多样的游戏体验。每个玩家的选择都将影响游戏的发展方向，创造属于自己的独特冒险故事。",
+    fantasyLaunchKicker: "LAUNCH SIGNAL",
+    fantasyLaunchTitle: "即将推出",
+    fantasyLaunchBody: "《奇幻岛屿》正在紧张开发中，敬请期待！",
+    fantasySubscribeLabel: "邮箱地址",
+    fantasySubscribePlaceholder: "您的邮箱地址",
+    fantasySubscribeButton: "订阅",
+    fantasySubscribeIdle: "留下邮箱，获取游戏最新动态和独家内容。",
+    fantasySubscribeSuccess: "订阅信号已接收，感谢关注！",
+    fantasySubscribeInvalid: "请输入有效的邮箱地址。",
+    fantasyFeaturesKicker: "FEATURE MATRIX",
+    fantasyFeaturesTitle: "游戏特色",
+    fantasyFeaturesLead:
+      "奇幻探索、角色互动、策略战斗与解谜挑战组成这座岛屿的核心体验。",
+    fantasyShowcase1Title: "奇幻世界",
+    fantasyShowcase1Body: "探索充满魔法与奇迹的岛屿，发现隐藏的奥秘。",
+    fantasyShowcase2Title: "角色互动",
+    fantasyShowcase2Body: "与岛上居民建立关系，完成任务并影响世界走向。",
+    fantasyShowcase3Title: "解谜挑战",
+    fantasyShowcase3Body: "进入遗迹与洞穴，解开秘密并解锁新区域。",
+    fantasyFeature1Title: "奇幻世界",
+    fantasyFeature1Body: "探索充满魔法与奇迹的岛屿，与神奇生物互动，发现隐藏的奥秘。",
+    fantasyFeature2Title: "引人入胜的故事",
+    fantasyFeature2Body: "体验精心编写的故事情节，跟随主角揭开岛屿的神秘面纱和自己的命运。",
+    fantasyFeature3Title: "策略性战斗",
+    fantasyFeature3Body: "参与回合制战斗，运用各种技能和策略，击败强大的敌人。",
+    fantasyFeature4Title: "解谜挑战",
+    fantasyFeature4Body: "解开各种谜题和挑战，获取宝藏和解锁新区域。",
+    fantasyFeature5Title: "角色互动",
+    fantasyFeature5Body: "与岛上的居民建立关系，完成任务，影响游戏世界的发展。",
+    fantasyFeature6Title: "精美画面",
+    fantasyFeature6Body: "欣赏精心设计的游戏场景和角色，沉浸在奇幻的视觉盛宴中。",
+    fantasyGalleryKicker: "VISUAL ARCHIVE",
+    fantasyGalleryTitle: "游戏截图",
+    fantasyGalleryLead: "点击缩略图切换预览，浏览海岛探索、营地、雪境、洞穴和生活系统。",
+    fantasyGallery1Title: "海岛远眺",
+    fantasyGallery1Body: "从高处俯瞰蔚蓝海面，旅程从神秘群岛开始。",
+    fantasyGallery2Title: "俯瞰岛屿",
+    fantasyGallery2Body: "山脉、瀑布和海岸线组成开放探索的奇幻地图。",
+    fantasyGallery3Title: "花野小径",
+    fantasyGallery3Body: "阳光穿过花海与森林，角色在自然中发现线索。",
+    fantasyGallery4Title: "花海日落",
+    fantasyGallery4Body: "黄昏光线铺满草地，柔和场景强化冒险的情绪张力。",
+    fantasyGallery5Title: "雪境村落",
+    fantasyGallery5Body: "从温暖海岸进入雪境聚落，环境变化带来新的任务。",
+    fantasyGallery6Title: "山脚营地",
+    fantasyGallery6Body: "在群山脚下建立据点，与岛民和环境产生更多连接。",
+    fantasyGallery7Title: "湖畔日出",
+    fantasyGallery7Body: "清晨湖面与远山形成开阔的探索目标。",
+    fantasyGallery8Title: "村落草场",
+    fantasyGallery8Body: "开放村落场景承载主线任务、资源点和角色互动。",
+    fantasyGallery9Title: "海滩资源",
+    fantasyGallery9Body: "海滩与浅水区域隐藏收集物和探索事件。",
+    fantasyGallery10Title: "水晶洞穴",
+    fantasyGallery10Body: "深入发光洞穴，追踪遗迹能量与未知谜题。",
+    fantasyGallery11Title: "种植系统",
+    fantasyGallery11Body: "种植、收获和资源管理让岛屿生活更有节奏。",
+    fantasyGallery12Title: "烹饪系统",
+    fantasyGallery12Body: "通过食材与配方制作料理，为探索补充状态。",
+    fantasyGallery13Title: "温馨房间",
+    fantasyGallery13Body: "室内空间展示生活化的一面，也暗示可成长的据点系统。",
+    fantasyCtaKicker: "READY FOR THE ISLAND",
+    fantasyCtaTitle: "踏上奇幻岛屿，开启你的下一段旅程。",
+    fantasyCtaLead: "返回产品矩阵，继续探索 Singularity Games 的更多动态世界。",
+    fantasyCtaButton: "返回产品",
+  },
+  en: {
+    fantasyKicker: "FANTASY ISLAND",
+    fantasyTitle: "Fantasy Islands",
+    fantasyLead: "Explore mysterious islands and experience a new generation of adventure and challenge.",
+    fantasyPrimaryAction: "Game Intro",
+    fantasySecondaryAction: "Screenshots",
+    fantasySignal1: "Fantasy World",
+    fantasySignal2: "Core Features",
+    fantasySignal3: "Gameplay Screens",
+    fantasyStoryKicker: "GAME INTRO",
+    fantasyStoryTitle: "Game Intro",
+    fantasyStoryBody1:
+      "Fantasy Islands is an adventure game filled with magic and wonder, sending players on a journey to explore mysterious islands and uncover their hidden secrets.",
+    fantasyStoryBody2:
+      "Across this fantasy world, magical creatures, ancient ruins, and hidden treasures wait beneath the surface. Players talk with residents, complete quests, solve puzzles, and gradually reveal the truth of the islands.",
+    fantasyStoryBody3:
+      "The game blends role-playing, puzzle solving, and combat into a rich adventure. Player choices influence the direction of the world and create a personal story of discovery.",
+    fantasyLaunchKicker: "LAUNCH SIGNAL",
+    fantasyLaunchTitle: "Coming Soon",
+    fantasyLaunchBody: "Fantasy Islands is in active development. Stay tuned.",
+    fantasySubscribeLabel: "Email address",
+    fantasySubscribePlaceholder: "Your email address",
+    fantasySubscribeButton: "Subscribe",
+    fantasySubscribeIdle: "Leave your email for development updates and exclusive content.",
+    fantasySubscribeSuccess: "Signal received. Thanks for following.",
+    fantasySubscribeInvalid: "Please enter a valid email address.",
+    fantasyFeaturesKicker: "FEATURE MATRIX",
+    fantasyFeaturesTitle: "Game Features",
+    fantasyFeaturesLead:
+      "Fantasy exploration, character bonds, tactical combat, and puzzle discovery shape the island experience.",
+    fantasyShowcase1Title: "Fantasy World",
+    fantasyShowcase1Body: "Explore islands full of magic, wonder, and hidden mysteries.",
+    fantasyShowcase2Title: "Character Bonds",
+    fantasyShowcase2Body: "Build relationships, complete quests, and influence the world.",
+    fantasyShowcase3Title: "Puzzle Trials",
+    fantasyShowcase3Body: "Enter ruins and caves to unlock secrets and new areas.",
+    fantasyFeature1Title: "Fantasy World",
+    fantasyFeature1Body: "Explore islands filled with magic and miracles, interact with strange creatures, and discover hidden mysteries.",
+    fantasyFeature2Title: "Engaging Story",
+    fantasyFeature2Body: "Follow a carefully written story and uncover the island's secrets alongside your own fate.",
+    fantasyFeature3Title: "Tactical Combat",
+    fantasyFeature3Body: "Join turn-based battles, use skills and strategy, and defeat powerful enemies.",
+    fantasyFeature4Title: "Puzzle Challenges",
+    fantasyFeature4Body: "Solve puzzles and trials to find treasure and unlock new regions.",
+    fantasyFeature5Title: "Character Interaction",
+    fantasyFeature5Body: "Build relationships with island residents, complete quests, and change the world.",
+    fantasyFeature6Title: "Beautiful Visuals",
+    fantasyFeature6Body: "Enjoy carefully designed environments and characters in a vivid fantasy world.",
+    fantasyGalleryKicker: "VISUAL ARCHIVE",
+    fantasyGalleryTitle: "Game Screens",
+    fantasyGalleryLead: "Click thumbnails to preview island exploration, camps, snowfields, caves, and life systems.",
+    fantasyGallery1Title: "Ocean Lookout",
+    fantasyGallery1Body: "A blue horizon opens the journey across the mysterious archipelago.",
+    fantasyGallery2Title: "Island Overview",
+    fantasyGallery2Body: "Mountains, waterfalls, and coastlines define an open fantasy map.",
+    fantasyGallery3Title: "Flower Path",
+    fantasyGallery3Body: "Sunlit flowers and forest paths lead the player toward hidden clues.",
+    fantasyGallery4Title: "Sunset Field",
+    fantasyGallery4Body: "Warm dusk light gives the adventure a softer emotional pulse.",
+    fantasyGallery5Title: "Snow Village",
+    fantasyGallery5Body: "From warm shores to snowy settlements, every biome brings fresh quests.",
+    fantasyGallery6Title: "Mountain Camp",
+    fantasyGallery6Body: "Build connections with residents and the environment below the mountain.",
+    fantasyGallery7Title: "Lake Sunrise",
+    fantasyGallery7Body: "A quiet lake and distant peaks create a clear exploration goal.",
+    fantasyGallery8Title: "Village Field",
+    fantasyGallery8Body: "Open village areas carry quests, resource nodes, and character interaction.",
+    fantasyGallery9Title: "Beach Resources",
+    fantasyGallery9Body: "The beach and shallow water hide collectibles and small events.",
+    fantasyGallery10Title: "Crystal Cave",
+    fantasyGallery10Body: "Follow glowing energy through caves and ancient puzzles.",
+    fantasyGallery11Title: "Farming System",
+    fantasyGallery11Body: "Planting, harvesting, and resource loops add rhythm to island life.",
+    fantasyGallery12Title: "Cooking System",
+    fantasyGallery12Body: "Craft meals from ingredients and recipes to support exploration.",
+    fantasyGallery13Title: "Cozy Room",
+    fantasyGallery13Body: "Interior spaces reveal a more personal, expandable base experience.",
+    fantasyCtaKicker: "READY FOR THE ISLAND",
+    fantasyCtaTitle: "Step onto the islands and begin your next journey.",
+    fantasyCtaLead: "Return to the product matrix and explore more dynamic worlds from Singularity Games.",
+    fantasyCtaButton: "Back to Products",
+  },
+  ja: {
+    fantasyKicker: "FANTASY ISLAND",
+    fantasyTitle: "ファンタジーアイランド",
+    fantasyLead: "神秘的な島を探索し、これまでにない冒険と挑戦を体験できます。",
+    fantasyPrimaryAction: "ゲーム紹介",
+    fantasySecondaryAction: "ゲーム画面",
+    fantasySignal1: "幻想世界",
+    fantasySignal2: "主要特色",
+    fantasySignal3: "実機画面",
+    fantasyStoryKicker: "GAME INTRO",
+    fantasyStoryTitle: "ゲーム紹介",
+    fantasyStoryBody1:
+      "『ファンタジーアイランド』は、魔法と幻想に満ちた冒険ゲームです。プレイヤーは神秘的な島々を探索し、隠された秘密を解き明かしていきます。",
+    fantasyStoryBody2:
+      "この幻想世界には、不思議な生き物、古代の魔法遺跡、秘宝が眠っています。島の住民と交流し、任務を達成し、謎を解きながら島の真実へ近づきます。",
+    fantasyStoryBody3:
+      "ロールプレイ、謎解き、戦闘を融合した豊かな体験を提供します。プレイヤーの選択が世界の行方に影響し、自分だけの冒険物語を生み出します。",
+    fantasyLaunchKicker: "LAUNCH SIGNAL",
+    fantasyLaunchTitle: "近日公開",
+    fantasyLaunchBody: "『ファンタジーアイランド』は鋭意開発中です。どうぞご期待ください。",
+    fantasySubscribeLabel: "メールアドレス",
+    fantasySubscribePlaceholder: "メールアドレス",
+    fantasySubscribeButton: "登録",
+    fantasySubscribeIdle: "メールを残すと、開発情報と限定コンテンツを受け取れます。",
+    fantasySubscribeSuccess: "登録シグナルを受信しました。ありがとうございます。",
+    fantasySubscribeInvalid: "有効なメールアドレスを入力してください。",
+    fantasyFeaturesKicker: "FEATURE MATRIX",
+    fantasyFeaturesTitle: "ゲーム特色",
+    fantasyFeaturesLead:
+      "幻想探索、キャラクター交流、戦略バトル、謎解きが島の中核体験をつくります。",
+    fantasyShowcase1Title: "幻想世界",
+    fantasyShowcase1Body: "魔法と奇跡に満ちた島を探索し、隠された秘密を見つけます。",
+    fantasyShowcase2Title: "キャラクター交流",
+    fantasyShowcase2Body: "島の住民と関係を築き、任務を達成して世界に影響を与えます。",
+    fantasyShowcase3Title: "謎解き挑戦",
+    fantasyShowcase3Body: "遺跡と洞窟に入り、秘密と新しい地域を解放します。",
+    fantasyFeature1Title: "幻想世界",
+    fantasyFeature1Body: "魔法と奇跡に満ちた島々を探索し、不思議な生き物と交流して隠された謎を発見します。",
+    fantasyFeature2Title: "心を引き込む物語",
+    fantasyFeature2Body: "丁寧に描かれた物語をたどり、島の秘密と自分自身の運命を明らかにします。",
+    fantasyFeature3Title: "戦略バトル",
+    fantasyFeature3Body: "ターン制バトルでスキルと戦略を使い、強大な敵に挑みます。",
+    fantasyFeature4Title: "謎解き挑戦",
+    fantasyFeature4Body: "さまざまな謎と試練を解き、宝物や新しい地域を解放します。",
+    fantasyFeature5Title: "キャラクター交流",
+    fantasyFeature5Body: "島の住民と関係を築き、任務を達成してゲーム世界の変化に関わります。",
+    fantasyFeature6Title: "美しい画面",
+    fantasyFeature6Body: "丁寧に設計された風景とキャラクターで、幻想的なビジュアル体験に没入できます。",
+    fantasyGalleryKicker: "VISUAL ARCHIVE",
+    fantasyGalleryTitle: "ゲーム画面",
+    fantasyGalleryLead: "サムネイルをクリックして、島の探索、拠点、雪原、洞窟、生活システムを確認できます。",
+    fantasyGallery1Title: "海の眺望",
+    fantasyGallery1Body: "青い海を見渡す場所から、神秘的な群島への旅が始まります。",
+    fantasyGallery2Title: "島の俯瞰",
+    fantasyGallery2Body: "山、滝、海岸線が開放的な幻想マップを形づくります。",
+    fantasyGallery3Title: "花の小径",
+    fantasyGallery3Body: "花畑と森の道が、隠された手がかりへ導きます。",
+    fantasyGallery4Title: "夕暮れの花野",
+    fantasyGallery4Body: "柔らかな夕暮れの光が、冒険に温かな表情を与えます。",
+    fantasyGallery5Title: "雪の村",
+    fantasyGallery5Body: "暖かな海辺から雪の集落へ、環境ごとに新しい任務が待っています。",
+    fantasyGallery6Title: "山麓の拠点",
+    fantasyGallery6Body: "山のふもとで住民や環境とつながり、物語を進めます。",
+    fantasyGallery7Title: "湖畔の日の出",
+    fantasyGallery7Body: "静かな湖と遠い山々が、次の探索目標を示します。",
+    fantasyGallery8Title: "村の草原",
+    fantasyGallery8Body: "開けた村エリアには任務、資源、キャラクター交流が広がります。",
+    fantasyGallery9Title: "浜辺の資源",
+    fantasyGallery9Body: "浜辺と浅瀬には収集物や小さなイベントが隠れています。",
+    fantasyGallery10Title: "水晶洞窟",
+    fantasyGallery10Body: "輝くエネルギーを追い、洞窟と古代の謎へ踏み込みます。",
+    fantasyGallery11Title: "栽培システム",
+    fantasyGallery11Body: "植える、収穫する、管理する流れが島での生活にリズムを与えます。",
+    fantasyGallery12Title: "料理システム",
+    fantasyGallery12Body: "食材とレシピから料理を作り、探索を支えます。",
+    fantasyGallery13Title: "居心地のよい部屋",
+    fantasyGallery13Body: "室内空間は、成長していく拠点体験の一面を示します。",
+    fantasyCtaKicker: "READY FOR THE ISLAND",
+    fantasyCtaTitle: "幻想の島へ踏み出し、次の旅を始めよう。",
+    fantasyCtaLead: "プロダクト一覧に戻り、Singularity Games のさらに多くの世界を探索しましょう。",
+    fantasyCtaButton: "プロダクトへ戻る",
+  },
+};
+
+Object.entries(fantasyTranslations).forEach(([lang, dictionary]) => {
+  Object.assign(translations[lang], dictionary);
+});
+
 const teamProfiles = {
   zh: {
     ceo: {
@@ -934,10 +1187,17 @@ function applyLanguage(lang, burstTarget = null) {
     if (value) node.textContent = value;
   });
 
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => {
+    const key = node.dataset.i18nPlaceholder;
+    const value = dictionary[key] || translations.zh[key];
+    if (value) node.setAttribute("placeholder", value);
+  });
+
   updateHeroTitleEffects(nextLang);
   updateTeamDetail(activeMemberKey);
   updateGameGalleryText();
   updateCopyStatus(dictionary.contactCopyIdle);
+  updateSubscribeStatus(dictionary.fantasySubscribeIdle, "idle");
   storeLanguage(nextLang);
   if (burstTarget) spawnBurst(burstTarget, 20);
 }
@@ -1081,6 +1341,34 @@ function setupEmailCopy() {
   });
 }
 
+function updateSubscribeStatus(message, state = "idle") {
+  const status = document.getElementById("fantasySubscribeStatus");
+  if (!status || !message) return;
+  status.textContent = message;
+  status.dataset.state = state;
+}
+
+function setupLocalSubscribe() {
+  document.querySelectorAll("[data-subscribe-form]").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const input = form.querySelector("input[type='email']");
+      const button = form.querySelector("button");
+      const dictionary = translations[currentLang] || translations.zh;
+
+      if (!input || !input.value.trim() || !input.validity.valid) {
+        updateSubscribeStatus(dictionary.fantasySubscribeInvalid, "error");
+        input?.focus();
+        return;
+      }
+
+      updateSubscribeStatus(dictionary.fantasySubscribeSuccess, "success");
+      input.value = "";
+      if (button) spawnBurst(button, 28);
+    });
+  });
+}
+
 function updateGameGalleryText() {
   const active = document.querySelector(".game-gallery-thumbs button.is-active");
   const title = document.getElementById("gameGalleryTitleText");
@@ -1112,6 +1400,12 @@ function setupGameGallery() {
         viewer.src = image;
         updateGameGalleryText();
         viewer.classList.remove("is-switching");
+        if (window.innerWidth < 1100) {
+          viewer.closest(".game-gallery-viewer")?.scrollIntoView({
+            block: "center",
+            behavior: prefersReduced ? "auto" : "smooth",
+          });
+        }
       }, 120);
       spawnBurst(button, 18);
     });
@@ -1127,6 +1421,7 @@ setupReveal();
 setupLanguage();
 setupTeamDirectory();
 setupEmailCopy();
+setupLocalSubscribe();
 setupGameGallery();
 updateHeroTitleEffects(currentLang);
 setupVideoFallback();

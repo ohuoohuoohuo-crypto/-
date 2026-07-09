@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="奇幻岛屿，充满魔法与奇幻元素的开放世界冒险游戏。"
+    />
+    <title>奇幻岛屿 - Singularity Games / 奇点游戏</title>
+    <link rel="stylesheet" href="./styles.css?v=fantasy-island-1" />
+  </head>
+  <body>
+    <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+    <div id="burstLayer" class="burst-layer" aria-hidden="true"></div>
+
+    <div class="stage-bg" aria-hidden="true">
+      <video
+        class="stage-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="./assets/homepage-pipe-animation.mp4" type="video/mp4" />
+      </video>
+      <div class="video-shade"></div>
+      <div class="grid-plane"></div>
+      <div class="light-trails"></div>
+      <div class="scan-field"></div>
+    </div>
+
+    <header class="site-header" data-reveal>
+      <a class="brand" href="./index.html#home" aria-label="Singularity Games home">
+        <span class="brand-mark">
+          <span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Singularity Games</strong>
+          <small>奇点游戏</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="主导航">
+        <a href="./index.html#home" data-i18n="navHome">首页</a>
+        <a class="is-current" href="./index.html#products" data-i18n="navProducts">产品</a>
+        <a href="./about.html" data-i18n="navAbout">关于我们</a>
+        <a href="./contact.html" data-i18n="navContact">联系我们</a>
+      </nav>
+
+      <div class="language-switch" aria-label="语言切换">
+        <button class="is-active" type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="en">English</button>
+        <button type="button" data-lang="ja">日本語</button>
+      </div>
+    </header>
+
+    <main class="fantasy-detail">
+      <section class="game-detail-hero fantasy-hero">
+        <div class="fantasy-hero-backdrop" aria-hidden="true">
+          <img src="./assets/fantasy-island/ocean-lookout.jpg" alt="" />
+        </div>
+
+        <div class="game-detail-hero-shell fantasy-hero-shell">
+          <div class="game-detail-copy fantasy-detail-copy" data-reveal>
+            <div class="about-breadcrumb game-breadcrumb" aria-label="当前位置">
+              <a href="./index.html#home" data-i18n="breadcrumbHome">首页</a>
+              <span>/</span>
+              <a href="./index.html#products" data-i18n="navProducts">产品</a>
+              <span>/</span>
+              <span data-i18n="fantasyTitle">奇幻岛屿</span>
+            </div>
+            <span class="section-kicker" data-i18n="fantasyKicker">FANTASY ISLAND</span>
+            <h1 data-i18n="fantasyTitle">奇幻岛屿</h1>
+            <p data-i18n="fantasyLead">
+              探索神秘的奇幻岛屿，体验前所未有的冒险与挑战。
+            </p>
+
+            <div class="game-detail-actions">
+              <a class="neon-button primary" href="#fantasy-intro" data-burst data-i18n="fantasyPrimaryAction">游戏介绍</a>
+              <a class="neon-button secondary" href="#game-gallery" data-burst data-i18n="fantasySecondaryAction">游戏截图</a>
+            </div>
+
+            <div class="game-signal-grid fantasy-signal-grid" aria-label="奇幻岛屿玩法标签">
+              <div>
+                <strong>03</strong>
+                <span data-i18n="fantasySignal1">奇幻世界</span>
+              </div>
+              <div>
+                <strong>06</strong>
+                <span data-i18n="fantasySignal2">核心特色</span>
+              </div>
+              <div>
+                <strong>13</strong>
+                <span data-i18n="fantasySignal3">实机画面</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="game-hero-media fantasy-hero-media reveal-card">
+            <img
+              src="./assets/fantasy-island/aerial-island.jpg"
+              alt="奇幻岛屿俯瞰主视觉"
+              loading="eager"
+            />
+            <div class="game-hero-hud fantasy-hero-hud" aria-hidden="true">
+              <span>MAGIC.ARCHIPELAGO ONLINE</span>
+              <strong>FANTASY ISLAND</strong>
+              <small>OPEN WORLD / QUEST / PUZZLE</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fantasy-intro" class="section game-story-section fantasy-story-section">
+        <div class="game-story-grid fantasy-story-grid">
+          <div class="story-copy game-story-copy fantasy-story-copy" data-reveal>
+            <span class="section-kicker" data-i18n="fantasyStoryKicker">GAME INTRO</span>
+            <h2 data-i18n="fantasyStoryTitle">游戏介绍</h2>
+            <p data-i18n="fantasyStoryBody1">
+              《奇幻岛屿》是一款充满魔法与奇幻元素的冒险游戏，玩家将踏上一段探索神秘岛屿的旅程，揭开岛上隐藏的秘密。
+            </p>
+            <p data-i18n="fantasyStoryBody2">
+              在这个奇幻世界中，岛屿上栖息着各种神奇生物，隐藏着古老的魔法遗迹和宝藏。玩家需要与岛上的居民交流，完成各种任务，解开谜题，逐步揭示岛屿的真相。
+            </p>
+            <p data-i18n="fantasyStoryBody3">
+              游戏融合了角色扮演、解谜和战斗元素，为玩家提供丰富多样的游戏体验。每个玩家的选择都将影响游戏的发展方向，创造属于自己的独特冒险故事。
+            </p>
+          </div>
+
+          <aside class="game-hud-panel fantasy-launch-panel reveal-card" aria-label="奇幻岛屿即将推出">
+            <span class="game-hud-label" data-i18n="fantasyLaunchKicker">LAUNCH SIGNAL</span>
+            <div class="fantasy-launch-scanner" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <h2 data-i18n="fantasyLaunchTitle">即将推出</h2>
+            <p data-i18n="fantasyLaunchBody">《奇幻岛屿》正在紧张开发中，敬请期待！</p>
+            <form class="fantasy-subscribe" data-subscribe-form data-subscribe-status="fantasySubscribeStatus">
+              <label class="sr-only" for="fantasyEmail" data-i18n="fantasySubscribeLabel">邮箱地址</label>
+              <input
+                id="fantasyEmail"
+                type="email"
+                autocomplete="email"
+                data-i18n-placeholder="fantasySubscribePlaceholder"
+                placeholder="您的邮箱地址"
+              />
+              <button type="submit" data-burst data-i18n="fantasySubscribeButton">订阅</button>
+            </form>
+            <p id="fantasySubscribeStatus" class="fantasy-subscribe-status" data-i18n="fantasySubscribeIdle">
+              留下邮箱，获取游戏最新动态和独家内容。
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="game-features" class="section game-feature-section fantasy-feature-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="fantasyFeaturesKicker">FEATURE MATRIX</span>
+          <h2 data-i18n="fantasyFeaturesTitle">游戏特色</h2>
+          <p data-i18n="fantasyFeaturesLead">
+            奇幻探索、角色互动、策略战斗与解谜挑战组成这座岛屿的核心体验。
+          </p>
+        </div>
+
+        <div class="game-showcase-grid fantasy-showcase-grid">
+          <article class="game-shot-card reveal-card" tabindex="0" style="--accent: 172 100% 60%">
+            <img src="./assets/fantasy-island/wildflower-path.jpg" alt="奇幻世界游戏画面" loading="lazy" />
+            <div>
+              <span>WORLD NODE</span>
+              <h3 data-i18n="fantasyShowcase1Title">奇幻世界</h3>
+              <p data-i18n="fantasyShowcase1Body">探索充满魔法与奇迹的岛屿，发现隐藏的奥秘。</p>
+            </div>
+          </article>
+          <article class="game-shot-card reveal-card" tabindex="0" style="--accent: 205 100% 66%">
+            <img src="./assets/fantasy-island/mountain-homestead.jpg" alt="角色互动游戏画面" loading="lazy" />
+            <div>
+              <span>QUEST LINK</span>
+              <h3 data-i18n="fantasyShowcase2Title">角色互动</h3>
+              <p data-i18n="fantasyShowcase2Body">与岛上居民建立关系，完成任务并影响世界走向。</p>
+            </div>
+          </article>
+          <article class="game-shot-card reveal-card" tabindex="0" style="--accent: 292 100% 70%">
+            <img src="./assets/fantasy-island/crystal-cavern.jpg" alt="解谜挑战游戏画面" loading="lazy" />
+            <div>
+              <span>RUIN CIPHER</span>
+              <h3 data-i18n="fantasyShowcase3Title">解谜挑战</h3>
+              <p data-i18n="fantasyShowcase3Body">进入遗迹与洞穴，解开秘密并解锁新区域。</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="game-feature-grid fantasy-feature-grid">
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>01</span>
+            <h3 data-i18n="fantasyFeature1Title">奇幻世界</h3>
+            <p data-i18n="fantasyFeature1Body">探索充满魔法与奇迹的岛屿，与神奇生物互动，发现隐藏的奥秘。</p>
+          </article>
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>02</span>
+            <h3 data-i18n="fantasyFeature2Title">引人入胜的故事</h3>
+            <p data-i18n="fantasyFeature2Body">体验精心编写的故事情节，跟随主角揭开岛屿的神秘面纱和自己的命运。</p>
+          </article>
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>03</span>
+            <h3 data-i18n="fantasyFeature3Title">策略性战斗</h3>
+            <p data-i18n="fantasyFeature3Body">参与回合制战斗，运用各种技能和策略，击败强大的敌人。</p>
+          </article>
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>04</span>
+            <h3 data-i18n="fantasyFeature4Title">解谜挑战</h3>
+            <p data-i18n="fantasyFeature4Body">解开各种谜题和挑战，获取宝藏和解锁新区域。</p>
+          </article>
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>05</span>
+            <h3 data-i18n="fantasyFeature5Title">角色互动</h3>
+            <p data-i18n="fantasyFeature5Body">与岛上的居民建立关系，完成任务，影响游戏世界的发展。</p>
+          </article>
+          <article class="game-feature-card reveal-card" tabindex="0">
+            <span>06</span>
+            <h3 data-i18n="fantasyFeature6Title">精美画面</h3>
+            <p data-i18n="fantasyFeature6Body">欣赏精心设计的游戏场景和角色，沉浸在奇幻的视觉盛宴中。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="game-gallery" class="section game-gallery-section fantasy-gallery-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="fantasyGalleryKicker">VISUAL ARCHIVE</span>
+          <h2 data-i18n="fantasyGalleryTitle">游戏截图</h2>
+          <p data-i18n="fantasyGalleryLead">点击缩略图切换预览，浏览海岛探索、营地、雪境、洞穴和生活系统。</p>
+        </div>
+
+        <div class="game-gallery-layout fantasy-gallery-layout" data-reveal>
+          <div class="game-gallery-viewer fantasy-gallery-viewer">
+            <img
+              id="gameGalleryImage"
+              src="./assets/fantasy-island/ocean-lookout.jpg"
+              alt="奇幻岛屿游戏画面预览"
+            />
+            <div class="game-gallery-caption">
+              <span>LIVE PREVIEW</span>
+              <h3 id="gameGalleryTitleText" data-i18n="fantasyGallery1Title">海岛远眺</h3>
+              <p id="gameGalleryBodyText" data-i18n="fantasyGallery1Body">从高处俯瞰蔚蓝海面，旅程从神秘群岛开始。</p>
+            </div>
+          </div>
+
+          <div class="game-gallery-thumbs fantasy-gallery-thumbs" aria-label="奇幻岛屿游戏截图缩略图">
+            <button class="is-active" type="button" data-gallery-image="./assets/fantasy-island/ocean-lookout.jpg" data-gallery-title="fantasyGallery1Title" data-gallery-body="fantasyGallery1Body" data-burst>
+              <img src="./assets/fantasy-island/ocean-lookout.jpg" alt="海岛远眺缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/fantasy-island/aerial-island.jpg" data-gallery-title="fantasyGallery2Title" data-gallery-body="fantasyGallery2Body" data-burst>
+              <img src="./assets/fantasy-island/aerial-island.jpg" alt="俯瞰岛屿缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/fantasy-island/wildflower-path.jpg" data-gallery-title="fantasyGallery3Title" data-gallery-body="fantasyGallery3Body" data-burst>
+              <img src="./assets/fantasy-island/wildflower-path.jpg" alt="花野小径缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/fantasy-island/flower-sunset.jpg" data-gallery-title="fantasyGallery4Title" data-gallery-body="fantasyGallery4Body" data-burst>
+              <img src="./assets/fantasy-island/flower-sunset.jpg" alt="花海日落缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/fantasy-island/snow-village.jpg" data-gallery-title="fantasyGallery5Title" data-gallery-body="fantasyGallery5Body" data-burst>
+              <img src="./assets/fantasy-island/snow-village.jpg" alt="雪境村落缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/fantasy-island/mountain-homestead.jpg" data-gallery-title="fantasyGallery6Title" data-gallery-body="fantasyGallery6Body" data-burst>
+              <img src="./assets/fantasy-island/mountain-homestead.jpg" alt="山脚营地缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/fantasy-island/lake-sun.jpg" data-gallery-title="fantasyGallery7Title" data-gallery-body="fantasyGallery7Body" data-burst>
+              <img src="./assets/fantasy-island/lake-sun.jpg" alt="湖畔日出缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/fantasy-island/village-field.jpg" data-gallery-title="fantasyGallery8Title" data-gallery-body="fantasyGallery8Body" data-burst>
+              <img src="./assets/fantasy-island/village-field.jpg" alt="村落草场缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/fantasy-island/beach-dolphins.jpg" data-gallery-title="fantasyGallery9Title" data-gallery-body="fantasyGallery9Body" data-burst>
+              <img src="./assets/fantasy-island/beach-dolphins.jpg" alt="海滩资源缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/fantasy-island/crystal-cavern.jpg" data-gallery-title="fantasyGallery10Title" data-gallery-body="fantasyGallery10Body" data-burst>
+              <img src="./assets/fantasy-island/crystal-cavern.jpg" alt="水晶洞穴缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/fantasy-island/farming-gameplay.jpg" data-gallery-title="fantasyGallery11Title" data-gallery-body="fantasyGallery11Body" data-burst>
+              <img src="./assets/fantasy-island/farming-gameplay.jpg" alt="种植系统缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/fantasy-island/cooking-ui.jpg" data-gallery-title="fantasyGallery12Title" data-gallery-body="fantasyGallery12Body" data-burst>
+              <img src="./assets/fantasy-island/cooking-ui.jpg" alt="烹饪系统缩略图" loading="lazy" />
+            </button>
+            <button type="button" data-gallery-image="./assets/fantasy-island/cozy-room.jpg" data-gallery-title="fantasyGallery13Title" data-gallery-body="fantasyGallery13Body" data-burst>
+              <img src="./assets/fantasy-island/cozy-room.jpg" alt="温馨房间缩略图" loading="lazy" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section game-detail-cta fantasy-detail-cta" data-reveal>
+        <div class="cta-energy" aria-hidden="true">
+          <span class="cta-orbit cta-orbit-one"></span>
+          <span class="cta-orbit cta-orbit-two"></span>
+          <span class="cta-beam"></span>
+          <span class="cta-core"></span>
+        </div>
+        <div class="cta-inner">
+          <span class="section-kicker" data-i18n="fantasyCtaKicker">READY FOR THE ISLAND</span>
+          <h2 data-i18n="fantasyCtaTitle">踏上奇幻岛屿，开启你的下一段旅程。</h2>
+          <p data-i18n="fantasyCtaLead">返回产品矩阵，继续探索 Singularity Games 的更多动态世界。</p>
+          <a class="neon-button primary" href="./index.html#products" data-burst data-i18n="fantasyCtaButton">返回产品</a>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="footer-scan" aria-hidden="true"></div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">
+            <span></span>
+          </span>
+          <div>
+            <strong>Singularity Games / 奇点游戏</strong>
+            <p data-i18n="footerTagline">创新游戏与 AI 体验的领导者</p>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <strong data-i18n="footerContact">联系我们</strong>
+          <a href="mailto:sgames@hanlian.com">sgames@hanlian.com</a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Singularity Games. 保留所有权利。</p>
+    </footer>
+
+    <script src="./app.js?v=fantasy-island-1"></script>
+  </body>
+</html>
