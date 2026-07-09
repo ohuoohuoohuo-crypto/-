@@ -35,7 +35,8 @@ const translations = {
     product5Body: "专为中小型房地产公司设计的 SaaS 管理系统，提供房源、租赁、合同等一体化管理解决方案。",
     product6Title: "毒舌坊主",
     product6Body: "20+ 角色，增强 3D，口才挑战！分享生活、吐槽热点，轻松各种话题的真人派对游戏。",
-    product7Body: "ネオン圏のカジュアルスネーク、エネルギーを集めて、どんどん成長。謎のうちが最強蛇王を目指します。",
+    product7Title: "蛇蛇·贪吃蛇",
+    product7Body: "霓虹风格的休闲贪吃蛇，吃掉能量点成长，利用加速和走位在限时挑战中坚持更久。",
     product8Title: "更多产品",
     product8Body: "我们还有更多有趣的游戏与 AI 应用正在开发中，敬请期待。",
     learnMore: "了解更多",
@@ -227,8 +228,9 @@ const translations = {
     product6Title: "Sharp-Tongue Master",
     product6Body:
       "20+ roles, enhanced 3D, and live verbal challenges for a fast, social party-game experience.",
+    product7Title: "Snake · Neon Bite",
     product7Body:
-      "A casual snake-growth game about eating, evolving, powering up, and challenging the final snake king.",
+      "A neon-style casual snake game. Eat energy points to grow, then use boosts and positioning to survive longer in timed challenges.",
     product8Title: "More Products",
     product8Body: "More games and AI applications are in development. Stay tuned.",
     learnMore: "Learn More",
@@ -423,8 +425,9 @@ const translations = {
     product6Title: "毒舌坊主",
     product6Body:
       "20以上のキャラクター、強化された 3D 表現、会話チャレンジを備えたリアル対戦パーティーゲームです。",
+    product7Title: "ヘビ・もぐもぐ",
     product7Body:
-      "ネオン圏のカジュアルスネーク。エネルギーを集めて成長し、最強の蛇王を目指します。",
+      "ネオン風のカジュアルスネーク。エネルギーポイントを食べて成長し、加速と位置取りで制限時間チャレンジをより長く生き残ります。",
     product8Title: "その他のプロダクト",
     product8Body: "さらに多くのゲームと AI アプリケーションを開発中です。どうぞご期待ください。",
     learnMore: "詳しく見る",
