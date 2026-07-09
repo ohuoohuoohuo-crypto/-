@@ -1084,6 +1084,223 @@ Object.entries(saylyTranslations).forEach(([lang, dictionary]) => {
   Object.assign(translations[lang], dictionary);
 });
 
+const savageTranslations = {
+  zh: {
+    savageKicker: "TOXIC MINE PARTY",
+    savageTitle: "毒舌坊主 SavageMonk",
+    savageLead: "20格、3颗地雷。口才比地雷更危险的坊主们，带来史上最毒舌的地雷探测派对游戏。",
+    savagePrimaryAction: "试探地雷盘",
+    savageSecondaryAction: "游戏特色",
+    savageSignal1: "地雷格局",
+    savageSignal2: "隐藏地雷",
+    savageSignal3: "个性角色",
+    savageIntroKicker: "GAME INTRO",
+    savageIntroTitle: "游戏介绍",
+    savageIntroBody1:
+      "毒舌坊主是一款漫画风视觉与黑色幽默融合的派对型扫雷游戏。玩家需要在 4x5 的 20 个格子里避开 3 颗地雷，找出 17 个安全地带。",
+    savageIntroBody2:
+      "11 个个性十足的坊主角色会迎接你的挑战。安全格也可能被吐槽轰炸，踩中地雷则会瞬间引爆，让聚会现场笑声不断。",
+    savageIntroBody3:
+      "派对模式支持朋友轮流操作设备，通过罚游戏、挑战卡与不可预测的特殊角色乱入，把简单规则变成高压又好笑的心理博弈。",
+    savageBoardKicker: "LIVE MINE TEST",
+    savageBoardTitle: "选择一个格子，看看坊主怎么毒舌。",
+    savageBoardIdle: "安全格也不一定安全，至少嘴上不是。",
+    savageBoardSafe: "{cell} 号暂时安全。坊主冷笑：运气好，不代表你聪明。",
+    savageBoardMine: "{cell} 号踩雷。坊主补刀：这判断力，地雷都嫌你吵。",
+    savageBoardReset: "重置地雷盘",
+    savageFeaturesKicker: "FEATURE MATRIX",
+    savageFeaturesTitle: "游戏特色",
+    savageFeaturesLead: "简单规则、强社交压力、随机乱入和三语本地化，构成这款派对扫雷的爽点。",
+    savageShowcase1Title: "漫画风视觉",
+    savageShowcase1Body: "和纸纹理、夸张表情与爆笑演出，完整复现日本漫画美学。",
+    savageShowcase2Title: "派对模式",
+    savageShowcase2Body: "朋友轮流操作设备，在地雷、惩罚和挑战卡之间制造气氛。",
+    savageRoleKicker: "CHARACTER SWITCH",
+    savageRoleNormal: "普通坊主",
+    savageRoleSpecial: "特殊坊主",
+    savageRoleRare: "稀有坊主",
+    savageRoleNormalTitle: "稳扎稳打的普通坊主",
+    savageRoleNormalBody: "基础规则最清晰，却会用毒舌提示不断扰乱你的判断。",
+    savageRoleSpecialTitle: "无法预测的特殊坊主",
+    savageRoleSpecialBody: "会追加地雷、隐藏格子或扔出骰子，让局势突然反转。",
+    savageRoleRareTitle: "压迫感拉满的稀有坊主",
+    savageRoleRareBody: "低概率登场，台词更毒、技能更狠，是派对气氛的爆点。",
+    savageFeature1Title: "扫雷 x 派对",
+    savageFeature1Body: "20 格里避开 3 颗地雷，规则简单但压力拉满，清除率只有 0.088%。",
+    savageFeature2Title: "11个角色",
+    savageFeature2Body: "普通、特殊、稀有角色都拥有专属毒舌台词和技能。",
+    savageFeature3Title: "特殊角色乱入",
+    savageFeature3Body: "地雷追加、格子隐藏、骰子胜负等随机事件让局势无法预测。",
+    savageFeature4Title: "派对模式",
+    savageFeature4Body: "围坐轮流挑战，罚游戏和挑战卡让每一次点击都更刺激。",
+    savageFeature5Title: "漫画风视觉",
+    savageFeature5Body: "夸张表情、爆炸演出与喜剧镜头，强化毒舌世界的荒诞感。",
+    savageFeature6Title: "三语支持",
+    savageFeature6Body: "中文、日语、英语完整本地化，角色吐槽也能切换语言。",
+    savageModeKicker: "GAME LOOP",
+    savageModeTitle: "三步进入毒舌局",
+    savageModeLead: "从选择角色到踩格判定，整局节奏为朋友聚会而设计。",
+    savageStep1Title: "选择坊主",
+    savageStep1Body: "选择普通、特殊或稀有角色，决定本轮台词和技能倾向。",
+    savageStep2Title: "点击格子",
+    savageStep2Body: "在 20 个格子里找安全地带，避开隐藏的 3 颗地雷。",
+    savageStep3Title: "接受吐槽",
+    savageStep3Body: "安全也会被嘴，踩雷则立刻触发惩罚和爆笑演出。",
+    savageDownloadKicker: "DOWNLOAD SIGNAL",
+    savageDownloadTitle: "下载毒舌坊主",
+    savageDownloadLead: "踩雷？自业自得。把这场毒舌派对带到你的下一次聚会。",
+    savageAppStore: "App Store下载",
+    savageOfficial: "查看官方网站",
+    savageDownloadIdle: "下载通道准备中，可先通过联系我们获取上架通知。",
+    savageDownloadAppStore: "App Store 下载信号已记录。正式上架后可第一时间获取通知。",
+    savageDownloadOfficial: "官网通道已准备，请继续关注 Singularity Games 产品矩阵。",
+  },
+  en: {
+    savageKicker: "TOXIC MINE PARTY",
+    savageTitle: "SavageMonk",
+    savageLead: "20 cells, 3 hidden mines, and monks whose words are sharper than the blast.",
+    savagePrimaryAction: "Try Mine Board",
+    savageSecondaryAction: "Game Features",
+    savageSignal1: "Mine Layout",
+    savageSignal2: "Hidden Mines",
+    savageSignal3: "Characters",
+    savageIntroKicker: "GAME INTRO",
+    savageIntroTitle: "Game Intro",
+    savageIntroBody1:
+      "SavageMonk is a party minesweeper game that mixes manga visuals with black comedy. Avoid 3 mines across a 4x5 board and uncover 17 safe cells.",
+    savageIntroBody2:
+      "Eleven sharp-tongued monk characters wait for your turn. Even safe cells may trigger a roast, while mines instantly explode the room into laughter.",
+    savageIntroBody3:
+      "Party mode lets friends pass the device around as penalty games, challenge cards, and special character intrusions turn simple rules into hilarious pressure.",
+    savageBoardKicker: "LIVE MINE TEST",
+    savageBoardTitle: "Pick a cell and let the monk judge you.",
+    savageBoardIdle: "Safe cells are not always safe, at least verbally.",
+    savageBoardSafe: "Cell {cell} is safe for now. The monk says: luck is not intelligence.",
+    savageBoardMine: "Cell {cell} exploded. The monk says: even the mine heard that bad choice.",
+    savageBoardReset: "Reset Board",
+    savageFeaturesKicker: "FEATURE MATRIX",
+    savageFeaturesTitle: "Game Features",
+    savageFeaturesLead: "Simple rules, social pressure, random intrusions, and three-language localization drive the party loop.",
+    savageShowcase1Title: "Manga Visuals",
+    savageShowcase1Body: "Paper texture, exaggerated expressions, and comic timing shape a Japanese manga-inspired look.",
+    savageShowcase2Title: "Party Mode",
+    savageShowcase2Body: "Pass the device around and let mines, penalties, and challenge cards build the room energy.",
+    savageRoleKicker: "CHARACTER SWITCH",
+    savageRoleNormal: "Normal Monk",
+    savageRoleSpecial: "Special Monk",
+    savageRoleRare: "Rare Monk",
+    savageRoleNormalTitle: "Reliable Normal Monk",
+    savageRoleNormalBody: "The base rules are clear, but sharp lines keep disturbing your judgment.",
+    savageRoleSpecialTitle: "Unpredictable Special Monk",
+    savageRoleSpecialBody: "Adds mines, hides cells, or throws dice events that flip the board state.",
+    savageRoleRareTitle: "High-Pressure Rare Monk",
+    savageRoleRareBody: "Appears rarely, roasts harder, and brings the strongest party moments.",
+    savageFeature1Title: "Minesweeper x Party",
+    savageFeature1Body: "Avoid 3 mines in 20 cells. The rules are simple, but the clear rate is only 0.088%.",
+    savageFeature2Title: "11 Characters",
+    savageFeature2Body: "Normal, special, and rare monks each bring unique roast lines and abilities.",
+    savageFeature3Title: "Special Intrusions",
+    savageFeature3Body: "Extra mines, hidden cells, dice events, and other chaos keep each round unpredictable.",
+    savageFeature4Title: "Party Mode",
+    savageFeature4Body: "Friends take turns, while penalty games and challenge cards make every click count.",
+    savageFeature5Title: "Manga Style",
+    savageFeature5Body: "Big expressions, blast effects, and comic framing amplify the absurd world.",
+    savageFeature6Title: "Three Languages",
+    savageFeature6Body: "Chinese, Japanese, and English localization lets the roast travel across languages.",
+    savageModeKicker: "GAME LOOP",
+    savageModeTitle: "Three Steps Into The Roast",
+    savageModeLead: "From character selection to cell judgment, the whole loop is built for gatherings.",
+    savageStep1Title: "Choose Monk",
+    savageStep1Body: "Pick a normal, special, or rare monk to shape the round's lines and abilities.",
+    savageStep2Title: "Tap A Cell",
+    savageStep2Body: "Search 20 cells for safe spaces and avoid the 3 hidden mines.",
+    savageStep3Title: "Take The Roast",
+    savageStep3Body: "Even safety gets mocked. A mine triggers penalties and comic impact.",
+    savageDownloadKicker: "DOWNLOAD SIGNAL",
+    savageDownloadTitle: "Download SavageMonk",
+    savageDownloadLead: "Stepped on a mine? That was on you. Bring the roast party to your next gathering.",
+    savageAppStore: "Download on App Store",
+    savageOfficial: "View Official Site",
+    savageDownloadIdle: "Download channels are being prepared. Contact us for launch updates.",
+    savageDownloadAppStore: "App Store signal recorded. Launch updates can be sent once the app is live.",
+    savageDownloadOfficial: "Official website channel is ready. Keep an eye on the Singularity Games product matrix.",
+  },
+  ja: {
+    savageKicker: "TOXIC MINE PARTY",
+    savageTitle: "毒舌坊主 SavageMonk",
+    savageLead: "20マス、地雷3つ。口が地雷より毒な坊主たち。史上最も毒舌な地雷探しパーティーゲーム。",
+    savagePrimaryAction: "地雷盤を試す",
+    savageSecondaryAction: "ゲーム特徴",
+    savageSignal1: "20マス",
+    savageSignal2: "地雷3つ",
+    savageSignal3: "11キャラ",
+    savageIntroKicker: "GAME INTRO",
+    savageIntroTitle: "ゲーム紹介",
+    savageIntroBody1:
+      "毒舌坊主は、漫画風ビジュアルとブラックユーモアが融合したパーティー型マインスイーパーゲームです。4x5の20マスに隠された3つの地雷を避けながら、17マスの安全地帯を見つけ出してください。",
+    savageIntroBody2:
+      "11人の個性豊かな坊主キャラクターがあなたを待ち受けています。安全なマスを踏んでも毒舌で罵られ、地雷を踏めば容赦なく爆発します。",
+    savageIntroBody3:
+      "パーティーモードでは、友達と一緒にデバイスを回しながら罰ゲームやチャレンジカードで盛り上がれます。中国語・日本語・英語の3言語に完全対応しています。",
+    savageBoardKicker: "LIVE MINE TEST",
+    savageBoardTitle: "マスを選んで、坊主の毒舌を受け止めよう。",
+    savageBoardIdle: "安全マスでも、口撃までは安全とは限りません。",
+    savageBoardSafe: "{cell} 番は今のところ安全。坊主曰く、運がいいだけです。",
+    savageBoardMine: "{cell} 番で地雷。坊主曰く、その判断力に地雷も驚いています。",
+    savageBoardReset: "地雷盤をリセット",
+    savageFeaturesKicker: "FEATURE MATRIX",
+    savageFeaturesTitle: "ゲームの特徴",
+    savageFeaturesLead: "シンプルなルール、強い心理圧、ランダム乱入、三言語対応がパーティー体験を作ります。",
+    savageShowcase1Title: "漫画風ビジュアル",
+    savageShowcase1Body: "和紙テクスチャ、漫画エフェクト、スピード線、爆発演出で日本漫画の美学を再現。",
+    savageShowcase2Title: "パーティーモード",
+    savageShowcase2Body: "友達と端末を回しながら、地雷、罰ゲーム、チャレンジカードで盛り上がれます。",
+    savageRoleKicker: "CHARACTER SWITCH",
+    savageRoleNormal: "通常坊主",
+    savageRoleSpecial: "特殊坊主",
+    savageRoleRare: "レア坊主",
+    savageRoleNormalTitle: "堅実な通常坊主",
+    savageRoleNormalBody: "基本ルールはわかりやすいものの、毒舌ヒントで判断を揺さぶります。",
+    savageRoleSpecialTitle: "予測不能な特殊坊主",
+    savageRoleSpecialBody: "地雷追加、セル隠し、サイコロ勝負など、展開を突然ひっくり返します。",
+    savageRoleRareTitle: "圧が強いレア坊主",
+    savageRoleRareBody: "低確率で登場し、台詞もスキルも強烈。場の空気を一気に変えます。",
+    savageFeature1Title: "マインスイーパー x パーティー",
+    savageFeature1Body: "20マスの中から3つの地雷を避けるシンプルなルール。クリア率0.088%の極限サバイバル。",
+    savageFeature2Title: "11人のキャラクター",
+    savageFeature2Body: "通常キャラ5体、特殊キャラ4体、レアキャラ2体。それぞれ固有の毒舌セリフとスキルを持ちます。",
+    savageFeature3Title: "特殊キャラ乱入",
+    savageFeature3Body: "地雷追加、セル隠し、サイコロ勝負など予測不能な展開が発生します。",
+    savageFeature4Title: "パーティーモード",
+    savageFeature4Body: "友達と一緒に遊べる飲み会モード。地雷で罰酒、安全でも罰ゲームカードが待ち受けます。",
+    savageFeature5Title: "漫画風ビジュアル",
+    savageFeature5Body: "和紙テクスチャ、漫画エフェクト、爆発演出で毒舌世界をコミカルに表現。",
+    savageFeature6Title: "3言語対応",
+    savageFeature6Body: "中国語・日本語・英語の完全ローカライズ。全キャラクターのセリフも3言語で楽しめます。",
+    savageModeKicker: "GAME LOOP",
+    savageModeTitle: "3ステップで毒舌局へ",
+    savageModeLead: "キャラ選択からマス判定まで、友達との集まりに向けたテンポで進みます。",
+    savageStep1Title: "坊主を選ぶ",
+    savageStep1Body: "通常、特殊、レアから選び、そのラウンドの台詞とスキル傾向を決めます。",
+    savageStep2Title: "マスをタップ",
+    savageStep2Body: "20マスから安全地帯を探し、隠された3つの地雷を避けます。",
+    savageStep3Title: "毒舌を受ける",
+    savageStep3Body: "安全でも口撃され、地雷なら罰ゲームと爆笑演出が発生します。",
+    savageDownloadKicker: "DOWNLOAD SIGNAL",
+    savageDownloadTitle: "毒舌坊主をダウンロード",
+    savageDownloadLead: "踏んだ？自業自得。次の集まりに毒舌パーティーを持ち込みましょう。",
+    savageAppStore: "App Storeでダウンロード",
+    savageOfficial: "公式サイトを見る",
+    savageDownloadIdle: "ダウンロード経路を準備中です。お問い合わせから公開通知を受け取れます。",
+    savageDownloadAppStore: "App Store の通知を記録しました。公開後に最新情報を受け取れます。",
+    savageDownloadOfficial: "公式サイトの経路を準備しました。Singularity Games の製品一覧もご確認ください。",
+  },
+};
+
+Object.entries(savageTranslations).forEach(([lang, dictionary]) => {
+  Object.assign(translations[lang], dictionary);
+});
+
 const teamProfiles = {
   zh: {
     ceo: {
@@ -1246,6 +1463,10 @@ let currentLang = "zh";
 let activeMemberKey = "ceo";
 let activeSaylyPlan = "free";
 let activeSaylyDownloadState = "idle";
+let activeSavageRole = "normal";
+let activeSavageBoardState = "idle";
+let activeSavageBoardCell = "";
+let activeSavageDownloadState = "idle";
 const languageMeta = {
   zh: "zh-CN",
   en: "en",
@@ -1373,7 +1594,7 @@ function spawnBurst(target, amount = 22) {
 
 function setupTiltCards() {
   document.querySelectorAll(
-    ".product-card, .value-card, .team-card, .contact-card, .contact-minimal-panel, .game-hud-panel, .game-shot-card, .game-feature-card, .game-gallery-viewer",
+    ".product-card, .value-card, .team-card, .contact-card, .contact-minimal-panel, .game-hud-panel, .game-shot-card, .game-feature-card, .game-gallery-viewer, .savage-hero-media, .savage-board-panel, .savage-role-card",
   ).forEach((card) => {
     card.addEventListener("pointermove", (event) => {
       const rect = card.getBoundingClientRect();
@@ -1448,6 +1669,9 @@ function applyLanguage(lang, burstTarget = null) {
   updateSaylyDemoText();
   updateSaylyPlanStatus();
   updateSaylyDownloadStatus();
+  updateSavageBoardStatus();
+  updateSavageRoleText();
+  updateSavageDownloadStatus();
   updateCopyStatus(dictionary.contactCopyIdle);
   updateSubscribeStatus(dictionary.fantasySubscribeIdle, "idle");
   storeLanguage(nextLang);
@@ -1751,6 +1975,124 @@ function setupSaylyDownloads() {
   updateSaylyDownloadStatus();
 }
 
+function updateSavageBoardStatus() {
+  const status = document.getElementById("savageBoardStatus");
+  if (!status) return;
+
+  const dictionary = translations[currentLang] || translations.zh;
+  const keys = {
+    idle: "savageBoardIdle",
+    safe: "savageBoardSafe",
+    mine: "savageBoardMine",
+  };
+  const key = keys[activeSavageBoardState] || keys.idle;
+  const fallback = translations.zh[key] || "";
+  status.dataset.i18n = key;
+  status.dataset.state = activeSavageBoardState;
+  status.textContent = (dictionary[key] || fallback).replace("{cell}", activeSavageBoardCell || "--");
+}
+
+function setupSavageBoard() {
+  const board = document.querySelector("[data-savage-board]");
+  const buttons = document.querySelectorAll("[data-monk-cell]");
+  const reset = document.querySelector("[data-monk-reset]");
+  if (!board || !buttons.length) return;
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const isMine = button.dataset.monkRisk === "true";
+      activeSavageBoardState = isMine ? "mine" : "safe";
+      activeSavageBoardCell = button.dataset.monkCell || "";
+
+      buttons.forEach((item) => {
+        item.classList.remove("is-safe", "is-mine");
+        item.setAttribute("aria-pressed", "false");
+      });
+      button.classList.add(isMine ? "is-mine" : "is-safe");
+      button.setAttribute("aria-pressed", "true");
+      updateSavageBoardStatus();
+      spawnBurst(button, isMine ? 38 : 20);
+    });
+  });
+
+  reset?.addEventListener("click", () => {
+    activeSavageBoardState = "idle";
+    activeSavageBoardCell = "";
+    buttons.forEach((button) => {
+      button.classList.remove("is-safe", "is-mine");
+      button.setAttribute("aria-pressed", "false");
+    });
+    updateSavageBoardStatus();
+    spawnBurst(reset, 18);
+  });
+
+  updateSavageBoardStatus();
+}
+
+function updateSavageRoleText() {
+  const title = document.getElementById("savageRoleTitle");
+  const body = document.getElementById("savageRoleBody");
+  if (!title || !body) return;
+
+  const dictionary = translations[currentLang] || translations.zh;
+  const roleKey = activeSavageRole || "normal";
+  const titleKey = `savageRole${roleKey[0].toUpperCase()}${roleKey.slice(1)}Title`;
+  const bodyKey = `savageRole${roleKey[0].toUpperCase()}${roleKey.slice(1)}Body`;
+
+  title.dataset.i18n = titleKey;
+  body.dataset.i18n = bodyKey;
+  title.textContent = dictionary[titleKey] || translations.zh[titleKey] || title.textContent;
+  body.textContent = dictionary[bodyKey] || translations.zh[bodyKey] || body.textContent;
+
+  document.querySelectorAll("[data-monk-role]").forEach((button) => {
+    const isSelected = button.dataset.monkRole === activeSavageRole;
+    button.classList.toggle("is-active", isSelected);
+    button.setAttribute("aria-pressed", String(isSelected));
+  });
+}
+
+function setupSavageRoles() {
+  const buttons = document.querySelectorAll("[data-monk-role]");
+  if (!buttons.length) return;
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeSavageRole = button.dataset.monkRole || "normal";
+      updateSavageRoleText();
+      spawnBurst(button, activeSavageRole === "rare" ? 30 : 18);
+    });
+  });
+
+  updateSavageRoleText();
+}
+
+function updateSavageDownloadStatus() {
+  const status = document.getElementById("savageDownloadStatus");
+  if (!status) return;
+
+  const dictionary = translations[currentLang] || translations.zh;
+  const keys = {
+    idle: "savageDownloadIdle",
+    appstore: "savageDownloadAppStore",
+    official: "savageDownloadOfficial",
+  };
+  const key = keys[activeSavageDownloadState] || keys.idle;
+  status.dataset.i18n = key;
+  status.textContent = dictionary[key] || translations.zh[key] || status.textContent;
+}
+
+function setupSavageDownloads() {
+  document.querySelectorAll("[data-monk-download]").forEach((button) => {
+    button.addEventListener("click", () => {
+      activeSavageDownloadState = button.dataset.monkDownload || "idle";
+      updateSavageDownloadStatus();
+      spawnBurst(button, 30);
+    });
+  });
+
+  updateSavageDownloadStatus();
+}
+
 resizeCanvas();
 setupPointer();
 setupTiltCards();
@@ -1763,6 +2105,9 @@ setupGameGallery();
 setupSaylyDemo();
 setupSaylyPricing();
 setupSaylyDownloads();
+setupSavageBoard();
+setupSavageRoles();
+setupSavageDownloads();
 updateHeroTitleEffects(currentLang);
 setupVideoFallback();
 

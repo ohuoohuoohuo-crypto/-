@@ -1,47 +1,50 @@
-**Findings**
-- No actionable P0/P1/P2 issues remain.
+**Source Visual**
+- `/Users/wangshengbin/Downloads/组 5.png`
 
-**Source Visual Truth**
-- Reference image: `/Users/wangshengbin/Downloads/组 4.png`
-- Local reference copy: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/sayly-reference.png`
-- Product asset used: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/assets/products/sayly.png`
-
-**Implementation Screenshots**
-- Desktop full page: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/sayly-final-desktop-qa.png`
-- Desktop hero viewport: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/sayly-final-viewport-qa.png`
-- Product demo interaction: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/sayly-demo-qa.png`
-- Pricing cards: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/sayly-pricing-cards-qa.png`
-- Pricing/download feedback: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/sayly-pricing-qa.png`
-- Mobile hero after tuning: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/sayly-mobile-hero-qa3.png`
-- Full-view comparison evidence: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/sayly-comparison-viewport-qa.png`
+**Implementation**
+- `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/savage-monk.html`
+- Local URL: `http://127.0.0.1:4174/savage-monk.html?v=qa1`
 
 **Viewport And State**
-- Desktop viewport: 1440 x 900.
-- Mobile viewport: 390 x 844.
-- States checked: first-load hero, product introduction, live tone conversion, pricing plan selection, download CTA feedback, Chinese/English/Japanese language modes, homepage product-card link.
+- Desktop: `1440x900`, Chinese mode, hero at top.
+- Interaction: Chinese mode, mine cell `03` selected, rare monk role selected.
+- Mobile: `390x844`, Chinese mode, hero at top.
+- Language: Japanese mode verified after selecting mine cell `15` and official download action.
+
+**Evidence**
+- Source/reference copy: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/savage-monk-reference.png`
+- Full-view comparison: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/savage-monk-comparison-qa1.png`
+- Desktop hero: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/savage-monk-desktop-hero-qa3.png`
+- Interaction state: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/savage-monk-interaction-qa1.png`
+- Mobile hero: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/savage-monk-mobile-hero-qa1.png`
+
+**Findings**
+- No actionable P0/P1/P2 issues remain.
+- The reference image uses a flat red/cream marketing page. The implementation intentionally adapts that content into the existing Singularity Games cyber/glass style: dark video-backed canvas, red/orange danger palette, glass panels, animated scan/ring effects, and interactive product modules.
 
 **Required Fidelity Surfaces**
-- Fonts and typography: Passed. The reference hierarchy was preserved while translated into the existing Singularity Games Chinese-first display system. Chinese, English, and Japanese modes render without horizontal overflow on tested desktop and mobile widths.
-- Spacing and layout rhythm: Passed. Source sections map to hero, intro, features, usage steps, pricing, and CTA. The mobile hero was tuned so the SayLy product visual appears in the first viewport instead of falling completely below the fold.
-- Colors and visual tokens: Passed. The light cream/orange source page was intentionally remixed into the site’s dark glass, cyan/violet, and SayLy orange/pink accent system. This is an intentional brand/style adaptation rather than a mismatch.
-- Image quality and asset fidelity: Passed. The real SayLy product artwork is used prominently in the hero and product card. No placeholder product imagery remains.
-- Copy and content: Passed. The source content is represented: product introduction, six product features, three usage steps, free/Pro pricing, and download CTA.
-- Interactions: Passed. Tone tabs switch the demo translation, pricing buttons update plan state, and download buttons provide immediate channel feedback.
-- Localization: Passed. Chinese, English, and Japanese language toggles update title, body copy, feature cards, usage steps, pricing labels, demo controls, and statuses.
+- Fonts and typography: title scale was reduced after QA to prevent `SavageMonk` from colliding with the hero media; mobile title fits within `343px` and desktop hero keeps a `58px` gap from the visual panel.
+- Spacing and layout rhythm: desktop hero, story, feature, mode, and CTA sections follow the existing detail-page rhythm; mobile has no horizontal overflow (`docWidth 375`, viewport `390`).
+- Colors and tokens: source red/orange danger tone is preserved, mapped into the site palette through neon red, orange, gold, dark glass, and existing cyan/violet accents.
+- Image quality and asset fidelity: uses the real product asset `assets/products/roast-master.png`; no placeholder art or CSS-drawn replacement for the product visual.
+- Copy and content: reference content is represented through title, game intro, 20-cell/3-mine rule, 11 characters, party mode, manga visuals, three-language support, and download CTA.
 
 **Patches Made**
-- Added `sayly.html` as the new SayLy product detail page.
-- Connected the homepage SayLy “了解更多” card to `./sayly.html`.
-- Added SayLy-specific translations for Chinese, English, and Japanese.
-- Added interactive tone conversion, plan selection, and download feedback logic.
-- Added SayLy-specific responsive hero, demo panel, feature grid, usage steps, pricing cards, and CTA styling.
-- Tuned mobile SayLy metrics into a compact three-column row so the product visual appears in the first viewport.
+- Added `savage-monk.html`.
+- Linked the homepage `毒舌坊主` product card to the new detail page.
+- Added Chinese, English, and Japanese translations for SavageMonk-specific content.
+- Added interactive mine-board, role-switching, and download-status behavior.
+- Added responsive red/orange SavageMonk visual system in `styles.css`.
+- Added ignored QA artifacts for SavageMonk screenshots and comparison files.
+- Tuned the desktop hero title size after visual QA.
 
-**Open Questions**
-- None for this iteration.
+**Interaction Checks**
+- Mine board: selecting `03` shows a mine state and localized roast feedback.
+- Role tabs: selecting rare monk updates role title/body and pressed state.
+- Download buttons: selecting official channel updates status copy.
+- Japanese language mode: board and download status update to Japanese.
 
 **Follow-Up Polish**
-- P3: If final App Store and official website URLs become available, wire the CTA buttons to the real destinations instead of local launch feedback.
-- P3: If additional SayLy screenshots are provided later, a gallery section can be added below the demo to show more product states.
+- If additional in-game screenshots become available, add a gallery section similar to `fantasy-island.html` and replace repeated product-art showcase imagery with actual play screens.
 
 final result: passed

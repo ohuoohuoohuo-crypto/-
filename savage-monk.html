@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="毒舌坊主 SavageMonk，一款融合地雷探测、角色吐槽和派对互动的黑色幽默游戏。"
+    />
+    <title>毒舌坊主 SavageMonk - Singularity Games / 奇点游戏</title>
+    <link rel="stylesheet" href="./styles.css?v=savage-monk-1" />
+  </head>
+  <body>
+    <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+    <div id="burstLayer" class="burst-layer" aria-hidden="true"></div>
+
+    <div class="stage-bg" aria-hidden="true">
+      <video
+        class="stage-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="./assets/homepage-pipe-animation.mp4" type="video/mp4" />
+      </video>
+      <div class="video-shade"></div>
+      <div class="grid-plane"></div>
+      <div class="light-trails"></div>
+      <div class="scan-field"></div>
+    </div>
+
+    <header class="site-header" data-reveal>
+      <a class="brand" href="./index.html#home" aria-label="Singularity Games home">
+        <span class="brand-mark">
+          <span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Singularity Games</strong>
+          <small>奇点游戏</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="主导航">
+        <a href="./index.html#home" data-i18n="navHome">首页</a>
+        <a class="is-current" href="./index.html#products" data-i18n="navProducts">产品</a>
+        <a href="./about.html" data-i18n="navAbout">关于我们</a>
+        <a href="./contact.html" data-i18n="navContact">联系我们</a>
+      </nav>
+
+      <div class="language-switch" aria-label="语言切换">
+        <button class="is-active" type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="en">English</button>
+        <button type="button" data-lang="ja">日本語</button>
+      </div>
+    </header>
+
+    <main class="savage-detail">
+      <section class="game-detail-hero savage-hero">
+        <div class="savage-hero-backdrop" aria-hidden="true"></div>
+        <div class="game-detail-hero-shell savage-hero-shell">
+          <div class="game-detail-copy savage-detail-copy" data-reveal>
+            <div class="about-breadcrumb game-breadcrumb" aria-label="当前位置">
+              <a href="./index.html#home" data-i18n="breadcrumbHome">首页</a>
+              <span>/</span>
+              <a href="./index.html#products" data-i18n="navProducts">产品</a>
+              <span>/</span>
+              <span data-i18n="savageTitle">毒舌坊主 SavageMonk</span>
+            </div>
+            <span class="section-kicker" data-i18n="savageKicker">TOXIC MINE PARTY</span>
+            <h1 data-i18n="savageTitle">毒舌坊主 SavageMonk</h1>
+            <p data-i18n="savageLead">
+              20格、3颗地雷。口才比地雷更危险的坊主们，带来史上最毒舌的地雷探测派对游戏。
+            </p>
+
+            <div class="game-detail-actions">
+              <a class="neon-button primary savage-primary" href="#savage-play" data-burst data-i18n="savagePrimaryAction">试探地雷盘</a>
+              <a class="neon-button secondary" href="#savage-features" data-burst data-i18n="savageSecondaryAction">游戏特色</a>
+            </div>
+
+            <div class="game-signal-grid savage-signal-grid" aria-label="毒舌坊主玩法标签">
+              <div>
+                <strong>20</strong>
+                <span data-i18n="savageSignal1">地雷格局</span>
+              </div>
+              <div>
+                <strong>03</strong>
+                <span data-i18n="savageSignal2">隐藏地雷</span>
+              </div>
+              <div>
+                <strong>11</strong>
+                <span data-i18n="savageSignal3">个性角色</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="savage-hero-media reveal-card" data-reveal>
+            <div class="savage-danger-rings" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img
+              class="savage-hero-art"
+              src="./assets/products/roast-master.png"
+              alt="毒舌坊主 SavageMonk 产品主视觉"
+              loading="eager"
+            />
+            <div class="savage-hero-hud" aria-hidden="true">
+              <span>SAVAGE MONK / MINE SCAN</span>
+              <strong>20 CELLS / 3 MINES</strong>
+              <small>PARTY MODE / ROAST LINES / 3 LANGUAGES</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="savage-intro" class="section savage-story-section">
+        <div class="game-story-grid savage-story-grid">
+          <div class="story-copy game-story-copy savage-story-copy" data-reveal>
+            <span class="section-kicker" data-i18n="savageIntroKicker">GAME INTRO</span>
+            <h2 data-i18n="savageIntroTitle">游戏介绍</h2>
+            <p data-i18n="savageIntroBody1">
+              毒舌坊主是一款漫画风视觉与黑色幽默融合的派对型扫雷游戏。玩家需要在 4x5 的 20 个格子里避开 3 颗地雷，找出 17 个安全地带。
+            </p>
+            <p data-i18n="savageIntroBody2">
+              11 个个性十足的坊主角色会迎接你的挑战。安全格也可能被吐槽轰炸，踩中地雷则会瞬间引爆，让聚会现场笑声不断。
+            </p>
+            <p data-i18n="savageIntroBody3">
+              派对模式支持朋友轮流操作设备，通过罚游戏、挑战卡与不可预测的特殊角色乱入，把简单规则变成高压又好笑的心理博弈。
+            </p>
+          </div>
+
+          <aside id="savage-play" class="savage-board-panel reveal-card" data-savage-board aria-label="毒舌坊主地雷盘演示">
+            <span class="game-hud-label" data-i18n="savageBoardKicker">LIVE MINE TEST</span>
+            <div class="savage-board-meta">
+              <strong data-i18n="savageBoardTitle">选择一个格子，看看坊主怎么毒舌。</strong>
+              <p id="savageBoardStatus" data-i18n="savageBoardIdle">安全格也不一定安全，至少嘴上不是。</p>
+            </div>
+            <div class="savage-mine-board" aria-label="20 格地雷演示">
+              <button type="button" data-monk-cell="01" data-burst>01</button>
+              <button type="button" data-monk-cell="02" data-burst>02</button>
+              <button type="button" data-monk-cell="03" data-monk-risk="true" data-burst>03</button>
+              <button type="button" data-monk-cell="04" data-burst>04</button>
+              <button type="button" data-monk-cell="05" data-burst>05</button>
+              <button type="button" data-monk-cell="06" data-burst>06</button>
+              <button type="button" data-monk-cell="07" data-burst>07</button>
+              <button type="button" data-monk-cell="08" data-burst>08</button>
+              <button type="button" data-monk-cell="09" data-monk-risk="true" data-burst>09</button>
+              <button type="button" data-monk-cell="10" data-burst>10</button>
+              <button type="button" data-monk-cell="11" data-burst>11</button>
+              <button type="button" data-monk-cell="12" data-burst>12</button>
+              <button type="button" data-monk-cell="13" data-burst>13</button>
+              <button type="button" data-monk-cell="14" data-burst>14</button>
+              <button type="button" data-monk-cell="15" data-monk-risk="true" data-burst>15</button>
+              <button type="button" data-monk-cell="16" data-burst>16</button>
+              <button type="button" data-monk-cell="17" data-burst>17</button>
+              <button type="button" data-monk-cell="18" data-burst>18</button>
+              <button type="button" data-monk-cell="19" data-burst>19</button>
+              <button type="button" data-monk-cell="20" data-burst>20</button>
+            </div>
+            <button class="savage-reset-button" type="button" data-monk-reset data-burst data-i18n="savageBoardReset">重置地雷盘</button>
+          </aside>
+        </div>
+      </section>
+
+      <section id="savage-features" class="section savage-feature-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="savageFeaturesKicker">FEATURE MATRIX</span>
+          <h2 data-i18n="savageFeaturesTitle">游戏特色</h2>
+          <p data-i18n="savageFeaturesLead">
+            简单规则、强社交压力、随机乱入和三语本地化，构成这款派对扫雷的爽点。
+          </p>
+        </div>
+
+        <div class="game-showcase-grid savage-showcase-grid">
+          <article class="game-shot-card savage-shot-card reveal-card" tabindex="0" style="--accent: 3 92% 58%">
+            <img src="./assets/products/roast-master.png" alt="毒舌坊主角色主视觉" loading="lazy" />
+            <div>
+              <span>ROAST NODE</span>
+              <h3 data-i18n="savageShowcase1Title">漫画风视觉</h3>
+              <p data-i18n="savageShowcase1Body">和纸纹理、夸张表情与爆笑演出，完整复现日本漫画美学。</p>
+            </div>
+          </article>
+          <article class="savage-role-card reveal-card" tabindex="0">
+            <span class="game-hud-label" data-i18n="savageRoleKicker">CHARACTER SWITCH</span>
+            <div class="savage-role-tabs" aria-label="角色类型切换">
+              <button class="is-active" type="button" data-monk-role="normal" data-burst data-i18n="savageRoleNormal">普通坊主</button>
+              <button type="button" data-monk-role="special" data-burst data-i18n="savageRoleSpecial">特殊坊主</button>
+              <button type="button" data-monk-role="rare" data-burst data-i18n="savageRoleRare">稀有坊主</button>
+            </div>
+            <div class="savage-role-output">
+              <strong id="savageRoleTitle" data-i18n="savageRoleNormalTitle">稳扎稳打的普通坊主</strong>
+              <p id="savageRoleBody" data-i18n="savageRoleNormalBody">基础规则最清晰，却会用毒舌提示不断扰乱你的判断。</p>
+            </div>
+          </article>
+          <article class="game-shot-card savage-shot-card reveal-card" tabindex="0" style="--accent: 34 100% 58%">
+            <img src="./assets/products/roast-master.png" alt="毒舌坊主派对玩法视觉" loading="lazy" />
+            <div>
+              <span>PARTY LOOP</span>
+              <h3 data-i18n="savageShowcase2Title">派对模式</h3>
+              <p data-i18n="savageShowcase2Body">朋友轮流操作设备，在地雷、惩罚和挑战卡之间制造气氛。</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="game-feature-grid savage-feature-grid">
+          <article class="game-feature-card savage-feature-card reveal-card" tabindex="0">
+            <span>01</span>
+            <h3 data-i18n="savageFeature1Title">扫雷 x 派对</h3>
+            <p data-i18n="savageFeature1Body">20 格里避开 3 颗地雷，规则简单但压力拉满，清除率只有 0.088%。</p>
+          </article>
+          <article class="game-feature-card savage-feature-card reveal-card" tabindex="0">
+            <span>02</span>
+            <h3 data-i18n="savageFeature2Title">11个角色</h3>
+            <p data-i18n="savageFeature2Body">普通、特殊、稀有角色都拥有专属毒舌台词和技能。</p>
+          </article>
+          <article class="game-feature-card savage-feature-card reveal-card" tabindex="0">
+            <span>03</span>
+            <h3 data-i18n="savageFeature3Title">特殊角色乱入</h3>
+            <p data-i18n="savageFeature3Body">地雷追加、格子隐藏、骰子胜负等随机事件让局势无法预测。</p>
+          </article>
+          <article class="game-feature-card savage-feature-card reveal-card" tabindex="0">
+            <span>04</span>
+            <h3 data-i18n="savageFeature4Title">派对模式</h3>
+            <p data-i18n="savageFeature4Body">围坐轮流挑战，罚游戏和挑战卡让每一次点击都更刺激。</p>
+          </article>
+          <article class="game-feature-card savage-feature-card reveal-card" tabindex="0">
+            <span>05</span>
+            <h3 data-i18n="savageFeature5Title">漫画风视觉</h3>
+            <p data-i18n="savageFeature5Body">夸张表情、爆炸演出与喜剧镜头，强化毒舌世界的荒诞感。</p>
+          </article>
+          <article class="game-feature-card savage-feature-card reveal-card" tabindex="0">
+            <span>06</span>
+            <h3 data-i18n="savageFeature6Title">三语支持</h3>
+            <p data-i18n="savageFeature6Body">中文、日语、英语完整本地化，角色吐槽也能切换语言。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section savage-mode-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="savageModeKicker">GAME LOOP</span>
+          <h2 data-i18n="savageModeTitle">三步进入毒舌局</h2>
+          <p data-i18n="savageModeLead">从选择角色到踩格判定，整局节奏为朋友聚会而设计。</p>
+        </div>
+
+        <div class="sayly-steps-grid savage-steps-grid">
+          <article class="sayly-step-card savage-step-card reveal-card" tabindex="0">
+            <span>1</span>
+            <h3 data-i18n="savageStep1Title">选择坊主</h3>
+            <p data-i18n="savageStep1Body">选择普通、特殊或稀有角色，决定本轮台词和技能倾向。</p>
+          </article>
+          <article class="sayly-step-card savage-step-card reveal-card" tabindex="0">
+            <span>2</span>
+            <h3 data-i18n="savageStep2Title">点击格子</h3>
+            <p data-i18n="savageStep2Body">在 20 个格子里找安全地带，避开隐藏的 3 颗地雷。</p>
+          </article>
+          <article class="sayly-step-card savage-step-card reveal-card" tabindex="0">
+            <span>3</span>
+            <h3 data-i18n="savageStep3Title">接受吐槽</h3>
+            <p data-i18n="savageStep3Body">安全也会被嘴，踩雷则立刻触发惩罚和爆笑演出。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-section game-detail-cta savage-download-cta" data-reveal>
+        <div class="cta-energy" aria-hidden="true">
+          <span class="cta-orbit cta-orbit-one"></span>
+          <span class="cta-orbit cta-orbit-two"></span>
+          <span class="cta-beam"></span>
+          <span class="cta-core"></span>
+        </div>
+        <div class="cta-inner">
+          <span class="section-kicker" data-i18n="savageDownloadKicker">DOWNLOAD SIGNAL</span>
+          <h2 data-i18n="savageDownloadTitle">下载毒舌坊主</h2>
+          <p data-i18n="savageDownloadLead">踩雷？自业自得。把这场毒舌派对带到你的下一次聚会。</p>
+          <div class="sayly-download-actions savage-download-actions">
+            <button class="neon-button primary savage-primary" type="button" data-monk-download="appstore" data-burst data-i18n="savageAppStore">App Store下载</button>
+            <button class="neon-button secondary" type="button" data-monk-download="official" data-burst data-i18n="savageOfficial">查看官方网站</button>
+          </div>
+          <p id="savageDownloadStatus" class="sayly-download-status" data-i18n="savageDownloadIdle">
+            下载通道准备中，可先通过联系我们获取上架通知。
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="footer-scan" aria-hidden="true"></div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">
+            <span></span>
+          </span>
+          <div>
+            <strong>Singularity Games / 奇点游戏</strong>
+            <p data-i18n="footerTagline">创新游戏与 AI 体验的领导者</p>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <strong data-i18n="footerContact">联系我们</strong>
+          <a href="mailto:sgames@hanlian.com">sgames@hanlian.com</a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Singularity Games. 保留所有权利。</p>
+    </footer>
+
+    <script src="./app.js?v=savage-monk-1"></script>
+  </body>
+</html>
