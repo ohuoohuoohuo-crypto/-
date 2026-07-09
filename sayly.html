@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SayLy 翻译键盘，为日本日常聊天场景提供自然日语转换。"
+    />
+    <title>SayLy - Singularity Games / 奇点游戏</title>
+    <link rel="stylesheet" href="./styles.css?v=sayly-1" />
+  </head>
+  <body>
+    <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+    <div id="burstLayer" class="burst-layer" aria-hidden="true"></div>
+
+    <div class="stage-bg" aria-hidden="true">
+      <video
+        class="stage-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="./assets/homepage-pipe-animation.mp4" type="video/mp4" />
+      </video>
+      <div class="video-shade"></div>
+      <div class="grid-plane"></div>
+      <div class="light-trails"></div>
+      <div class="scan-field"></div>
+    </div>
+
+    <header class="site-header" data-reveal>
+      <a class="brand" href="./index.html#home" aria-label="Singularity Games home">
+        <span class="brand-mark">
+          <span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Singularity Games</strong>
+          <small>奇点游戏</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="主导航">
+        <a href="./index.html#home" data-i18n="navHome">首页</a>
+        <a class="is-current" href="./index.html#products" data-i18n="navProducts">产品</a>
+        <a href="./about.html" data-i18n="navAbout">关于我们</a>
+        <a href="./contact.html" data-i18n="navContact">联系我们</a>
+      </nav>
+
+      <div class="language-switch" aria-label="语言切换">
+        <button class="is-active" type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="en">English</button>
+        <button type="button" data-lang="ja">日本語</button>
+      </div>
+    </header>
+
+    <main class="sayly-detail">
+      <section class="game-detail-hero sayly-hero">
+        <div class="sayly-hero-glass" aria-hidden="true"></div>
+        <div class="game-detail-hero-shell sayly-hero-shell">
+          <div class="game-detail-copy sayly-detail-copy" data-reveal>
+            <div class="about-breadcrumb game-breadcrumb" aria-label="当前位置">
+              <a href="./index.html#home" data-i18n="breadcrumbHome">首页</a>
+              <span>/</span>
+              <a href="./index.html#products" data-i18n="navProducts">产品</a>
+              <span>/</span>
+              <span>SayLy</span>
+            </div>
+            <span class="section-kicker" data-i18n="saylyKicker">SAYLY TRANSLATION KEYBOARD</span>
+            <h1 data-i18n="saylyTitle">SayLy - 翻译键盘</h1>
+            <p data-i18n="saylyLead">
+              不懂长日语也没关系。只需输入，即刻转换为自然日语。
+            </p>
+
+            <div class="game-detail-actions">
+              <a class="neon-button primary" href="#sayly-intro" data-burst data-i18n="saylyPrimaryAction">产品介绍</a>
+              <a class="neon-button secondary" href="#sayly-pricing" data-burst data-i18n="saylySecondaryAction">价格方案</a>
+            </div>
+
+            <div class="game-signal-grid sayly-signal-grid" aria-label="SayLy 产品能力">
+              <div>
+                <strong>9,600+</strong>
+                <span data-i18n="saylySignal1">离线翻译条目</span>
+              </div>
+              <div>
+                <strong>05</strong>
+                <span data-i18n="saylySignal2">对话场景</span>
+              </div>
+              <div>
+                <strong>AI</strong>
+                <span data-i18n="saylySignal3">实时润色</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sayly-hero-media reveal-card" data-reveal>
+            <div class="sayly-orbit" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img
+              class="sayly-hero-art"
+              src="./assets/products/sayly.png"
+              alt="SayLy 翻译键盘产品主视觉"
+              loading="eager"
+            />
+            <div class="sayly-hero-hud" aria-hidden="true">
+              <span>SAYLY.KEYBOARD ONLINE</span>
+              <strong>ENG → 日本語</strong>
+              <small>Gemini AI / Offline Phrasebase / Tone Switch</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sayly-intro" class="section sayly-story-section">
+        <div class="game-story-grid sayly-story-grid">
+          <div class="story-copy game-story-copy sayly-story-copy" data-reveal>
+            <span class="section-kicker" data-i18n="saylyIntroKicker">PRODUCT INTRO</span>
+            <h2 data-i18n="saylyIntroTitle">产品介绍</h2>
+            <p data-i18n="saylyIntroBody1">
+              SayLy 是一款专为在日外国人设计的翻译键盘应用。只需用中文或英文输入，即可立即转换为适用于 LINE、WhatsApp、iMessage 等消息应用的自然日语表达。
+            </p>
+            <p data-i18n="saylyIntroBody2">
+              无需复制粘贴。只需切换到 SayLy 键盘，轻触即可替换文本。支持日常、商务、情侣、敬语、简洁 5 种对话场景，提供符合场景的自然日语表达。
+            </p>
+            <p data-i18n="saylyIntroBody3">
+              内置 9,600+ 条离线翻译数据库，搭载 Google Gemini API 的 AI 实时翻译。即使没有网络也能进行基本翻译，AI 翻译实现更准确、更自然的表达。
+            </p>
+          </div>
+
+          <aside class="sayly-demo-panel reveal-card" data-sayly-demo aria-label="SayLy 翻译演示">
+            <span class="game-hud-label" data-i18n="saylyDemoKicker">LIVE CONVERSION</span>
+            <div class="sayly-demo-screen">
+              <div class="sayly-demo-source">
+                <span data-i18n="saylyDemoSourceLabel">输入</span>
+                <strong data-i18n="saylyDemoSource">Can we meet at 11 tomorrow?</strong>
+              </div>
+              <div class="sayly-demo-arrow" aria-hidden="true">→</div>
+              <div class="sayly-demo-result">
+                <span id="saylyDemoTone" data-i18n="saylyTonePolite">敬语</span>
+                <strong id="saylyDemoOutput" data-i18n="saylyDemoPoliteOutput">明日11時にお会いできますでしょうか。</strong>
+              </div>
+            </div>
+            <div class="sayly-tone-tabs" aria-label="SayLy 语气切换">
+              <button class="is-active" type="button" data-sayly-tone data-sayly-tone-label="saylyTonePolite" data-sayly-output="saylyDemoPoliteOutput" data-burst data-i18n="saylyTonePolite">敬语</button>
+              <button type="button" data-sayly-tone data-sayly-tone-label="saylyToneCasual" data-sayly-output="saylyDemoCasualOutput" data-burst data-i18n="saylyToneCasual">日常</button>
+              <button type="button" data-sayly-tone data-sayly-tone-label="saylyToneBusiness" data-sayly-output="saylyDemoBusinessOutput" data-burst data-i18n="saylyToneBusiness">商务</button>
+              <button type="button" data-sayly-tone data-sayly-tone-label="saylyToneShort" data-sayly-output="saylyDemoShortOutput" data-burst data-i18n="saylyToneShort">简洁</button>
+              <button type="button" data-sayly-tone data-sayly-tone-label="saylyToneRomance" data-sayly-output="saylyDemoRomanceOutput" data-burst data-i18n="saylyToneRomance">情侣</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="sayly-features" class="section sayly-feature-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="saylyFeaturesKicker">FEATURE MATRIX</span>
+          <h2 data-i18n="saylyFeaturesTitle">产品特色</h2>
+          <p data-i18n="saylyFeaturesLead">
+            把翻译、语境、离线数据库和 AI 润色压缩进一个随手可用的聊天键盘。
+          </p>
+        </div>
+
+        <div class="game-feature-grid sayly-feature-grid">
+          <article class="game-feature-card sayly-feature-card reveal-card" tabindex="0">
+            <span>01</span>
+            <h3 data-i18n="saylyFeature1Title">翻译键盘</h3>
+            <p data-i18n="saylyFeature1Body">适用于任何应用的键盘扩展。无需复制粘贴，一键替换为翻译文本。</p>
+          </article>
+          <article class="game-feature-card sayly-feature-card reveal-card" tabindex="0">
+            <span>02</span>
+            <h3 data-i18n="saylyFeature2Title">5种对话场景</h3>
+            <p data-i18n="saylyFeature2Body">日常、商务、情侣、敬语、简洁多种模式，为每种场景提供最合适的日语表达。</p>
+          </article>
+          <article class="game-feature-card sayly-feature-card reveal-card" tabindex="0">
+            <span>03</span>
+            <h3 data-i18n="saylyFeature3Title">离线数据库</h3>
+            <p data-i18n="saylyFeature3Body">预装 9,600+ 条翻译条目，无网络连接也能进行基本翻译。</p>
+          </article>
+          <article class="game-feature-card sayly-feature-card reveal-card" tabindex="0">
+            <span>04</span>
+            <h3 data-i18n="saylyFeature4Title">AI实时翻译</h3>
+            <p data-i18n="saylyFeature4Body">基于 Google Gemini API 的 AI 翻译，理解上下文，实现准确自然的日语表达。</p>
+          </article>
+          <article class="game-feature-card sayly-feature-card reveal-card" tabindex="0">
+            <span>05</span>
+            <h3 data-i18n="saylyFeature5Title">多语言支持</h3>
+            <p data-i18n="saylyFeature5Body">支持中文和英文输入。界面提供英语和中文双语版本。</p>
+          </article>
+          <article class="game-feature-card sayly-feature-card reveal-card" tabindex="0">
+            <span>06</span>
+            <h3 data-i18n="saylyFeature6Title">快捷回复</h3>
+            <p data-i18n="saylyFeature6Body">将常用短语注册为快捷方式，快速回复功能让你快速响应。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section sayly-steps-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="saylyStepsKicker">HOW IT WORKS</span>
+          <h2 data-i18n="saylyStepsTitle">使用方法</h2>
+          <p data-i18n="saylyStepsLead">SayLy 的使用非常简单。3 步即可发送自然的日语消息。</p>
+        </div>
+
+        <div class="sayly-steps-grid">
+          <article class="sayly-step-card reveal-card" tabindex="0">
+            <span>1</span>
+            <h3 data-i18n="saylyStep1Title">切换键盘</h3>
+            <p data-i18n="saylyStep1Body">按下地球按钮切换到 SayLy 键盘。</p>
+          </article>
+          <article class="sayly-step-card reveal-card" tabindex="0">
+            <span>2</span>
+            <h3 data-i18n="saylyStep2Title">用母语输入</h3>
+            <p data-i18n="saylyStep2Body">用中文或英文输入消息，选择对话场景。</p>
+          </article>
+          <article class="sayly-step-card reveal-card" tabindex="0">
+            <span>3</span>
+            <h3 data-i18n="saylyStep3Title">一键转换</h3>
+            <p data-i18n="saylyStep3Body">轻触翻译结果，输入文本即被替换为自然日语。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="sayly-pricing" class="section sayly-pricing-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="saylyPricingKicker">PRICE PLAN</span>
+          <h2 data-i18n="saylyPricingTitle">价格方案</h2>
+          <p data-i18n="saylyPricingLead">从日常免费翻译开始，需要更高频率时升级 Pro。</p>
+        </div>
+
+        <div class="sayly-pricing-grid" data-sayly-pricing data-reveal>
+          <article class="sayly-price-card reveal-card is-selected" tabindex="0">
+            <span class="sayly-plan-chip" data-i18n="saylyFreeName">免费版</span>
+            <h3 data-i18n="saylyFreePrice">免费</h3>
+            <ul>
+              <li data-i18n="saylyFreeItem1">每天20次AI翻译</li>
+              <li data-i18n="saylyFreeItem2">9,600+离线翻译</li>
+              <li data-i18n="saylyFreeItem3">5种对话场景</li>
+            </ul>
+            <button class="neon-button secondary" type="button" data-sayly-plan="free" data-burst data-i18n="saylyChooseFree">选择免费版</button>
+          </article>
+
+          <article class="sayly-price-card reveal-card sayly-price-card--pro" tabindex="0">
+            <span class="sayly-plan-chip" data-i18n="saylyProName">Pro版</span>
+            <h3><span>$0.99</span><small data-i18n="saylyPriceMonth">/月</small></h3>
+            <ul>
+              <li data-i18n="saylyProItem1">无限AI翻译</li>
+              <li data-i18n="saylyProItem2">9,600+离线翻译</li>
+              <li data-i18n="saylyProItem3">5种对话场景</li>
+              <li data-i18n="saylyProItem4">优先支持</li>
+            </ul>
+            <button class="neon-button primary" type="button" data-sayly-plan="pro" data-burst data-i18n="saylyChoosePro">升级 Pro</button>
+          </article>
+        </div>
+        <p id="saylyPlanStatus" class="sayly-plan-status" data-i18n="saylyPlanStatusFree">
+          已选择免费版，适合先体验 SayLy 的核心翻译能力。
+        </p>
+      </section>
+
+      <section class="cta-section game-detail-cta sayly-download-cta" data-reveal>
+        <div class="cta-energy" aria-hidden="true">
+          <span class="cta-orbit cta-orbit-one"></span>
+          <span class="cta-orbit cta-orbit-two"></span>
+          <span class="cta-beam"></span>
+          <span class="cta-core"></span>
+        </div>
+        <div class="cta-inner">
+          <span class="section-kicker" data-i18n="saylyDownloadKicker">DOWNLOAD SIGNAL</span>
+          <h2 data-i18n="saylyDownloadTitle">立即下载SayLy</h2>
+          <p data-i18n="saylyDownloadLead">让你的日本生活更顺畅。开始自然的日语交流吧！</p>
+          <div class="sayly-download-actions">
+            <button class="neon-button primary" type="button" data-sayly-download="appstore" data-burst data-i18n="saylyAppStore">在App Store下载</button>
+            <button class="neon-button secondary" type="button" data-sayly-download="official" data-burst>Official Website</button>
+          </div>
+          <p id="saylyDownloadStatus" class="sayly-download-status" data-i18n="saylyDownloadIdle">
+            下载通道准备中，可先通过联系我们获取上架通知。
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="footer-scan" aria-hidden="true"></div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">
+            <span></span>
+          </span>
+          <div>
+            <strong>Singularity Games / 奇点游戏</strong>
+            <p data-i18n="footerTagline">创新游戏与 AI 体验的领导者</p>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <strong data-i18n="footerContact">联系我们</strong>
+          <a href="mailto:sgames@hanlian.com">sgames@hanlian.com</a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Singularity Games. 保留所有权利。</p>
+    </footer>
+
+    <script src="./app.js?v=sayly-1"></script>
+  </body>
+</html>

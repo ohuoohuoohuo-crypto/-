@@ -31,7 +31,7 @@ const translations = {
     product2Body: "利用先进的 AI 技术，智能将创意转化为精美的艺术作品。",
     product3Title: "荒岛大赢家",
     product3Body: "在这款充满挑战的荒岛冒险游戏中，你将化身一名探险家，在神秘岛屿上求生存。",
-    product4Body: "日本正在专为国人设计的聊天键盘与 AI 聊天助手，助你在日本语境场景中自信交流。",
+    product4Body: "专为在日外国人设计的聊天键盘与 AI 聊天助手，助你在日本语境场景中自信交流。",
     product5Body: "专为中小型房地产公司设计的 SaaS 管理系统，提供房源、租赁、合同等一体化管理解决方案。",
     product6Title: "毒舌坊主",
     product6Body: "20+ 角色，增强 3D，口才挑战！分享生活、吐槽热点，轻松各种话题的真人派对游戏。",
@@ -837,6 +837,253 @@ Object.entries(fantasyTranslations).forEach(([lang, dictionary]) => {
   Object.assign(translations[lang], dictionary);
 });
 
+const saylyTranslations = {
+  zh: {
+    saylyKicker: "SAYLY TRANSLATION KEYBOARD",
+    saylyTitle: "SayLy - 翻译键盘",
+    saylyLead: "不懂长日语也没关系。只需输入，即刻转换为自然日语。",
+    saylyPrimaryAction: "产品介绍",
+    saylySecondaryAction: "价格方案",
+    saylySignal1: "离线翻译条目",
+    saylySignal2: "对话场景",
+    saylySignal3: "实时润色",
+    saylyIntroKicker: "PRODUCT INTRO",
+    saylyIntroTitle: "产品介绍",
+    saylyIntroBody1:
+      "SayLy 是一款专为在日外国人设计的翻译键盘应用。只需用中文或英文输入，即可立即转换为适用于 LINE、WhatsApp、iMessage 等消息应用的自然日语表达。",
+    saylyIntroBody2:
+      "无需复制粘贴。只需切换到 SayLy 键盘，轻触即可替换文本。支持日常、商务、情侣、敬语、简洁 5 种对话场景，提供符合场景的自然日语表达。",
+    saylyIntroBody3:
+      "内置 9,600+ 条离线翻译数据库，搭载 Google Gemini API 的 AI 实时翻译。即使没有网络也能进行基本翻译，AI 翻译实现更准确、更自然的表达。",
+    saylyDemoKicker: "LIVE CONVERSION",
+    saylyDemoSourceLabel: "输入",
+    saylyDemoSource: "Can we meet at 11 tomorrow?",
+    saylyTonePolite: "敬语",
+    saylyToneCasual: "日常",
+    saylyToneBusiness: "商务",
+    saylyToneShort: "简洁",
+    saylyToneRomance: "情侣",
+    saylyDemoPoliteOutput: "明日11時にお会いできますでしょうか。",
+    saylyDemoCasualOutput: "明日11時に会える？",
+    saylyDemoBusinessOutput: "明日11時にお打ち合わせ可能でしょうか。",
+    saylyDemoShortOutput: "明日11時、会えますか？",
+    saylyDemoRomanceOutput: "明日11時に会えたら嬉しいな。",
+    saylyFeaturesKicker: "FEATURE MATRIX",
+    saylyFeaturesTitle: "产品特色",
+    saylyFeaturesLead: "把翻译、语境、离线数据库和 AI 润色压缩进一个随手可用的聊天键盘。",
+    saylyFeature1Title: "翻译键盘",
+    saylyFeature1Body: "适用于任何应用的键盘扩展。无需复制粘贴，一键替换为翻译文本。",
+    saylyFeature2Title: "5种对话场景",
+    saylyFeature2Body: "日常、商务、情侣、敬语、简洁多种模式，为每种场景提供最合适的日语表达。",
+    saylyFeature3Title: "离线数据库",
+    saylyFeature3Body: "预装 9,600+ 条翻译条目，无网络连接也能进行基本翻译。",
+    saylyFeature4Title: "AI实时翻译",
+    saylyFeature4Body: "基于 Google Gemini API 的 AI 翻译，理解上下文，实现准确自然的日语表达。",
+    saylyFeature5Title: "多语言支持",
+    saylyFeature5Body: "支持中文和英文输入。界面提供英语和中文双语版本。",
+    saylyFeature6Title: "快捷回复",
+    saylyFeature6Body: "将常用短语注册为快捷方式，快速回复功能让你快速响应。",
+    saylyStepsKicker: "HOW IT WORKS",
+    saylyStepsTitle: "使用方法",
+    saylyStepsLead: "SayLy 的使用非常简单。3 步即可发送自然的日语消息。",
+    saylyStep1Title: "切换键盘",
+    saylyStep1Body: "按下地球按钮切换到 SayLy 键盘。",
+    saylyStep2Title: "用母语输入",
+    saylyStep2Body: "用中文或英文输入消息，选择对话场景。",
+    saylyStep3Title: "一键转换",
+    saylyStep3Body: "轻触翻译结果，输入文本即被替换为自然日语。",
+    saylyPricingKicker: "PRICE PLAN",
+    saylyPricingTitle: "价格方案",
+    saylyPricingLead: "从日常免费翻译开始，需要更高频率时升级 Pro。",
+    saylyFreeName: "免费版",
+    saylyFreePrice: "免费",
+    saylyFreeItem1: "每天20次AI翻译",
+    saylyFreeItem2: "9,600+离线翻译",
+    saylyFreeItem3: "5种对话场景",
+    saylyChooseFree: "选择免费版",
+    saylyProName: "Pro版",
+    saylyPriceMonth: "/月",
+    saylyProItem1: "无限AI翻译",
+    saylyProItem2: "9,600+离线翻译",
+    saylyProItem3: "5种对话场景",
+    saylyProItem4: "优先支持",
+    saylyChoosePro: "升级 Pro",
+    saylyPlanStatusFree: "已选择免费版，适合先体验 SayLy 的核心翻译能力。",
+    saylyPlanStatusPro: "已选择 Pro 版，适合高频聊天、商务沟通和更自然的 AI 表达。",
+    saylyDownloadKicker: "DOWNLOAD SIGNAL",
+    saylyDownloadTitle: "立即下载SayLy",
+    saylyDownloadLead: "让你的日本生活更顺畅。开始自然的日语交流吧！",
+    saylyAppStore: "在App Store下载",
+    saylyDownloadIdle: "下载通道准备中，可先通过联系我们获取上架通知。",
+    saylyDownloadAppStore: "App Store 下载信号已记录。正式上架后可第一时间获取通知。",
+    saylyDownloadOfficial: "官网通道已准备，请继续关注 Singularity Games 产品矩阵。",
+  },
+  en: {
+    saylyKicker: "SAYLY TRANSLATION KEYBOARD",
+    saylyTitle: "SayLy - Translation Keyboard",
+    saylyLead: "No long Japanese needed. Type once and convert it into natural Japanese instantly.",
+    saylyPrimaryAction: "Product Intro",
+    saylySecondaryAction: "Pricing",
+    saylySignal1: "Offline Phrases",
+    saylySignal2: "Conversation Modes",
+    saylySignal3: "AI Refinement",
+    saylyIntroKicker: "PRODUCT INTRO",
+    saylyIntroTitle: "Product Intro",
+    saylyIntroBody1:
+      "SayLy is a translation keyboard app designed for foreigners living in Japan. Type in Chinese or English and instantly convert it into natural Japanese for LINE, WhatsApp, iMessage, and other chat apps.",
+    saylyIntroBody2:
+      "No copying or pasting. Switch to the SayLy keyboard and replace text with one tap. Five modes cover daily chat, business, romance, honorifics, and concise replies.",
+    saylyIntroBody3:
+      "SayLy includes 9,600+ offline translation entries and real-time AI translation powered by Google Gemini API. Basic translation works even without a network, while AI makes output more accurate and natural.",
+    saylyDemoKicker: "LIVE CONVERSION",
+    saylyDemoSourceLabel: "Input",
+    saylyDemoSource: "Can we meet at 11 tomorrow?",
+    saylyTonePolite: "Polite",
+    saylyToneCasual: "Casual",
+    saylyToneBusiness: "Business",
+    saylyToneShort: "Short",
+    saylyToneRomance: "Romance",
+    saylyDemoPoliteOutput: "明日11時にお会いできますでしょうか。",
+    saylyDemoCasualOutput: "明日11時に会える？",
+    saylyDemoBusinessOutput: "明日11時にお打ち合わせ可能でしょうか。",
+    saylyDemoShortOutput: "明日11時、会えますか？",
+    saylyDemoRomanceOutput: "明日11時に会えたら嬉しいな。",
+    saylyFeaturesKicker: "FEATURE MATRIX",
+    saylyFeaturesTitle: "Product Features",
+    saylyFeaturesLead: "Translation, context, offline data, and AI refinement compressed into a keyboard you can use anywhere.",
+    saylyFeature1Title: "Translation Keyboard",
+    saylyFeature1Body: "A keyboard extension for any app. Replace text with a translated message without copying and pasting.",
+    saylyFeature2Title: "5 Conversation Modes",
+    saylyFeature2Body: "Daily, business, romance, honorific, and concise modes shape the right Japanese for each situation.",
+    saylyFeature3Title: "Offline Database",
+    saylyFeature3Body: "9,600+ built-in translation entries keep basic translation available without a network.",
+    saylyFeature4Title: "Real-Time AI",
+    saylyFeature4Body: "AI translation powered by Google Gemini API understands context and produces natural Japanese.",
+    saylyFeature5Title: "Multilingual Support",
+    saylyFeature5Body: "Supports Chinese and English input with bilingual Chinese and English interface options.",
+    saylyFeature6Title: "Quick Replies",
+    saylyFeature6Body: "Register frequently used phrases as shortcuts and respond faster in everyday chat.",
+    saylyStepsKicker: "HOW IT WORKS",
+    saylyStepsTitle: "How It Works",
+    saylyStepsLead: "SayLy is simple. Three steps are enough to send natural Japanese messages.",
+    saylyStep1Title: "Switch Keyboard",
+    saylyStep1Body: "Tap the globe key and switch to the SayLy keyboard.",
+    saylyStep2Title: "Type Naturally",
+    saylyStep2Body: "Type in Chinese or English, then choose the conversation mode.",
+    saylyStep3Title: "Convert Once",
+    saylyStep3Body: "Tap the result and your text is replaced with natural Japanese.",
+    saylyPricingKicker: "PRICE PLAN",
+    saylyPricingTitle: "Pricing",
+    saylyPricingLead: "Start with free daily translation, then upgrade to Pro for higher-frequency communication.",
+    saylyFreeName: "Free",
+    saylyFreePrice: "Free",
+    saylyFreeItem1: "20 AI translations per day",
+    saylyFreeItem2: "9,600+ offline phrases",
+    saylyFreeItem3: "5 conversation modes",
+    saylyChooseFree: "Choose Free",
+    saylyProName: "Pro",
+    saylyPriceMonth: "/mo",
+    saylyProItem1: "Unlimited AI translation",
+    saylyProItem2: "9,600+ offline phrases",
+    saylyProItem3: "5 conversation modes",
+    saylyProItem4: "Priority support",
+    saylyChoosePro: "Upgrade Pro",
+    saylyPlanStatusFree: "Free selected. A good way to try SayLy's core translation flow.",
+    saylyPlanStatusPro: "Pro selected. Built for frequent chat, business communication, and more natural AI expression.",
+    saylyDownloadKicker: "DOWNLOAD SIGNAL",
+    saylyDownloadTitle: "Download SayLy",
+    saylyDownloadLead: "Make life in Japan smoother. Start communicating in natural Japanese.",
+    saylyAppStore: "Download on App Store",
+    saylyDownloadIdle: "Download channels are being prepared. Contact us for launch updates.",
+    saylyDownloadAppStore: "App Store signal recorded. Launch updates can be sent once the app is live.",
+    saylyDownloadOfficial: "Official website channel is ready. Keep an eye on the Singularity Games product matrix.",
+  },
+  ja: {
+    saylyKicker: "SAYLY TRANSLATION KEYBOARD",
+    saylyTitle: "SayLy - 翻訳キーボード",
+    saylyLead: "長い日本語が苦手でも大丈夫。入力するだけで自然な日本語に変換できます。",
+    saylyPrimaryAction: "製品紹介",
+    saylySecondaryAction: "料金プラン",
+    saylySignal1: "オフライン翻訳項目",
+    saylySignal2: "会話シーン",
+    saylySignal3: "AI リライト",
+    saylyIntroKicker: "PRODUCT INTRO",
+    saylyIntroTitle: "製品紹介",
+    saylyIntroBody1:
+      "SayLy は、日本で暮らす外国人のための翻訳キーボードアプリです。中国語または英語で入力すると、LINE、WhatsApp、iMessage などで使える自然な日本語へすぐ変換できます。",
+    saylyIntroBody2:
+      "コピーや貼り付けは不要です。SayLy キーボードに切り替え、軽くタップするだけで文章を置き換えられます。日常、ビジネス、恋人、敬語、短文の 5 つの場面に対応します。",
+    saylyIntroBody3:
+      "9,600 件以上のオフライン翻訳データと、Google Gemini API による AI リアルタイム翻訳を搭載。ネットがなくても基本翻訳ができ、AI でより自然な表現にできます。",
+    saylyDemoKicker: "LIVE CONVERSION",
+    saylyDemoSourceLabel: "入力",
+    saylyDemoSource: "Can we meet at 11 tomorrow?",
+    saylyTonePolite: "敬語",
+    saylyToneCasual: "日常",
+    saylyToneBusiness: "ビジネス",
+    saylyToneShort: "短文",
+    saylyToneRomance: "恋人",
+    saylyDemoPoliteOutput: "明日11時にお会いできますでしょうか。",
+    saylyDemoCasualOutput: "明日11時に会える？",
+    saylyDemoBusinessOutput: "明日11時にお打ち合わせ可能でしょうか。",
+    saylyDemoShortOutput: "明日11時、会えますか？",
+    saylyDemoRomanceOutput: "明日11時に会えたら嬉しいな。",
+    saylyFeaturesKicker: "FEATURE MATRIX",
+    saylyFeaturesTitle: "製品特色",
+    saylyFeaturesLead: "翻訳、場面選択、オフラインデータ、AI リライトを、どこでも使えるキーボードにまとめました。",
+    saylyFeature1Title: "翻訳キーボード",
+    saylyFeature1Body: "どのアプリでも使えるキーボード拡張。コピーや貼り付けなしで翻訳文に置き換えられます。",
+    saylyFeature2Title: "5つの会話シーン",
+    saylyFeature2Body: "日常、ビジネス、恋人、敬語、短文に合わせて最適な日本語表現を提供します。",
+    saylyFeature3Title: "オフラインDB",
+    saylyFeature3Body: "9,600 件以上の翻訳項目を内蔵し、ネット接続がなくても基本翻訳ができます。",
+    saylyFeature4Title: "AIリアルタイム翻訳",
+    saylyFeature4Body: "Google Gemini API による AI 翻訳で、文脈を理解し自然な日本語にします。",
+    saylyFeature5Title: "多言語対応",
+    saylyFeature5Body: "中国語と英語入力に対応。画面は英語と中国語のバイリンガル版を提供します。",
+    saylyFeature6Title: "クイック返信",
+    saylyFeature6Body: "よく使う短文をショートカットに登録し、日常チャットへすばやく返信できます。",
+    saylyStepsKicker: "HOW IT WORKS",
+    saylyStepsTitle: "使い方",
+    saylyStepsLead: "SayLy の使い方はとても簡単。3ステップで自然な日本語メッセージを送れます。",
+    saylyStep1Title: "キーボード切替",
+    saylyStep1Body: "地球儀ボタンを押して SayLy キーボードに切り替えます。",
+    saylyStep2Title: "母語で入力",
+    saylyStep2Body: "中国語または英語で入力し、会話シーンを選びます。",
+    saylyStep3Title: "ワンタップ変換",
+    saylyStep3Body: "翻訳結果をタップすると、入力文が自然な日本語に置き換わります。",
+    saylyPricingKicker: "PRICE PLAN",
+    saylyPricingTitle: "料金プラン",
+    saylyPricingLead: "無料の日常翻訳から始め、頻繁に使う場合は Pro にアップグレードできます。",
+    saylyFreeName: "無料版",
+    saylyFreePrice: "無料",
+    saylyFreeItem1: "1日20回のAI翻訳",
+    saylyFreeItem2: "9,600+ オフライン翻訳",
+    saylyFreeItem3: "5つの会話シーン",
+    saylyChooseFree: "無料版を選択",
+    saylyProName: "Pro版",
+    saylyPriceMonth: "/月",
+    saylyProItem1: "無制限AI翻訳",
+    saylyProItem2: "9,600+ オフライン翻訳",
+    saylyProItem3: "5つの会話シーン",
+    saylyProItem4: "優先サポート",
+    saylyChoosePro: "Proにアップグレード",
+    saylyPlanStatusFree: "無料版を選択中。SayLy の基本翻訳を試すのに最適です。",
+    saylyPlanStatusPro: "Pro版を選択中。頻繁なチャット、ビジネス連絡、より自然なAI表現に向いています。",
+    saylyDownloadKicker: "DOWNLOAD SIGNAL",
+    saylyDownloadTitle: "SayLyを今すぐダウンロード",
+    saylyDownloadLead: "日本での生活をもっとスムーズに。自然な日本語交流を始めましょう。",
+    saylyAppStore: "App Storeでダウンロード",
+    saylyDownloadIdle: "ダウンロード経路を準備中です。お問い合わせから公開通知を受け取れます。",
+    saylyDownloadAppStore: "App Store の通知を記録しました。公開後に最新情報を受け取れます。",
+    saylyDownloadOfficial: "公式サイトの経路を準備しました。Singularity Games の製品一覧もご確認ください。",
+  },
+};
+
+Object.entries(saylyTranslations).forEach(([lang, dictionary]) => {
+  Object.assign(translations[lang], dictionary);
+});
+
 const teamProfiles = {
   zh: {
     ceo: {
@@ -997,6 +1244,8 @@ const pointer = { x: 0, y: 0, active: false };
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 let currentLang = "zh";
 let activeMemberKey = "ceo";
+let activeSaylyPlan = "free";
+let activeSaylyDownloadState = "idle";
 const languageMeta = {
   zh: "zh-CN",
   en: "en",
@@ -1196,6 +1445,9 @@ function applyLanguage(lang, burstTarget = null) {
   updateHeroTitleEffects(nextLang);
   updateTeamDetail(activeMemberKey);
   updateGameGalleryText();
+  updateSaylyDemoText();
+  updateSaylyPlanStatus();
+  updateSaylyDownloadStatus();
   updateCopyStatus(dictionary.contactCopyIdle);
   updateSubscribeStatus(dictionary.fantasySubscribeIdle, "idle");
   storeLanguage(nextLang);
@@ -1414,6 +1666,91 @@ function setupGameGallery() {
   updateGameGalleryText();
 }
 
+function updateSaylyDemoText() {
+  const active = document.querySelector("[data-sayly-tone].is-active");
+  const tone = document.getElementById("saylyDemoTone");
+  const output = document.getElementById("saylyDemoOutput");
+  if (!active || !tone || !output) return;
+
+  const dictionary = translations[currentLang] || translations.zh;
+  const toneKey = active.dataset.saylyToneLabel;
+  const outputKey = active.dataset.saylyOutput;
+  tone.dataset.i18n = toneKey;
+  output.dataset.i18n = outputKey;
+  tone.textContent = dictionary[toneKey] || translations.zh[toneKey] || tone.textContent;
+  output.textContent = dictionary[outputKey] || translations.zh[outputKey] || output.textContent;
+}
+
+function setupSaylyDemo() {
+  const buttons = document.querySelectorAll("[data-sayly-tone]");
+  if (!buttons.length) return;
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      buttons.forEach((item) => item.classList.toggle("is-active", item === button));
+      updateSaylyDemoText();
+      spawnBurst(button, 18);
+    });
+  });
+
+  updateSaylyDemoText();
+}
+
+function updateSaylyPlanStatus() {
+  const status = document.getElementById("saylyPlanStatus");
+  if (!status) return;
+
+  const dictionary = translations[currentLang] || translations.zh;
+  const key = activeSaylyPlan === "pro" ? "saylyPlanStatusPro" : "saylyPlanStatusFree";
+  status.dataset.i18n = key;
+  status.textContent = dictionary[key] || translations.zh[key] || status.textContent;
+
+  document.querySelectorAll("[data-sayly-plan]").forEach((button) => {
+    const isSelected = button.dataset.saylyPlan === activeSaylyPlan;
+    button.setAttribute("aria-pressed", String(isSelected));
+    button.closest(".sayly-price-card")?.classList.toggle("is-selected", isSelected);
+  });
+}
+
+function setupSaylyPricing() {
+  document.querySelectorAll("[data-sayly-plan]").forEach((button) => {
+    button.addEventListener("click", () => {
+      activeSaylyPlan = button.dataset.saylyPlan || "free";
+      updateSaylyPlanStatus();
+      spawnBurst(button, activeSaylyPlan === "pro" ? 32 : 20);
+    });
+  });
+
+  updateSaylyPlanStatus();
+}
+
+function updateSaylyDownloadStatus() {
+  const status = document.getElementById("saylyDownloadStatus");
+  if (!status) return;
+
+  const dictionary = translations[currentLang] || translations.zh;
+  const keys = {
+    idle: "saylyDownloadIdle",
+    appstore: "saylyDownloadAppStore",
+    official: "saylyDownloadOfficial",
+  };
+  const key = keys[activeSaylyDownloadState] || keys.idle;
+  status.dataset.i18n = key;
+  status.textContent = dictionary[key] || translations.zh[key] || status.textContent;
+}
+
+function setupSaylyDownloads() {
+  document.querySelectorAll("[data-sayly-download]").forEach((button) => {
+    button.addEventListener("click", () => {
+      activeSaylyDownloadState = button.dataset.saylyDownload || "idle";
+      updateSaylyDownloadStatus();
+      spawnBurst(button, 30);
+    });
+  });
+
+  updateSaylyDownloadStatus();
+}
+
 resizeCanvas();
 setupPointer();
 setupTiltCards();
@@ -1423,6 +1760,9 @@ setupTeamDirectory();
 setupEmailCopy();
 setupLocalSubscribe();
 setupGameGallery();
+setupSaylyDemo();
+setupSaylyPricing();
+setupSaylyDownloads();
 updateHeroTitleEffects(currentLang);
 setupVideoFallback();
 
