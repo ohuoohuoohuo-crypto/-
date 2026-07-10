@@ -8,7 +8,7 @@
       content="蛇蛇·贪吃蛇，霓虹风格的休闲贪吃蛇限时挑战。"
     />
     <title>蛇蛇·贪吃蛇 - Singularity Games / 奇点游戏</title>
-    <link rel="stylesheet" href="./styles.css?v=neon-snake-1" />
+    <link rel="stylesheet" href="./styles.css?v=neon-snake-2" />
   </head>
   <body>
     <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
@@ -71,7 +71,10 @@
               <span>/</span>
               <span data-i18n="snakeTitle">蛇蛇·贪吃蛇</span>
             </div>
-            <span class="section-kicker" data-i18n="snakeKicker">NEON SNAKE ARENA</span>
+            <div class="snake-identity-row">
+              <span class="section-kicker" data-i18n="snakeKicker">NEON SNAKE ARENA</span>
+              <span class="snake-live-status" aria-hidden="true"><i></i> LIVE BUILD 0.6</span>
+            </div>
             <h1 data-i18n="snakeTitle">蛇蛇·贪吃蛇</h1>
             <p data-i18n="snakeLead">
               霓虹风格的休闲贪吃蛇，吃掉发光能量点延长身体，抓住加速时机穿过复杂蛇阵，在限时挑战中坚持更久。
@@ -99,15 +102,24 @@
           </div>
 
           <div class="snake-hero-media reveal-card" data-reveal>
+            <div class="snake-media-topline" aria-hidden="true">
+              <span>SNAKE / ARENA_06</span>
+              <strong>SESSION 02:49</strong>
+            </div>
             <div class="snake-orbit-rings" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="snake-media-axis" aria-hidden="true">
               <span></span>
               <span></span>
               <span></span>
             </div>
             <img
               class="snake-hero-shot"
-              src="./assets/snake/speed-run.jpg"
-              alt="蛇蛇·贪吃蛇高速穿行游戏画面"
+              src="./assets/snake/multi-snake-grid.jpg"
+              alt="蛇蛇·贪吃蛇多蛇竞技游戏画面"
               loading="eager"
             />
             <img
@@ -350,6 +362,6 @@
       <p class="copyright">© 2026 Singularity Games. 保留所有权利。</p>
     </footer>
 
-    <script src="./app.js?v=neon-snake-1"></script>
+    <script src="./app.js?v=neon-snake-2"></script>
   </body>
 </html>

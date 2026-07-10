@@ -37,3 +37,40 @@
 - `git diff --check`: passed.
 
 final result: passed
+
+## Neon Snake Hero Refinement - 2026-07-10
+
+**Audit Scope**
+- Surface: `neon-snake.html` hero section.
+- User goal: understand the game quickly, recognize the playable fantasy, and choose either features or screenshots without the visual layers competing.
+
+**Implementation**
+- `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/neon-snake.html`
+- Local QA URL: `http://127.0.0.1:4174/neon-snake.html?v=refined`
+
+**Viewport And State**
+- Desktop: `1440x900`, Chinese mode, hero at top.
+- Wide desktop: `2048x1191`, Chinese mode, hero at top.
+- Mobile: `390x844`, Chinese mode, hero at top.
+- Language: Japanese mode verified on wide desktop.
+- Interaction: primary hero action verified to land at `#snake-features`.
+
+**Evidence**
+- Before/after board: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/neon-snake-refine-qa-comparison.png`
+- Desktop: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/neon-snake-final-qa.png`
+- Wide desktop: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/neon-snake-wide-2048-qa.png`
+- Mobile: `/Users/wangshengbin/Documents/Codex/2026-05-28/files-mentioned-by-the-user-homepage-2/neon-snake-mobile-qa.png`
+
+**Findings And Resolution**
+- The previous hero used a large title-screen logo, gameplay screenshot, 3D model, and HUD at similar visual weight. The title-screen layer was removed from the hero frame and replaced by a darker live arena screenshot so the 3D product model becomes the single primary visual.
+- The title, lead, actions, and metric strip were reduced and separated into distinct hierarchy levels. The metric strip now reads as a quiet data rail instead of a fourth card.
+- A lightweight build indicator, arena topline, restrained guide axes, scan treatment, and model float preserve the cyber-game energy without adding another competing object.
+- Mobile actions remain side by side, the visual frame is compact enough to reveal the next section, and no horizontal overflow is present.
+
+**Accessibility And Behavior Checks**
+- Existing semantic heading, navigation, links, image alternatives, and language buttons remain intact.
+- Japanese mode produced `lang="ja-JP"` and the localized hero content without overflow.
+- Primary action produced `#snake-features` with the target aligned to the viewport.
+- Screenshots alone do not prove full keyboard focus visibility or reduced-motion compliance; those remain implementation-level checks beyond this visual pass.
+
+final result: passed
