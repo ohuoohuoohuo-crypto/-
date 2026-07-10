@@ -5143,6 +5143,763 @@ main,
   text-shadow: 0 0 28px rgba(4, 5, 16, 0.5);
 }
 
+.estate-detail {
+  --estate-teal: #34f5d6;
+  --estate-blue: #4aa9ff;
+  --estate-violet: #8a70ff;
+  --estate-orange: #ff6a2a;
+  --estate-gold: #ffc86d;
+  --estate-ink: #050914;
+}
+
+.estate-hero {
+  min-height: 100svh;
+  background:
+    radial-gradient(circle at 16% 20%, rgba(52, 245, 214, 0.18), transparent 28rem),
+    radial-gradient(circle at 82% 20%, rgba(255, 106, 42, 0.15), transparent 30rem),
+    radial-gradient(circle at 52% 62%, rgba(138, 112, 255, 0.13), transparent 32rem),
+    linear-gradient(135deg, rgba(5, 11, 32, 0.5), rgba(13, 8, 34, 0.9));
+}
+
+.estate-hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(52, 245, 214, 0.07) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: linear-gradient(180deg, transparent, #000 12%, #000 90%, transparent);
+}
+
+.estate-hero-grid::before,
+.estate-hero-grid::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+.estate-hero-grid::before {
+  left: -12%;
+  top: 42%;
+  width: 124%;
+  height: 13rem;
+  background:
+    linear-gradient(90deg, transparent, rgba(52, 245, 214, 0.22), rgba(138, 112, 255, 0.12), rgba(255, 106, 42, 0.12), transparent),
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.052) 0 1px, transparent 1px 10px);
+  filter: blur(0.5px);
+  transform: rotate(-4deg);
+  animation: estateDataSweep 6.8s ease-in-out infinite;
+}
+
+.estate-hero-grid::after {
+  inset: 0;
+  background:
+    radial-gradient(circle at 22% 28%, rgba(52, 245, 214, 0.14), transparent 13rem),
+    radial-gradient(circle at 72% 70%, rgba(255, 200, 109, 0.1), transparent 16rem);
+}
+
+.estate-hero-grid span {
+  position: absolute;
+  width: 30vw;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(52, 245, 214, 0.82), transparent);
+  box-shadow: 0 0 22px rgba(52, 245, 214, 0.35);
+  animation: estateRailDrift 9s ease-in-out infinite;
+}
+
+.estate-hero-grid span:nth-child(1) {
+  left: 6%;
+  top: 30%;
+  transform: rotate(-12deg);
+}
+
+.estate-hero-grid span:nth-child(2) {
+  right: 10%;
+  top: 42%;
+  background: linear-gradient(90deg, transparent, rgba(255, 106, 42, 0.72), transparent);
+  animation-delay: -2.6s;
+  transform: rotate(14deg);
+}
+
+.estate-hero-grid span:nth-child(3) {
+  left: 38%;
+  bottom: 18%;
+  background: linear-gradient(90deg, transparent, rgba(138, 112, 255, 0.74), transparent);
+  animation-delay: -4.4s;
+  transform: rotate(-8deg);
+}
+
+.estate-hero-shell {
+  width: min(90rem, 100%);
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+}
+
+.estate-detail-copy h1 {
+  max-width: 8em;
+  font-size: clamp(3.1rem, 5.8vw, 5.9rem);
+  background: linear-gradient(96deg, #ffffff 0%, #d6fff7 28%, var(--estate-teal) 48%, var(--estate-blue) 70%, var(--estate-orange) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 30px rgba(52, 245, 214, 0.28), 0 0 58px rgba(255, 106, 42, 0.16);
+}
+
+.estate-detail-copy > p {
+  color: #e9fff8;
+}
+
+.estate-primary {
+  background: linear-gradient(135deg, var(--estate-teal), var(--estate-blue), var(--estate-violet));
+  color: #06101d;
+}
+
+.estate-signal-grid {
+  border-color: rgba(52, 245, 214, 0.28);
+  background: rgba(52, 245, 214, 0.14);
+}
+
+.estate-signal-grid strong {
+  color: #effff9;
+  text-shadow: 0 0 22px rgba(52, 245, 214, 0.54);
+}
+
+.estate-hero-media {
+  --rx: 0deg;
+  --ry: 0deg;
+  position: relative;
+  min-height: clamp(28rem, 48vw, 42rem);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(52, 245, 214, 0.25);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02)),
+    radial-gradient(circle at 52% 42%, rgba(52, 245, 214, 0.17), transparent 20rem),
+    radial-gradient(circle at 80% 18%, rgba(255, 106, 42, 0.12), transparent 20rem),
+    rgba(5, 10, 26, 0.76);
+  box-shadow:
+    0 36px 120px rgba(0, 0, 0, 0.58),
+    0 0 88px rgba(52, 245, 214, 0.14),
+    0 0 46px rgba(138, 112, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.estate-hero-media:hover,
+.estate-hero-media:focus-within {
+  border-color: rgba(52, 245, 214, 0.7);
+  box-shadow:
+    0 40px 126px rgba(0, 0, 0, 0.62),
+    0 0 98px rgba(52, 245, 214, 0.24),
+    0 0 54px rgba(255, 106, 42, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.estate-hero-media::before,
+.estate-hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.estate-hero-media::before {
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(4, 5, 16, 0.04), rgba(4, 5, 16, 0.52)),
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 9px);
+}
+
+.estate-hero-media::after {
+  z-index: 4;
+  left: -30%;
+  width: 42%;
+  background: linear-gradient(90deg, transparent, rgba(232, 255, 247, 0.32), transparent);
+  transform: skewX(-18deg);
+  animation: gameMediaSweep 5s ease-in-out infinite;
+}
+
+.estate-hero-art {
+  position: relative;
+  z-index: 2;
+  width: min(128%, 70rem);
+  max-width: none;
+  transform: translateX(1%) translateY(3%) scale(1.02);
+  filter:
+    drop-shadow(0 34px 44px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 42px rgba(52, 245, 214, 0.18))
+    drop-shadow(0 0 34px rgba(255, 106, 42, 0.12));
+  transition: transform 420ms ease, filter 420ms ease;
+}
+
+.estate-hero-media:hover .estate-hero-art {
+  transform: translateX(0) translateY(0) scale(1.08);
+  filter:
+    drop-shadow(0 38px 54px rgba(0, 0, 0, 0.58))
+    drop-shadow(0 0 54px rgba(52, 245, 214, 0.28))
+    drop-shadow(0 0 42px rgba(255, 106, 42, 0.2));
+}
+
+.estate-orbit {
+  position: absolute;
+  inset: 8%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.estate-orbit span {
+  position: absolute;
+  inset: 12% 4%;
+  border: 1px solid rgba(52, 245, 214, 0.24);
+  border-radius: 50%;
+  transform: rotateX(66deg) rotateZ(0deg);
+  box-shadow: 0 0 30px rgba(52, 245, 214, 0.12);
+  animation: savageRingSpin 10s linear infinite;
+}
+
+.estate-orbit span:nth-child(2) {
+  inset: 24% 14%;
+  border-color: rgba(138, 112, 255, 0.24);
+  animation-duration: 7.4s;
+  animation-direction: reverse;
+}
+
+.estate-orbit span:nth-child(3) {
+  inset: 2% 18%;
+  border-color: rgba(255, 106, 42, 0.18);
+  animation-duration: 13s;
+}
+
+.estate-dashboard-lines {
+  position: absolute;
+  inset: 8%;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.estate-dashboard-lines span {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(52, 245, 214, 0.86), transparent);
+  box-shadow: 0 0 18px rgba(52, 245, 214, 0.4);
+  animation: estateRailDrift 6.8s ease-in-out infinite;
+}
+
+.estate-dashboard-lines span:nth-child(1) {
+  left: 2%;
+  top: 18%;
+  width: 38%;
+  transform: rotate(10deg);
+}
+
+.estate-dashboard-lines span:nth-child(2) {
+  right: 6%;
+  top: 38%;
+  width: 34%;
+  background: linear-gradient(90deg, transparent, rgba(255, 106, 42, 0.76), transparent);
+  animation-delay: -1.8s;
+  transform: rotate(-12deg);
+}
+
+.estate-dashboard-lines span:nth-child(3) {
+  left: 16%;
+  bottom: 30%;
+  width: 42%;
+  background: linear-gradient(90deg, transparent, rgba(138, 112, 255, 0.76), transparent);
+  animation-delay: -3.2s;
+  transform: rotate(-6deg);
+}
+
+.estate-dashboard-lines span:nth-child(4) {
+  right: 18%;
+  bottom: 16%;
+  width: 28%;
+  animation-delay: -4.2s;
+  transform: rotate(8deg);
+}
+
+.estate-hero-hud {
+  position: absolute;
+  left: clamp(1rem, 2vw, 1.5rem);
+  right: clamp(1rem, 2vw, 1.5rem);
+  bottom: clamp(1rem, 2vw, 1.5rem);
+  z-index: 5;
+  display: grid;
+  gap: 0.35rem;
+  width: min(30rem, calc(100% - 2rem));
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(52, 245, 214, 0.32);
+  border-radius: 8px;
+  background: rgba(5, 10, 24, 0.76);
+  box-shadow: 0 0 38px rgba(52, 245, 214, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.estate-hero-hud span,
+.estate-console-panel .game-hud-label {
+  color: rgba(255, 200, 109, 0.94);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.estate-hero-hud strong {
+  color: #edfff9;
+  font-size: clamp(1.32rem, 2.2vw, 1.98rem);
+  line-height: 1;
+  text-shadow: 0 0 22px rgba(52, 245, 214, 0.46);
+}
+
+.estate-hero-hud small {
+  color: #dff0ff;
+  font-weight: 760;
+}
+
+.estate-story-section,
+.estate-module-section,
+.estate-tech-section,
+.estate-audience-section {
+  background:
+    linear-gradient(180deg, rgba(5, 9, 26, 0.66), rgba(4, 5, 16, 0.9)),
+    radial-gradient(circle at 14% 22%, rgba(52, 245, 214, 0.1), transparent 30rem),
+    radial-gradient(circle at 86% 18%, rgba(255, 106, 42, 0.09), transparent 30rem);
+}
+
+.estate-story-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.86fr);
+}
+
+.estate-story-copy {
+  border-color: rgba(52, 245, 214, 0.18);
+}
+
+.estate-story-copy h2,
+.estate-module-section .about-block-head h2,
+.estate-tech-section .about-block-head h2,
+.estate-audience-section .about-block-head h2 {
+  background: linear-gradient(96deg, #ffffff, #d8fff7 28%, var(--estate-teal) 58%, var(--estate-orange));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.estate-console-panel {
+  --rx: 0deg;
+  --ry: 0deg;
+  --estate-module-power: 68%;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  align-content: center;
+  gap: 1rem;
+  min-height: 100%;
+  padding: clamp(1.2rem, 2.4vw, 1.8rem);
+  border: 1px solid rgba(52, 245, 214, 0.24);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(52, 245, 214, 0.14), rgba(138, 112, 255, 0.08)),
+    rgba(5, 10, 24, 0.76);
+  box-shadow: var(--shadow), inset 0 0 42px rgba(52, 245, 214, 0.08);
+  backdrop-filter: blur(20px);
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.estate-console-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, rgba(52, 245, 214, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(180deg, #000, transparent 82%);
+}
+
+.estate-console-panel:hover,
+.estate-console-panel:focus-within {
+  border-color: rgba(52, 245, 214, 0.68);
+  box-shadow: 0 32px 100px rgba(0, 0, 0, 0.58), 0 0 54px rgba(52, 245, 214, 0.18);
+}
+
+.estate-console-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.estate-console-screen {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 0.75rem;
+  min-height: 24rem;
+  padding: 1.15rem;
+  border: 1px solid rgba(52, 245, 214, 0.18);
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 44% 38%, rgba(52, 245, 214, 0.14), transparent 13rem),
+    rgba(3, 8, 20, 0.76);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.estate-console-radar {
+  position: relative;
+  width: 8.2rem;
+  aspect-ratio: 1;
+  margin: 0 auto 0.1rem;
+  border: 1px solid rgba(52, 245, 214, 0.35);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, rgba(52, 245, 214, 0.26), transparent 30%),
+    repeating-radial-gradient(circle, transparent 0 1.24rem, rgba(52, 245, 214, 0.16) 1.3rem 1.36rem);
+  box-shadow: inset 0 0 34px rgba(52, 245, 214, 0.12), 0 0 34px rgba(52, 245, 214, 0.1);
+}
+
+.estate-console-radar::before {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 48%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--estate-gold), transparent);
+  transform-origin: left center;
+  animation: gameRadarSweep 3s linear infinite;
+}
+
+.estate-console-radar span {
+  position: absolute;
+  width: 0.58rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--estate-teal);
+  box-shadow: 0 0 18px var(--estate-teal);
+}
+
+.estate-console-radar span:nth-child(1) {
+  left: 28%;
+  top: 35%;
+}
+
+.estate-console-radar span:nth-child(2) {
+  right: 22%;
+  top: 54%;
+  background: var(--estate-orange);
+  box-shadow: 0 0 18px var(--estate-orange);
+}
+
+.estate-console-radar span:nth-child(3) {
+  left: 54%;
+  bottom: 24%;
+  background: var(--estate-violet);
+  box-shadow: 0 0 18px var(--estate-violet);
+}
+
+.estate-console-screen strong {
+  color: #effff9;
+  font-size: clamp(1.28rem, 2vw, 1.72rem);
+  line-height: 1.25;
+}
+
+.estate-console-screen p {
+  min-height: 3.2rem;
+  margin: 0;
+  color: #dff3ff;
+  line-height: 1.65;
+  font-weight: 700;
+}
+
+.estate-module-list {
+  display: grid;
+  gap: 0.45rem;
+  min-height: 5.6rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.estate-module-list li {
+  position: relative;
+  padding-left: 0.9rem;
+  color: rgba(232, 242, 255, 0.86);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.estate-module-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.56em;
+  width: 0.34rem;
+  height: 0.34rem;
+  border-radius: 50%;
+  background: var(--estate-teal);
+  box-shadow: 0 0 12px rgba(52, 245, 214, 0.55);
+}
+
+.estate-console-meter {
+  overflow: hidden;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: rgba(184, 210, 255, 0.12);
+}
+
+.estate-console-meter span {
+  display: block;
+  width: var(--estate-module-power, 68%);
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--estate-teal), var(--estate-blue), var(--estate-orange));
+  box-shadow: 0 0 18px rgba(52, 245, 214, 0.4);
+  transition: width 240ms ease;
+}
+
+.estate-console-screen small {
+  color: rgba(255, 200, 109, 0.9);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 800;
+}
+
+.estate-module-tabs {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.52rem;
+}
+
+.estate-module-tabs button {
+  min-height: 2.75rem;
+  border: 1px solid rgba(52, 245, 214, 0.18);
+  border-radius: 8px;
+  background: rgba(8, 14, 34, 0.72);
+  color: #e8fff7;
+  font-weight: 860;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.estate-module-tabs button:hover,
+.estate-module-tabs button:focus-visible,
+.estate-module-tabs button.is-active {
+  transform: translateY(-2px);
+  border-color: rgba(52, 245, 214, 0.62);
+  background: linear-gradient(135deg, rgba(52, 245, 214, 0.2), rgba(255, 106, 42, 0.13));
+  box-shadow: 0 0 24px rgba(52, 245, 214, 0.16);
+  outline: 0;
+}
+
+.estate-module-card-grid,
+.estate-tech-grid,
+.estate-audience-grid {
+  width: min(78rem, 100%);
+  margin: 2.15rem auto 0;
+  display: grid;
+  gap: 1.05rem;
+}
+
+.estate-module-card-grid {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.estate-module-card {
+  --rx: 0deg;
+  --ry: 0deg;
+  position: relative;
+  overflow: hidden;
+  min-height: 23rem;
+  grid-column: span 2;
+  padding: 1.35rem;
+  border: 1px solid rgba(52, 245, 214, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02)),
+    rgba(8, 14, 34, 0.58);
+  box-shadow: 0 18px 70px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.estate-module-card:nth-child(4),
+.estate-module-card:nth-child(5) {
+  grid-column: span 3;
+}
+
+.estate-module-card::before,
+.estate-tech-card::before,
+.estate-audience-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--estate-teal), var(--estate-blue), var(--estate-orange));
+  box-shadow: 0 0 22px rgba(52, 245, 214, 0.42);
+}
+
+.estate-module-card::after,
+.estate-tech-card::after,
+.estate-audience-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at var(--mx, 50%) var(--my, 40%), rgba(52, 245, 214, 0.18), transparent 13rem),
+    linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+}
+
+.estate-module-card:hover,
+.estate-module-card:focus-visible,
+.estate-tech-card:hover,
+.estate-tech-card:focus-visible,
+.estate-audience-card:hover,
+.estate-audience-card:focus-visible {
+  transform: rotateX(var(--rx)) rotateY(var(--ry)) translateY(-8px);
+  border-color: rgba(52, 245, 214, 0.56);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.42), 0 0 34px rgba(52, 245, 214, 0.14);
+  outline: 0;
+}
+
+.estate-module-card:hover::after,
+.estate-module-card:focus-visible::after,
+.estate-tech-card:hover::after,
+.estate-tech-card:focus-visible::after,
+.estate-audience-card:hover::after,
+.estate-audience-card:focus-visible::after {
+  opacity: 1;
+}
+
+.estate-module-card > *,
+.estate-tech-card > *,
+.estate-audience-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.estate-module-card span,
+.estate-tech-card span,
+.estate-audience-card span {
+  display: inline-grid;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-bottom: 1rem;
+  color: #06101d;
+  border-radius: 6px;
+  background: linear-gradient(135deg, var(--estate-teal), var(--estate-orange));
+  box-shadow: 0 0 24px rgba(52, 245, 214, 0.25);
+  font-weight: 900;
+}
+
+.estate-module-card h3,
+.estate-tech-card h3,
+.estate-audience-card h3 {
+  margin: 0 0 0.62rem;
+  color: #f7fbff;
+  font-size: clamp(1.18rem, 2vw, 1.45rem);
+}
+
+.estate-module-card p,
+.estate-tech-card p,
+.estate-audience-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.72;
+  font-size: 0.95rem;
+  font-weight: 680;
+}
+
+.estate-module-card ul {
+  display: grid;
+  gap: 0.46rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.estate-module-card li {
+  position: relative;
+  padding-left: 0.88rem;
+  color: #dfe9ff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.estate-module-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 0.34rem;
+  height: 0.34rem;
+  border-radius: 50%;
+  background: var(--estate-orange);
+  box-shadow: 0 0 12px rgba(255, 106, 42, 0.46);
+}
+
+.estate-tech-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.estate-tech-card,
+.estate-audience-card {
+  --rx: 0deg;
+  --ry: 0deg;
+  position: relative;
+  overflow: hidden;
+  min-height: 15.5rem;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  padding: 1.45rem;
+  text-align: center;
+  border: 1px solid rgba(184, 210, 255, 0.16);
+  border-radius: 8px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02)),
+    rgba(8, 14, 34, 0.58);
+  box-shadow: 0 20px 76px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  transform: rotateX(var(--rx)) rotateY(var(--ry));
+  transform-style: preserve-3d;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.estate-tech-card span {
+  width: 3rem;
+  height: 3rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.estate-audience-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.estate-audience-card {
+  min-height: 17rem;
+  text-align: left;
+  justify-items: start;
+}
+
+.estate-download-cta {
+  background:
+    linear-gradient(135deg, rgba(11, 114, 113, 0.94), rgba(52, 245, 214, 0.72), rgba(255, 106, 42, 0.62)),
+    linear-gradient(180deg, rgba(5, 9, 26, 0.32), rgba(4, 5, 16, 0.54));
+}
+
+.estate-download-cta .section-kicker,
+.estate-download-cta h2,
+.estate-download-cta p {
+  color: #fff;
+  text-shadow: 0 0 28px rgba(4, 5, 16, 0.5);
+}
+
 @keyframes fantasyBackdropDrift {
   from {
     transform: scale(1.08) translate3d(0, 0, 0);
@@ -5219,6 +5976,32 @@ main,
   50% {
     transform: translateX(5%) skewY(-5deg);
     opacity: 0.9;
+  }
+}
+
+@keyframes estateDataSweep {
+  0%,
+  100% {
+    opacity: 0.54;
+    transform: translateX(-4%) rotate(-4deg);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: translateX(4%) rotate(-4deg);
+  }
+}
+
+@keyframes estateRailDrift {
+  0%,
+  100% {
+    opacity: 0.44;
+    filter: blur(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur(0.3px);
   }
 }
 
@@ -5675,8 +6458,24 @@ main,
     min-height: 31rem;
   }
 
+  .estate-hero-media {
+    min-height: 31rem;
+  }
+
   .snake-steps-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .estate-module-card-grid,
+  .estate-tech-grid,
+  .estate-audience-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .estate-module-card,
+  .estate-module-card:nth-child(4),
+  .estate-module-card:nth-child(5) {
+    grid-column: auto;
   }
 
   .game-gallery-thumbs {
@@ -6039,6 +6838,10 @@ main,
     min-height: 23rem;
   }
 
+  .estate-hero-media {
+    min-height: 23rem;
+  }
+
   .savage-hero-art {
     width: 132%;
     transform: translateY(3%) scale(1);
@@ -6064,6 +6867,20 @@ main,
   }
 
   .snake-hero-hud {
+    width: auto;
+    padding: 0.8rem;
+  }
+
+  .estate-hero-art {
+    width: 146%;
+    transform: translateX(0) translateY(4%) scale(1);
+  }
+
+  .estate-hero-media:hover .estate-hero-art {
+    transform: translateX(0) translateY(2%) scale(1.04);
+  }
+
+  .estate-hero-hud {
     width: auto;
     padding: 0.8rem;
   }
@@ -6106,6 +6923,49 @@ main,
 
   .snake-route-tabs {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .estate-signal-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .estate-signal-grid div {
+    min-height: 4.65rem;
+    padding: 0.78rem 0.62rem;
+  }
+
+  .estate-signal-grid strong {
+    font-size: clamp(0.92rem, 5vw, 1.26rem);
+  }
+
+  .estate-signal-grid span {
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+
+  .estate-module-tabs {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .estate-module-card-grid,
+  .estate-tech-grid,
+  .estate-audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .estate-module-card,
+  .estate-tech-card,
+  .estate-audience-card {
+    min-height: auto;
+    padding: 1.1rem 1rem 1.15rem;
+  }
+
+  .estate-console-panel {
+    min-height: 28rem;
+  }
+
+  .estate-console-screen {
+    min-height: 23rem;
   }
 
   .savage-mine-board {

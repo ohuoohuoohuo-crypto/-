@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="EstateForce，不动产资产指令控制台，为海外及日本中小型不动产公司打造的 NocoBase 基础 SaaS 管理系统。"
+    />
+    <title>EstateForce - Singularity Games / 奇点游戏</title>
+    <link rel="stylesheet" href="./styles.css?v=estate-force-1" />
+  </head>
+  <body>
+    <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
+    <div id="burstLayer" class="burst-layer" aria-hidden="true"></div>
+
+    <div class="stage-bg" aria-hidden="true">
+      <video
+        class="stage-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
+        <source src="./assets/homepage-pipe-animation.mp4" type="video/mp4" />
+      </video>
+      <div class="video-shade"></div>
+      <div class="grid-plane"></div>
+      <div class="light-trails"></div>
+      <div class="scan-field"></div>
+    </div>
+
+    <header class="site-header" data-reveal>
+      <a class="brand" href="./index.html#home" aria-label="Singularity Games home">
+        <span class="brand-mark">
+          <span></span>
+        </span>
+        <span class="brand-copy">
+          <strong>Singularity Games</strong>
+          <small>奇点游戏</small>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="主导航">
+        <a href="./index.html#home" data-i18n="navHome">首页</a>
+        <a class="is-current" href="./index.html#products" data-i18n="navProducts">产品</a>
+        <a href="./about.html" data-i18n="navAbout">关于我们</a>
+        <a href="./contact.html" data-i18n="navContact">联系我们</a>
+      </nav>
+
+      <div class="language-switch" aria-label="语言切换">
+        <button class="is-active" type="button" data-lang="zh">中文</button>
+        <button type="button" data-lang="en">English</button>
+        <button type="button" data-lang="ja">日本語</button>
+      </div>
+    </header>
+
+    <main class="estate-detail">
+      <section class="game-detail-hero estate-hero">
+        <div class="estate-hero-grid" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="game-detail-hero-shell estate-hero-shell">
+          <div class="game-detail-copy estate-detail-copy" data-reveal>
+            <div class="about-breadcrumb game-breadcrumb" aria-label="当前位置">
+              <a href="./index.html#home" data-i18n="breadcrumbHome">首页</a>
+              <span>/</span>
+              <a href="./index.html#products" data-i18n="navProducts">产品</a>
+              <span>/</span>
+              <span data-i18n="estateTitle">EstateForce</span>
+            </div>
+            <span class="section-kicker" data-i18n="estateKicker">ESTATEFORCE CONTROL OS</span>
+            <h1 data-i18n="estateTitle">EstateForce</h1>
+            <p data-i18n="estateLead">
+              不动产资产指令控制台。专为海外及日本的中小型不动产公司设计的 NocoBase 基础 SaaS 不动产管理系统。
+            </p>
+
+            <div class="game-detail-actions">
+              <a class="neon-button primary estate-primary" href="#estate-modules" data-burst data-i18n="estatePrimaryAction">核心模块</a>
+              <a class="neon-button secondary" href="#estate-tech" data-burst data-i18n="estateSecondaryAction">技术架构</a>
+            </div>
+
+            <div class="game-signal-grid estate-signal-grid" aria-label="EstateForce 能力标签">
+              <div>
+                <strong>05</strong>
+                <span data-i18n="estateSignal1">核心模块</span>
+              </div>
+              <div>
+                <strong>SaaS</strong>
+                <span data-i18n="estateSignal2">NocoBase 基础</span>
+              </div>
+              <div>
+                <strong>JP+</strong>
+                <span data-i18n="estateSignal3">海外适配</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="estate-hero-media reveal-card" data-reveal>
+            <div class="estate-orbit" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="estate-dashboard-lines" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <img
+              class="estate-hero-art"
+              src="./assets/products/estateforce.png"
+              alt="EstateForce 不动产管理系统产品主视觉"
+              loading="eager"
+            />
+            <div class="estate-hero-hud" aria-hidden="true">
+              <span>ASSET OPS ONLINE</span>
+              <strong>NocoBase SaaS</strong>
+              <small>Property / Lease / Contract / Work Order</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="estate-intro" class="section estate-story-section">
+        <div class="game-story-grid estate-story-grid">
+          <div class="story-copy game-story-copy estate-story-copy" data-reveal>
+            <span class="section-kicker" data-i18n="estateIntroKicker">PRODUCT INTRO</span>
+            <h2 data-i18n="estateIntroTitle">产品介绍</h2>
+            <p data-i18n="estateIntroBody1">
+              EstateForce 是专为海外及日本的中小型不动产公司设计的 NocoBase 基础 SaaS 不动产管理系统。系统将房源管理、租赁管理、合同管理、维修订单管理、用户角色管理一体化，大幅提升业务效率。
+            </p>
+            <p data-i18n="estateIntroBody2">
+              通过采用最新的低代码技术和云原生架构，EstateForce 为不动产企业提供灵活、可扩展的解决方案。无论您是管理几十套还是几千套物业，EstateForce 都能满足您的需求，帮助您实现数字化转型。
+            </p>
+            <p data-i18n="estateIntroBody3">
+              系统支持多语言、多币种，特别适合在日本和海外开展业务的不动产公司。通过直观的用户界面和强大的功能模块，EstateForce 让复杂的不动产管理变得简单高效。
+            </p>
+          </div>
+
+          <aside class="estate-console-panel reveal-card" data-estate-console aria-label="EstateForce 模块演示">
+            <span class="game-hud-label" data-i18n="estateConsoleKicker">MODULE COMMAND CENTER</span>
+            <div class="estate-console-screen">
+              <div class="estate-console-radar" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <strong id="estateModuleTitle" data-i18n="estateModulePropertyTitle">房源管理</strong>
+              <p id="estateModuleBody" data-i18n="estateModulePropertyBody">物业信息、照片、价格、状态等一体化管理，实现高效的物业运营。</p>
+              <ul id="estateModuleList" class="estate-module-list">
+                <li data-i18n="estateModulePropertyItem1">物业基本信息管理</li>
+                <li data-i18n="estateModulePropertyItem2">照片・视频上传</li>
+                <li data-i18n="estateModulePropertyItem3">价格历史追踪</li>
+              </ul>
+              <div class="estate-console-meter" aria-hidden="true">
+                <span></span>
+              </div>
+              <small id="estateModuleStatus" data-i18n="estateModuleStatusProperty">PROPERTY NODE / READY</small>
+            </div>
+            <div class="estate-module-tabs" aria-label="核心模块切换">
+              <button class="is-active" type="button" data-estate-module="property" data-burst data-i18n="estateModulePropertyShort">房源</button>
+              <button type="button" data-estate-module="lease" data-burst data-i18n="estateModuleLeaseShort">租赁</button>
+              <button type="button" data-estate-module="contract" data-burst data-i18n="estateModuleContractShort">合同</button>
+              <button type="button" data-estate-module="maintenance" data-burst data-i18n="estateModuleMaintenanceShort">维修</button>
+              <button type="button" data-estate-module="roles" data-burst data-i18n="estateModuleRolesShort">权限</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="estate-modules" class="section estate-module-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="estateModulesKicker">FIVE CORE MODULES</span>
+          <h2 data-i18n="estateModulesTitle">5个核心模块</h2>
+          <p data-i18n="estateModulesLead">提供全面的不动产管理解决方案的集成系统。</p>
+        </div>
+
+        <div class="estate-module-card-grid">
+          <article class="estate-module-card reveal-card" tabindex="0">
+            <span>01</span>
+            <h3 data-i18n="estateModulePropertyTitle">房源管理</h3>
+            <p data-i18n="estateModulePropertyBody">物业信息、照片、价格、状态等一体化管理，实现高效的物业运营。</p>
+            <ul>
+              <li data-i18n="estateModulePropertyItem1">物业基本信息管理</li>
+              <li data-i18n="estateModulePropertyItem2">照片・视频上传</li>
+              <li data-i18n="estateModulePropertyItem3">价格历史追踪</li>
+              <li data-i18n="estateModulePropertyItem4">空置状况管理</li>
+              <li data-i18n="estateModulePropertyItem5">物业搜索、筛选</li>
+            </ul>
+          </article>
+          <article class="estate-module-card reveal-card" tabindex="0">
+            <span>02</span>
+            <h3 data-i18n="estateModuleLeaseTitle">租赁管理</h3>
+            <p data-i18n="estateModuleLeaseBody">租户信息、租赁历史、支付状况综合管理。</p>
+            <ul>
+              <li data-i18n="estateModuleLeaseItem1">租户基本信息</li>
+              <li data-i18n="estateModuleLeaseItem2">租赁历史管理</li>
+              <li data-i18n="estateModuleLeaseItem3">支付状况追踪</li>
+              <li data-i18n="estateModuleLeaseItem4">信用信息管理</li>
+              <li data-i18n="estateModuleLeaseItem5">沟通记录</li>
+            </ul>
+          </article>
+          <article class="estate-module-card reveal-card" tabindex="0">
+            <span>03</span>
+            <h3 data-i18n="estateModuleContractTitle">合同管理</h3>
+            <p data-i18n="estateModuleContractBody">从合同创建到结束，全生命周期自动化管理。</p>
+            <ul>
+              <li data-i18n="estateModuleContractItem1">合同模板</li>
+              <li data-i18n="estateModuleContractItem2">电子签名支持</li>
+              <li data-i18n="estateModuleContractItem3">到期自动提醒</li>
+              <li data-i18n="estateModuleContractItem4">续约管理</li>
+              <li data-i18n="estateModuleContractItem5">法律合规</li>
+            </ul>
+          </article>
+          <article class="estate-module-card reveal-card" tabindex="0">
+            <span>04</span>
+            <h3 data-i18n="estateModuleMaintenanceTitle">维修订单管理</h3>
+            <p data-i18n="estateModuleMaintenanceBody">从维修请求到完成，高效的工作流程管理。</p>
+            <ul>
+              <li data-i18n="estateModuleMaintenanceItem1">订单接收系统</li>
+              <li data-i18n="estateModuleMaintenanceItem2">优先级管理</li>
+              <li data-i18n="estateModuleMaintenanceItem3">工作人员分配</li>
+              <li data-i18n="estateModuleMaintenanceItem4">进度追踪</li>
+              <li data-i18n="estateModuleMaintenanceItem5">成本管理</li>
+            </ul>
+          </article>
+          <article class="estate-module-card reveal-card" tabindex="0">
+            <span>05</span>
+            <h3 data-i18n="estateModuleRolesTitle">用户角色管理</h3>
+            <p data-i18n="estateModuleRolesBody">细粒度权限控制，实现安全高效的团队协作。</p>
+            <ul>
+              <li data-i18n="estateModuleRolesItem1">基于角色的访问控制</li>
+              <li data-i18n="estateModuleRolesItem2">权限自定义</li>
+              <li data-i18n="estateModuleRolesItem3">用户组管理</li>
+              <li data-i18n="estateModuleRolesItem4">操作日志记录</li>
+              <li data-i18n="estateModuleRolesItem5">安全审计</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="estate-tech" class="section estate-tech-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="estateTechKicker">TECH ARCHITECTURE</span>
+          <h2 data-i18n="estateTechTitle">技术架构</h2>
+          <p data-i18n="estateTechLead">采用最新技术栈，兼具稳定性和可扩展性的系统。</p>
+        </div>
+
+        <div class="estate-tech-grid">
+          <article class="estate-tech-card reveal-card" tabindex="0">
+            <span>&lt;/&gt;</span>
+            <h3>NocoBase</h3>
+            <p data-i18n="estateTechNocoBody">开源低代码平台，实现快速开发和灵活定制。</p>
+          </article>
+          <article class="estate-tech-card reveal-card" tabindex="0">
+            <span>DB</span>
+            <h3>PostgreSQL</h3>
+            <p data-i18n="estateTechPostgresBody">企业级数据库，保证高性能和可靠性。</p>
+          </article>
+          <article class="estate-tech-card reveal-card" tabindex="0">
+            <span>DX</span>
+            <h3>Docker</h3>
+            <p data-i18n="estateTechDockerBody">容器化部署，实现一键部署和环境一致性。</p>
+          </article>
+          <article class="estate-tech-card reveal-card" tabindex="0">
+            <span>JS</span>
+            <h3>JavaScript</h3>
+            <p data-i18n="estateTechJsBody">灵活的业务逻辑，可定制的工作流程。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section estate-audience-section">
+        <div class="about-block-head" data-reveal>
+          <span class="section-kicker" data-i18n="estateAudienceKicker">TARGET USERS</span>
+          <h2 data-i18n="estateAudienceTitle">目标用户</h2>
+          <p data-i18n="estateAudienceLead">专为海外及日本的中小型不动产公司需求定制的解决方案。</p>
+        </div>
+
+        <div class="estate-audience-grid">
+          <article class="estate-audience-card reveal-card" tabindex="0">
+            <span>01</span>
+            <h3 data-i18n="estateAudience1Title">不动产公司</h3>
+            <p data-i18n="estateAudience1Body">物业管理、客户管理、合同管理一体化，大幅提升业务效率。通过数字化增强竞争力。</p>
+          </article>
+          <article class="estate-audience-card reveal-card" tabindex="0">
+            <span>02</span>
+            <h3 data-i18n="estateAudience2Title">物业管理公司</h3>
+            <p data-i18n="estateAudience2Body">维护管理、租户应对、费用管理高效化。同时实现服务质量提升和成本削减。</p>
+          </article>
+          <article class="estate-audience-card reveal-card" tabindex="0">
+            <span>03</span>
+            <h3 data-i18n="estateAudience3Title">海外扩展企业</h3>
+            <p data-i18n="estateAudience3Body">多语言支持、当地法规适应、远程管理功能，支持海外不动产业务的高效运营。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-section game-detail-cta estate-download-cta" data-reveal>
+        <div class="cta-energy" aria-hidden="true">
+          <span class="cta-orbit cta-orbit-one"></span>
+          <span class="cta-orbit cta-orbit-two"></span>
+          <span class="cta-beam"></span>
+          <span class="cta-core"></span>
+        </div>
+        <div class="cta-inner">
+          <span class="section-kicker" data-i18n="estateCtaKicker">START ASSET OPS</span>
+          <h2 data-i18n="estateCtaTitle">用 EstateForce 革新不动产管理</h2>
+          <p data-i18n="estateCtaLead">立即开始免费试用，体验高效的不动产管理。</p>
+          <div class="sayly-download-actions estate-download-actions">
+            <a class="neon-button primary estate-primary" href="./contact.html" data-burst data-i18n="estateCtaPrimary">免费试用</a>
+            <a class="neon-button secondary" href="./contact.html" data-burst data-i18n="estateCtaSecondary">联系我们</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="footer-scan" aria-hidden="true"></div>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">
+            <span></span>
+          </span>
+          <div>
+            <strong>Singularity Games / 奇点游戏</strong>
+            <p data-i18n="footerTagline">创新游戏与 AI 体验的领导者</p>
+          </div>
+        </div>
+        <div class="footer-contact">
+          <strong data-i18n="footerContact">联系我们</strong>
+          <a href="mailto:sgames@hanlian.com">sgames@hanlian.com</a>
+        </div>
+      </div>
+      <p class="copyright">© 2026 Singularity Games. 保留所有权利。</p>
+    </footer>
+
+    <script src="./app.js?v=estate-force-1"></script>
+  </body>
+</html>

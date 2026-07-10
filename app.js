@@ -1572,6 +1572,277 @@ Object.entries(snakeTranslations).forEach(([lang, dictionary]) => {
   Object.assign(translations[lang], dictionary);
 });
 
+const estateTranslations = {
+  zh: {
+    estateKicker: "ESTATEFORCE CONTROL OS",
+    estateTitle: "EstateForce",
+    estateLead: "不动产资产指令控制台。专为海外及日本的中小型不动产公司设计的 NocoBase 基础 SaaS 不动产管理系统。",
+    estatePrimaryAction: "核心模块",
+    estateSecondaryAction: "技术架构",
+    estateSignal1: "核心模块",
+    estateSignal2: "NocoBase 基础",
+    estateSignal3: "海外适配",
+    estateIntroKicker: "PRODUCT INTRO",
+    estateIntroTitle: "产品介绍",
+    estateIntroBody1:
+      "EstateForce 是专为海外及日本的中小型不动产公司设计的 NocoBase 基础 SaaS 不动产管理系统。系统将房源管理、租赁管理、合同管理、维修订单管理、用户角色管理一体化，大幅提升业务效率。",
+    estateIntroBody2:
+      "通过采用最新的低代码技术和云原生架构，EstateForce 为不动产企业提供灵活、可扩展的解决方案。无论您是管理几十套还是几千套物业，EstateForce 都能满足您的需求，帮助您实现数字化转型。",
+    estateIntroBody3:
+      "系统支持多语言、多币种，特别适合在日本和海外开展业务的不动产公司。通过直观的用户界面和强大的功能模块，EstateForce 让复杂的不动产管理变得简单高效。",
+    estateConsoleKicker: "MODULE COMMAND CENTER",
+    estateModulePropertyShort: "房源",
+    estateModuleLeaseShort: "租赁",
+    estateModuleContractShort: "合同",
+    estateModuleMaintenanceShort: "维修",
+    estateModuleRolesShort: "权限",
+    estateModuleStatusProperty: "PROPERTY NODE / READY",
+    estateModuleStatusLease: "LEASE NODE / SYNCED",
+    estateModuleStatusContract: "CONTRACT NODE / ACTIVE",
+    estateModuleStatusMaintenance: "WORK ORDER / TRACKING",
+    estateModuleStatusRoles: "ROLE MATRIX / SECURE",
+    estateModulesKicker: "FIVE CORE MODULES",
+    estateModulesTitle: "5个核心模块",
+    estateModulesLead: "提供全面的不动产管理解决方案的集成系统。",
+    estateModulePropertyTitle: "房源管理",
+    estateModulePropertyBody: "物业信息、照片、价格、状态等一体化管理，实现高效的物业运营。",
+    estateModulePropertyItem1: "物业基本信息管理",
+    estateModulePropertyItem2: "照片・视频上传",
+    estateModulePropertyItem3: "价格历史追踪",
+    estateModulePropertyItem4: "空置状况管理",
+    estateModulePropertyItem5: "物业搜索、筛选",
+    estateModuleLeaseTitle: "租赁管理",
+    estateModuleLeaseBody: "租户信息、租赁历史、支付状况综合管理。",
+    estateModuleLeaseItem1: "租户基本信息",
+    estateModuleLeaseItem2: "租赁历史管理",
+    estateModuleLeaseItem3: "支付状况追踪",
+    estateModuleLeaseItem4: "信用信息管理",
+    estateModuleLeaseItem5: "沟通记录",
+    estateModuleContractTitle: "合同管理",
+    estateModuleContractBody: "从合同创建到结束，全生命周期自动化管理。",
+    estateModuleContractItem1: "合同模板",
+    estateModuleContractItem2: "电子签名支持",
+    estateModuleContractItem3: "到期自动提醒",
+    estateModuleContractItem4: "续约管理",
+    estateModuleContractItem5: "法律合规",
+    estateModuleMaintenanceTitle: "维修订单管理",
+    estateModuleMaintenanceBody: "从维修请求到完成，高效的工作流程管理。",
+    estateModuleMaintenanceItem1: "订单接收系统",
+    estateModuleMaintenanceItem2: "优先级管理",
+    estateModuleMaintenanceItem3: "工作人员分配",
+    estateModuleMaintenanceItem4: "进度追踪",
+    estateModuleMaintenanceItem5: "成本管理",
+    estateModuleRolesTitle: "用户角色管理",
+    estateModuleRolesBody: "细粒度权限控制，实现安全高效的团队协作。",
+    estateModuleRolesItem1: "基于角色的访问控制",
+    estateModuleRolesItem2: "权限自定义",
+    estateModuleRolesItem3: "用户组管理",
+    estateModuleRolesItem4: "操作日志记录",
+    estateModuleRolesItem5: "安全审计",
+    estateTechKicker: "TECH ARCHITECTURE",
+    estateTechTitle: "技术架构",
+    estateTechLead: "采用最新技术栈，兼具稳定性和可扩展性的系统。",
+    estateTechNocoBody: "开源低代码平台，实现快速开发和灵活定制。",
+    estateTechPostgresBody: "企业级数据库，保证高性能和可靠性。",
+    estateTechDockerBody: "容器化部署，实现一键部署和环境一致性。",
+    estateTechJsBody: "灵活的业务逻辑，可定制的工作流程。",
+    estateAudienceKicker: "TARGET USERS",
+    estateAudienceTitle: "目标用户",
+    estateAudienceLead: "专为海外及日本的中小型不动产公司需求定制的解决方案。",
+    estateAudience1Title: "不动产公司",
+    estateAudience1Body: "物业管理、客户管理、合同管理一体化，大幅提升业务效率。通过数字化增强竞争力。",
+    estateAudience2Title: "物业管理公司",
+    estateAudience2Body: "维护管理、租户应对、费用管理高效化。同时实现服务质量提升和成本削减。",
+    estateAudience3Title: "海外扩展企业",
+    estateAudience3Body: "多语言支持、当地法规适应、远程管理功能，支持海外不动产业务的高效运营。",
+    estateCtaKicker: "START ASSET OPS",
+    estateCtaTitle: "用 EstateForce 革新不动产管理",
+    estateCtaLead: "立即开始免费试用，体验高效的不动产管理。",
+    estateCtaPrimary: "免费试用",
+    estateCtaSecondary: "联系我们",
+  },
+  en: {
+    estateKicker: "ESTATEFORCE CONTROL OS",
+    estateTitle: "EstateForce",
+    estateLead: "A real-estate asset command console. A NocoBase-based SaaS property management system for small and medium real-estate teams in Japan and overseas.",
+    estatePrimaryAction: "Core Modules",
+    estateSecondaryAction: "Tech Stack",
+    estateSignal1: "Core Modules",
+    estateSignal2: "NocoBase Base",
+    estateSignal3: "Global Ready",
+    estateIntroKicker: "PRODUCT INTRO",
+    estateIntroTitle: "Product Intro",
+    estateIntroBody1:
+      "EstateForce is a NocoBase-based SaaS property management system designed for small and medium real-estate companies operating in Japan and overseas. It unifies property, leasing, contracts, maintenance work orders, and user roles to improve daily operations.",
+    estateIntroBody2:
+      "Built with low-code technology and a cloud-native architecture, EstateForce gives property teams a flexible and extensible platform. Whether you manage dozens or thousands of units, it helps teams move toward digital operations.",
+    estateIntroBody3:
+      "The system supports multiple languages and currencies, making it especially useful for companies running business across Japan and international markets. Clear interfaces and strong modules make complex property management simpler and faster.",
+    estateConsoleKicker: "MODULE COMMAND CENTER",
+    estateModulePropertyShort: "Property",
+    estateModuleLeaseShort: "Lease",
+    estateModuleContractShort: "Contract",
+    estateModuleMaintenanceShort: "Work",
+    estateModuleRolesShort: "Roles",
+    estateModuleStatusProperty: "PROPERTY NODE / READY",
+    estateModuleStatusLease: "LEASE NODE / SYNCED",
+    estateModuleStatusContract: "CONTRACT NODE / ACTIVE",
+    estateModuleStatusMaintenance: "WORK ORDER / TRACKING",
+    estateModuleStatusRoles: "ROLE MATRIX / SECURE",
+    estateModulesKicker: "FIVE CORE MODULES",
+    estateModulesTitle: "5 Core Modules",
+    estateModulesLead: "An integrated system for comprehensive property management workflows.",
+    estateModulePropertyTitle: "Property Management",
+    estateModulePropertyBody: "Manage property information, photos, pricing, and status in one operational surface.",
+    estateModulePropertyItem1: "Basic property profiles",
+    estateModulePropertyItem2: "Photo and video uploads",
+    estateModulePropertyItem3: "Price history tracking",
+    estateModulePropertyItem4: "Vacancy status management",
+    estateModulePropertyItem5: "Property search and filters",
+    estateModuleLeaseTitle: "Lease Management",
+    estateModuleLeaseBody: "Manage tenant information, lease history, and payment status in one place.",
+    estateModuleLeaseItem1: "Tenant profiles",
+    estateModuleLeaseItem2: "Lease history management",
+    estateModuleLeaseItem3: "Payment status tracking",
+    estateModuleLeaseItem4: "Credit information management",
+    estateModuleLeaseItem5: "Communication records",
+    estateModuleContractTitle: "Contract Management",
+    estateModuleContractBody: "Automate the contract lifecycle from creation through completion.",
+    estateModuleContractItem1: "Contract templates",
+    estateModuleContractItem2: "E-signature support",
+    estateModuleContractItem3: "Expiration reminders",
+    estateModuleContractItem4: "Renewal management",
+    estateModuleContractItem5: "Legal compliance",
+    estateModuleMaintenanceTitle: "Maintenance Orders",
+    estateModuleMaintenanceBody: "Track an efficient workflow from maintenance request to completion.",
+    estateModuleMaintenanceItem1: "Request intake system",
+    estateModuleMaintenanceItem2: "Priority management",
+    estateModuleMaintenanceItem3: "Staff assignment",
+    estateModuleMaintenanceItem4: "Progress tracking",
+    estateModuleMaintenanceItem5: "Cost management",
+    estateModuleRolesTitle: "User Role Management",
+    estateModuleRolesBody: "Fine-grained permission controls for secure and efficient team collaboration.",
+    estateModuleRolesItem1: "Role-based access control",
+    estateModuleRolesItem2: "Custom permissions",
+    estateModuleRolesItem3: "User group management",
+    estateModuleRolesItem4: "Operation logs",
+    estateModuleRolesItem5: "Security audit",
+    estateTechKicker: "TECH ARCHITECTURE",
+    estateTechTitle: "Tech Architecture",
+    estateTechLead: "A modern stack designed for stability, extensibility, and fast rollout.",
+    estateTechNocoBody: "Open-source low-code platform for fast development and flexible customization.",
+    estateTechPostgresBody: "Enterprise-grade database for performance and reliability.",
+    estateTechDockerBody: "Containerized deployment for one-click rollout and consistent environments.",
+    estateTechJsBody: "Flexible business logic and customizable workflows.",
+    estateAudienceKicker: "TARGET USERS",
+    estateAudienceTitle: "Target Users",
+    estateAudienceLead: "A solution tailored for small and medium real-estate companies in Japan and overseas.",
+    estateAudience1Title: "Real-Estate Companies",
+    estateAudience1Body: "Unify property, customer, and contract management to improve efficiency and strengthen digital competitiveness.",
+    estateAudience2Title: "Property Managers",
+    estateAudience2Body: "Streamline maintenance, tenant response, and fee management while improving service quality and reducing costs.",
+    estateAudience3Title: "Overseas Expansion Teams",
+    estateAudience3Body: "Multi-language support, local compliance adaptation, and remote management for cross-border property operations.",
+    estateCtaKicker: "START ASSET OPS",
+    estateCtaTitle: "Modernize property management with EstateForce",
+    estateCtaLead: "Start a free trial and experience faster real-estate operations.",
+    estateCtaPrimary: "Free Trial",
+    estateCtaSecondary: "Contact Us",
+  },
+  ja: {
+    estateKicker: "ESTATEFORCE CONTROL OS",
+    estateTitle: "EstateForce",
+    estateLead: "不動産資産の指令コンソール。海外および日本の中小不動産会社向けに設計された、NocoBase ベースの SaaS 不動産管理システムです。",
+    estatePrimaryAction: "中核モジュール",
+    estateSecondaryAction: "技術構成",
+    estateSignal1: "中核モジュール",
+    estateSignal2: "NocoBase 基盤",
+    estateSignal3: "海外対応",
+    estateIntroKicker: "PRODUCT INTRO",
+    estateIntroTitle: "製品紹介",
+    estateIntroBody1:
+      "EstateForce は、海外および日本の中小不動産会社向けに設計された NocoBase ベースの SaaS 不動産管理システムです。物件、賃貸、契約、修繕依頼、ユーザー権限を一体化し、業務効率を高めます。",
+    estateIntroBody2:
+      "最新のローコード技術とクラウドネイティブ構成により、柔軟で拡張しやすいソリューションを提供します。数十件から数千件の物件まで、デジタル化を支援します。",
+    estateIntroBody3:
+      "多言語、多通貨に対応し、日本と海外で事業を展開する不動産会社に適しています。直感的な UI と強力な機能で、複雑な管理をシンプルにします。",
+    estateConsoleKicker: "MODULE COMMAND CENTER",
+    estateModulePropertyShort: "物件",
+    estateModuleLeaseShort: "賃貸",
+    estateModuleContractShort: "契約",
+    estateModuleMaintenanceShort: "修繕",
+    estateModuleRolesShort: "権限",
+    estateModuleStatusProperty: "PROPERTY NODE / READY",
+    estateModuleStatusLease: "LEASE NODE / SYNCED",
+    estateModuleStatusContract: "CONTRACT NODE / ACTIVE",
+    estateModuleStatusMaintenance: "WORK ORDER / TRACKING",
+    estateModuleStatusRoles: "ROLE MATRIX / SECURE",
+    estateModulesKicker: "FIVE CORE MODULES",
+    estateModulesTitle: "5つの中核モジュール",
+    estateModulesLead: "不動産管理に必要なワークフローを統合したシステムです。",
+    estateModulePropertyTitle: "物件管理",
+    estateModulePropertyBody: "物件情報、写真、価格、状態を一元管理し、効率的な運用を実現します。",
+    estateModulePropertyItem1: "物件基本情報管理",
+    estateModulePropertyItem2: "写真・動画アップロード",
+    estateModulePropertyItem3: "価格履歴の追跡",
+    estateModulePropertyItem4: "空室状況管理",
+    estateModulePropertyItem5: "物件検索・絞り込み",
+    estateModuleLeaseTitle: "賃貸管理",
+    estateModuleLeaseBody: "入居者情報、賃貸履歴、支払い状況を総合的に管理します。",
+    estateModuleLeaseItem1: "入居者基本情報",
+    estateModuleLeaseItem2: "賃貸履歴管理",
+    estateModuleLeaseItem3: "支払い状況追跡",
+    estateModuleLeaseItem4: "信用情報管理",
+    estateModuleLeaseItem5: "コミュニケーション記録",
+    estateModuleContractTitle: "契約管理",
+    estateModuleContractBody: "契約作成から終了まで、ライフサイクル全体を自動化します。",
+    estateModuleContractItem1: "契約テンプレート",
+    estateModuleContractItem2: "電子署名対応",
+    estateModuleContractItem3: "期限自動リマインド",
+    estateModuleContractItem4: "更新管理",
+    estateModuleContractItem5: "法務コンプライアンス",
+    estateModuleMaintenanceTitle: "修繕依頼管理",
+    estateModuleMaintenanceBody: "修繕依頼から完了まで、効率的なワークフローで管理します。",
+    estateModuleMaintenanceItem1: "依頼受付システム",
+    estateModuleMaintenanceItem2: "優先度管理",
+    estateModuleMaintenanceItem3: "担当者割り当て",
+    estateModuleMaintenanceItem4: "進捗追跡",
+    estateModuleMaintenanceItem5: "コスト管理",
+    estateModuleRolesTitle: "ユーザー権限管理",
+    estateModuleRolesBody: "細かな権限制御で、安全かつ効率的なチーム協業を実現します。",
+    estateModuleRolesItem1: "ロールベースアクセス制御",
+    estateModuleRolesItem2: "権限カスタマイズ",
+    estateModuleRolesItem3: "ユーザーグループ管理",
+    estateModuleRolesItem4: "操作ログ記録",
+    estateModuleRolesItem5: "セキュリティ監査",
+    estateTechKicker: "TECH ARCHITECTURE",
+    estateTechTitle: "技術構成",
+    estateTechLead: "安定性と拡張性を兼ね備えた最新技術スタックです。",
+    estateTechNocoBody: "オープンソースのローコード基盤で、迅速な開発と柔軟なカスタマイズを実現します。",
+    estateTechPostgresBody: "高性能と信頼性を備えたエンタープライズ級データベースです。",
+    estateTechDockerBody: "コンテナ化により、一括デプロイと環境の一貫性を実現します。",
+    estateTechJsBody: "柔軟な業務ロジックとカスタムワークフローに対応します。",
+    estateAudienceKicker: "TARGET USERS",
+    estateAudienceTitle: "対象ユーザー",
+    estateAudienceLead: "海外および日本の中小不動産会社向けに最適化されたソリューションです。",
+    estateAudience1Title: "不動産会社",
+    estateAudience1Body: "物件、顧客、契約管理を一体化し、業務効率を高めます。デジタル化で競争力を強化します。",
+    estateAudience2Title: "物件管理会社",
+    estateAudience2Body: "修繕管理、入居者対応、費用管理を効率化し、サービス品質向上とコスト削減を実現します。",
+    estateAudience3Title: "海外展開企業",
+    estateAudience3Body: "多言語対応、現地法規への適応、遠隔管理機能により、海外不動産事業を支援します。",
+    estateCtaKicker: "START ASSET OPS",
+    estateCtaTitle: "EstateForce で不動産管理を刷新",
+    estateCtaLead: "無料トライアルを開始し、効率的な不動産管理を体験してください。",
+    estateCtaPrimary: "無料トライアル",
+    estateCtaSecondary: "お問い合わせ",
+  },
+};
+
+Object.entries(estateTranslations).forEach(([lang, dictionary]) => {
+  Object.assign(translations[lang], dictionary);
+});
+
 const teamProfiles = {
   zh: {
     ceo: {
@@ -1739,6 +2010,7 @@ let activeSavageBoardState = "idle";
 let activeSavageBoardCell = "";
 let activeSavageDownloadState = "idle";
 let activeSnakeRoute = "direction";
+let activeEstateModule = "property";
 const languageMeta = {
   zh: "zh-CN",
   en: "en",
@@ -1866,7 +2138,7 @@ function spawnBurst(target, amount = 22) {
 
 function setupTiltCards() {
   document.querySelectorAll(
-    ".product-card, .value-card, .team-card, .contact-card, .contact-minimal-panel, .game-hud-panel, .game-shot-card, .game-feature-card, .game-gallery-viewer, .savage-hero-media, .savage-board-panel, .savage-role-card, .snake-hero-media, .snake-control-panel",
+    ".product-card, .value-card, .team-card, .contact-card, .contact-minimal-panel, .game-hud-panel, .game-shot-card, .game-feature-card, .game-gallery-viewer, .savage-hero-media, .savage-board-panel, .savage-role-card, .snake-hero-media, .snake-control-panel, .estate-hero-media, .estate-console-panel, .estate-module-card, .estate-tech-card, .estate-audience-card",
   ).forEach((card) => {
     card.addEventListener("pointermove", (event) => {
       const rect = card.getBoundingClientRect();
@@ -1945,6 +2217,7 @@ function applyLanguage(lang, burstTarget = null) {
   updateSavageRoleText();
   updateSavageDownloadStatus();
   updateSnakeRouteText();
+  updateEstateModuleText();
   updateCopyStatus(dictionary.contactCopyIdle);
   updateSubscribeStatus(dictionary.fantasySubscribeIdle, "idle");
   storeLanguage(nextLang);
@@ -2416,6 +2689,123 @@ function setupSnakeRoutes() {
   updateSnakeRouteText();
 }
 
+function updateEstateModuleText() {
+  const panel = document.querySelector("[data-estate-console]");
+  const title = document.getElementById("estateModuleTitle");
+  const body = document.getElementById("estateModuleBody");
+  const list = document.getElementById("estateModuleList");
+  const status = document.getElementById("estateModuleStatus");
+  if (!panel || !title || !body || !list || !status) return;
+
+  const dictionary = translations[currentLang] || translations.zh;
+  const module = activeEstateModule || "property";
+  const config = {
+    property: {
+      title: "estateModulePropertyTitle",
+      body: "estateModulePropertyBody",
+      status: "estateModuleStatusProperty",
+      items: [
+        "estateModulePropertyItem1",
+        "estateModulePropertyItem2",
+        "estateModulePropertyItem3",
+        "estateModulePropertyItem4",
+        "estateModulePropertyItem5",
+      ],
+      power: "78%",
+    },
+    lease: {
+      title: "estateModuleLeaseTitle",
+      body: "estateModuleLeaseBody",
+      status: "estateModuleStatusLease",
+      items: [
+        "estateModuleLeaseItem1",
+        "estateModuleLeaseItem2",
+        "estateModuleLeaseItem3",
+        "estateModuleLeaseItem4",
+        "estateModuleLeaseItem5",
+      ],
+      power: "70%",
+    },
+    contract: {
+      title: "estateModuleContractTitle",
+      body: "estateModuleContractBody",
+      status: "estateModuleStatusContract",
+      items: [
+        "estateModuleContractItem1",
+        "estateModuleContractItem2",
+        "estateModuleContractItem3",
+        "estateModuleContractItem4",
+        "estateModuleContractItem5",
+      ],
+      power: "84%",
+    },
+    maintenance: {
+      title: "estateModuleMaintenanceTitle",
+      body: "estateModuleMaintenanceBody",
+      status: "estateModuleStatusMaintenance",
+      items: [
+        "estateModuleMaintenanceItem1",
+        "estateModuleMaintenanceItem2",
+        "estateModuleMaintenanceItem3",
+        "estateModuleMaintenanceItem4",
+        "estateModuleMaintenanceItem5",
+      ],
+      power: "66%",
+    },
+    roles: {
+      title: "estateModuleRolesTitle",
+      body: "estateModuleRolesBody",
+      status: "estateModuleStatusRoles",
+      items: [
+        "estateModuleRolesItem1",
+        "estateModuleRolesItem2",
+        "estateModuleRolesItem3",
+        "estateModuleRolesItem4",
+        "estateModuleRolesItem5",
+      ],
+      power: "92%",
+    },
+  };
+  const item = config[module] || config.property;
+
+  title.dataset.i18n = item.title;
+  body.dataset.i18n = item.body;
+  status.dataset.i18n = item.status;
+  title.textContent = dictionary[item.title] || translations.zh[item.title] || title.textContent;
+  body.textContent = dictionary[item.body] || translations.zh[item.body] || body.textContent;
+  status.textContent = dictionary[item.status] || translations.zh[item.status] || status.textContent;
+  list.replaceChildren(
+    ...item.items.map((key) => {
+      const listItem = document.createElement("li");
+      listItem.dataset.i18n = key;
+      listItem.textContent = dictionary[key] || translations.zh[key] || "";
+      return listItem;
+    })
+  );
+  panel.style.setProperty("--estate-module-power", item.power);
+
+  document.querySelectorAll("[data-estate-module]").forEach((button) => {
+    const isSelected = button.dataset.estateModule === module;
+    button.classList.toggle("is-active", isSelected);
+    button.setAttribute("aria-pressed", String(isSelected));
+  });
+}
+
+function setupEstateModules() {
+  const buttons = document.querySelectorAll("[data-estate-module]");
+  if (!buttons.length) return;
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeEstateModule = button.dataset.estateModule || "property";
+      updateEstateModuleText();
+      spawnBurst(button, activeEstateModule === "contract" ? 30 : 18);
+    });
+  });
+
+  updateEstateModuleText();
+}
+
 resizeCanvas();
 setupPointer();
 setupTiltCards();
@@ -2432,6 +2822,7 @@ setupSavageBoard();
 setupSavageRoles();
 setupSavageDownloads();
 setupSnakeRoutes();
+setupEstateModules();
 updateHeroTitleEffects(currentLang);
 setupVideoFallback();
 
