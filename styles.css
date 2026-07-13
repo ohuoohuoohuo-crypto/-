@@ -3411,36 +3411,36 @@ main,
 }
 
 .fantasy-showcase-card {
-  --scene-base: #648b86;
+  --scene-base: #d1ebe5;
   background:
-    radial-gradient(circle at 50% 30%, hsl(var(--accent) / 0.18), transparent 17rem),
+    radial-gradient(circle at 50% 30%, hsl(var(--accent) / 0.12), transparent 17rem),
     var(--scene-base);
 }
 
 .fantasy-showcase-card-quest {
-  --scene-base: #688899;
+  --scene-base: #d5e4ec;
 }
 
 .fantasy-showcase-card-ruin {
-  --scene-base: #5f6e96;
+  --scene-base: #c8cbea;
 }
 
 .fantasy-showcase-card::before {
   background:
-    linear-gradient(180deg, rgba(4, 10, 24, 0.04), rgba(4, 10, 24, 0.22) 42%, rgba(4, 7, 20, 0.9) 78%),
-    radial-gradient(circle at var(--mx, 50%) var(--my, 40%), hsl(var(--accent) / 0.18), transparent 17rem);
+    linear-gradient(180deg, rgba(4, 10, 24, 0), rgba(4, 10, 24, 0.04) 56%, rgba(4, 7, 20, 0.28) 72%, rgba(4, 7, 20, 0.82) 91%),
+    radial-gradient(circle at var(--mx, 50%) var(--my, 40%), hsl(var(--accent) / 0.14), transparent 17rem);
 }
 
 .fantasy-showcase-card img {
   object-position: center center;
   mix-blend-mode: multiply;
-  filter: saturate(1.34) contrast(1.08) brightness(1.06);
+  filter: saturate(1.32) contrast(1.03) brightness(1.34);
   transform: scale(1.01);
 }
 
 .fantasy-showcase-card:hover img,
 .fantasy-showcase-card:focus-visible img {
-  filter: saturate(1.46) contrast(1.1) brightness(1.12);
+  filter: saturate(1.44) contrast(1.05) brightness(1.42);
   transform: scale(1.065);
 }
 
