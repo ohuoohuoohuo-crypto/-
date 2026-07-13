@@ -3410,6 +3410,40 @@ main,
   border-color: rgba(77, 249, 226, 0.2);
 }
 
+.fantasy-showcase-card {
+  --scene-base: #648b86;
+  background:
+    radial-gradient(circle at 50% 30%, hsl(var(--accent) / 0.18), transparent 17rem),
+    var(--scene-base);
+}
+
+.fantasy-showcase-card-quest {
+  --scene-base: #688899;
+}
+
+.fantasy-showcase-card-ruin {
+  --scene-base: #5f6e96;
+}
+
+.fantasy-showcase-card::before {
+  background:
+    linear-gradient(180deg, rgba(4, 10, 24, 0.04), rgba(4, 10, 24, 0.22) 42%, rgba(4, 7, 20, 0.9) 78%),
+    radial-gradient(circle at var(--mx, 50%) var(--my, 40%), hsl(var(--accent) / 0.18), transparent 17rem);
+}
+
+.fantasy-showcase-card img {
+  object-position: center center;
+  mix-blend-mode: multiply;
+  filter: saturate(1.34) contrast(1.08) brightness(1.06);
+  transform: scale(1.01);
+}
+
+.fantasy-showcase-card:hover img,
+.fantasy-showcase-card:focus-visible img {
+  filter: saturate(1.46) contrast(1.1) brightness(1.12);
+  transform: scale(1.065);
+}
+
 .fantasy-feature-grid .game-feature-card::before {
   background: linear-gradient(180deg, var(--fantasy-sea), var(--fantasy-leaf), var(--fantasy-sun), var(--fantasy-pink));
   box-shadow: 0 0 22px rgba(77, 249, 226, 0.42);
