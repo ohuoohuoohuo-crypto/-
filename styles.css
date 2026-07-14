@@ -4195,6 +4195,36 @@ main,
   min-width: 13rem;
 }
 
+.savage-products-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 0.9rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 760;
+  text-decoration: none;
+  transition: color 180ms ease, text-shadow 180ms ease, transform 180ms ease;
+}
+
+.savage-products-back::before {
+  content: "\2190";
+  font-size: 1.05em;
+  transition: transform 180ms ease;
+}
+
+.savage-products-back:hover,
+.savage-products-back:focus-visible {
+  color: #fff3d5;
+  text-shadow: 0 0 18px rgba(255, 211, 111, 0.48);
+  transform: translateY(-2px);
+}
+
+.savage-products-back:hover::before,
+.savage-products-back:focus-visible::before {
+  transform: translateX(-4px);
+}
+
 .sayly-download-status {
   width: min(42rem, 100%);
   color: rgba(255, 255, 255, 0.84);
@@ -4381,9 +4411,9 @@ main,
 .savage-hero-art {
   position: relative;
   z-index: 2;
-  width: min(118%, 60rem);
+  width: min(94%, 48rem);
   max-width: none;
-  transform: translateY(4%) scale(1.04);
+  transform: translateY(7%) scale(0.96);
   filter:
     drop-shadow(0 34px 44px rgba(0, 0, 0, 0.5))
     drop-shadow(0 0 42px rgba(255, 47, 50, 0.18))
@@ -4392,7 +4422,7 @@ main,
 }
 
 .savage-hero-media:hover .savage-hero-art {
-  transform: translateY(1%) scale(1.1);
+  transform: translateY(5%) scale(1.01);
   filter:
     drop-shadow(0 38px 54px rgba(0, 0, 0, 0.58))
     drop-shadow(0 0 52px rgba(255, 47, 50, 0.28))
@@ -7198,12 +7228,12 @@ main,
   }
 
   .savage-hero-art {
-    width: 132%;
-    transform: translateY(3%) scale(1);
+    width: 108%;
+    transform: translateY(7%) scale(0.96);
   }
 
   .savage-hero-media:hover .savage-hero-art {
-    transform: translateY(0) scale(1.05);
+    transform: translateY(5%) scale(1);
   }
 
   .savage-hero-hud {

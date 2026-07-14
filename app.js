@@ -1157,6 +1157,7 @@ const savageTranslations = {
     savageDownloadIdle: "下载通道准备中，可先通过联系我们获取上架通知。",
     savageDownloadAppStore: "App Store 下载信号已记录。正式上架后可第一时间获取通知。",
     savageDownloadOfficial: "官网通道已准备，请继续关注 Singularity Games 产品矩阵。",
+    savageBackProducts: "返回产品",
   },
   en: {
     savageKicker: "TOXIC MINE PARTY",
@@ -1227,6 +1228,7 @@ const savageTranslations = {
     savageDownloadIdle: "Download channels are being prepared. Contact us for launch updates.",
     savageDownloadAppStore: "App Store signal recorded. Launch updates can be sent once the app is live.",
     savageDownloadOfficial: "Official website channel is ready. Keep an eye on the Singularity Games product matrix.",
+    savageBackProducts: "Back to Products",
   },
   ja: {
     savageKicker: "TOXIC MINE PARTY",
@@ -1297,6 +1299,7 @@ const savageTranslations = {
     savageDownloadIdle: "ダウンロード経路を準備中です。お問い合わせから公開通知を受け取れます。",
     savageDownloadAppStore: "App Store の通知を記録しました。公開後に最新情報を受け取れます。",
     savageDownloadOfficial: "公式サイトの経路を準備しました。Singularity Games の製品一覧もご確認ください。",
+    savageBackProducts: "製品一覧へ戻る",
   },
 };
 
