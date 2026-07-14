@@ -351,7 +351,7 @@ main,
   width: min(45rem, 100%);
   margin-left: min(3vw, 2.6rem);
   text-align: left;
-  transform: translateY(calc(-1 * var(--hero-lift) - 28px));
+  transform: translateY(calc(-1 * var(--hero-lift) - 56px));
 }
 
 .eyebrow,
