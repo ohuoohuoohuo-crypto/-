@@ -3526,12 +3526,12 @@ main,
 }
 
 .fantasy-gallery-viewer img {
-  filter: saturate(1.08) contrast(1.06) brightness(0.86);
+  filter: saturate(1.12) contrast(1.08) brightness(0.76);
 }
 
 .fantasy-gallery-viewer::before {
   background:
-    linear-gradient(180deg, rgba(4, 10, 24, 0.06), rgba(4, 10, 24, 0.12) 58%, rgba(4, 5, 16, 0.64)),
+    linear-gradient(180deg, rgba(4, 10, 24, 0.08), rgba(4, 10, 24, 0.14) 58%, rgba(4, 5, 16, 0.66)),
     linear-gradient(120deg, rgba(77, 249, 226, 0.06), transparent 46%);
 }
 
@@ -3552,13 +3552,13 @@ main,
 }
 
 .fantasy-gallery-thumbs img {
-  filter: saturate(1.08) contrast(1.05) brightness(0.86);
+  filter: saturate(1.12) contrast(1.07) brightness(0.76);
 }
 
 .fantasy-gallery-thumbs button:hover img,
 .fantasy-gallery-thumbs button:focus-visible img,
 .fantasy-gallery-thumbs button.is-active img {
-  filter: saturate(1.12) contrast(1.06) brightness(0.92);
+  filter: saturate(1.16) contrast(1.08) brightness(0.84);
 }
 
 .fantasy-detail-cta {
