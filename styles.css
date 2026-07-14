@@ -4413,7 +4413,7 @@ main,
   z-index: 2;
   width: min(94%, 48rem);
   max-width: none;
-  transform: translateY(7%) scale(0.96);
+  transform: translateY(-1%) scale(0.96);
   filter:
     drop-shadow(0 34px 44px rgba(0, 0, 0, 0.5))
     drop-shadow(0 0 42px rgba(255, 47, 50, 0.18))
@@ -4422,7 +4422,7 @@ main,
 }
 
 .savage-hero-media:hover .savage-hero-art {
-  transform: translateY(5%) scale(1.01);
+  transform: translateY(-3%) scale(1.01);
   filter:
     drop-shadow(0 38px 54px rgba(0, 0, 0, 0.58))
     drop-shadow(0 0 52px rgba(255, 47, 50, 0.28))
@@ -7229,11 +7229,11 @@ main,
 
   .savage-hero-art {
     width: 108%;
-    transform: translateY(7%) scale(0.96);
+    transform: translateY(1%) scale(0.96);
   }
 
   .savage-hero-media:hover .savage-hero-art {
-    transform: translateY(5%) scale(1);
+    transform: translateY(-1%) scale(1);
   }
 
   .savage-hero-hud {
