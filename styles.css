@@ -3526,7 +3526,7 @@ main,
 }
 
 .fantasy-gallery-viewer img {
-  filter: saturate(1.12) contrast(1.04) brightness(1.08);
+  filter: saturate(1.06) contrast(1.05) brightness(0.92);
 }
 
 .fantasy-gallery-viewer::before {
@@ -3552,13 +3552,13 @@ main,
 }
 
 .fantasy-gallery-thumbs img {
-  filter: saturate(1.08) contrast(1.03) brightness(1.02);
+  filter: saturate(1.05) contrast(1.04) brightness(0.92);
 }
 
 .fantasy-gallery-thumbs button:hover img,
 .fantasy-gallery-thumbs button:focus-visible img,
 .fantasy-gallery-thumbs button.is-active img {
-  filter: saturate(1.15) contrast(1.05) brightness(1.09);
+  filter: saturate(1.1) contrast(1.05) brightness(0.98);
 }
 
 .fantasy-detail-cta {
