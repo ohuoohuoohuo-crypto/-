@@ -3169,6 +3169,126 @@ main,
   filter: saturate(1.14) contrast(1.08) brightness(0.95);
 }
 
+.island-winner-gallery-layout {
+  display: block;
+  width: min(82rem, 100%);
+}
+
+.game-gallery-viewer.island-winner-gallery-viewer {
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.island-winner-gallery-viewer::before {
+  background:
+    linear-gradient(180deg, rgba(4, 5, 16, 0), rgba(4, 5, 16, 0.04) 58%, rgba(4, 5, 16, 0.58)),
+    linear-gradient(120deg, rgba(66, 245, 255, 0.04), transparent 46%);
+}
+
+.island-winner-gallery-viewer img {
+  min-height: 0;
+  object-position: center;
+  filter: saturate(1.1) contrast(1.04) brightness(1.02);
+}
+
+.island-winner-gallery-viewer:hover img {
+  filter: saturate(1.14) contrast(1.05) brightness(1.08);
+}
+
+.island-gallery-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  color: #f7fbff;
+  border: 1px solid rgba(184, 210, 255, 0.34);
+  border-radius: 6px;
+  background: rgba(4, 8, 24, 0.66);
+  box-shadow: 0 0 28px rgba(66, 245, 255, 0.14);
+  backdrop-filter: blur(14px);
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.island-gallery-nav:hover,
+.island-gallery-nav:focus-visible {
+  border-color: rgba(66, 245, 255, 0.8);
+  background: rgba(12, 28, 54, 0.86);
+  box-shadow: 0 0 36px rgba(66, 245, 255, 0.28);
+  transform: translateY(-50%) scale(1.06);
+  outline: 0;
+}
+
+.island-gallery-nav span {
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.island-gallery-prev {
+  left: 1rem;
+}
+
+.island-gallery-next {
+  right: 1rem;
+}
+
+.game-gallery-thumbs.island-winner-gallery-thumbs {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.game-gallery-thumbs.island-winner-gallery-thumbs button {
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+}
+
+.island-winner-gallery-thumbs button::before {
+  background: linear-gradient(180deg, transparent, rgba(4, 5, 16, 0.12));
+}
+
+.island-winner-gallery-thumbs img {
+  min-height: 0;
+  filter: saturate(1.08) contrast(1.03) brightness(1);
+}
+
+.island-winner-gallery-thumbs button:hover img,
+.island-winner-gallery-thumbs button:focus-visible img,
+.island-winner-gallery-thumbs button.is-active img {
+  filter: saturate(1.14) contrast(1.05) brightness(1.08);
+}
+
+@media (max-width: 760px) {
+  .game-gallery-viewer.island-winner-gallery-viewer {
+    aspect-ratio: 16 / 10;
+  }
+
+  .island-gallery-nav {
+    top: 42%;
+    width: 2.55rem;
+    height: 2.55rem;
+  }
+
+  .game-gallery-thumbs.island-winner-gallery-thumbs {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(10.5rem, 72vw);
+    overflow-x: auto;
+    padding: 0.4rem 0.1rem 0.8rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: rgba(66, 245, 255, 0.42) rgba(8, 14, 34, 0.5);
+  }
+
+  .game-gallery-thumbs.island-winner-gallery-thumbs button {
+    scroll-snap-align: center;
+  }
+}
+
 .game-detail-cta {
   border-top-color: rgba(147, 197, 253, 0.16);
 }

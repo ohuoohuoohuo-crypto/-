@@ -8,7 +8,7 @@
       content="荒岛大赢家，充满挑战的放置类冒险生存游戏。"
     />
     <title>荒岛大赢家 - Singularity Games / 奇点游戏</title>
-    <link rel="stylesheet" href="./styles.css?v=game-detail-2" />
+    <link rel="stylesheet" href="./styles.css?v=game-detail-3" />
   </head>
   <body>
     <canvas id="particleCanvas" class="particle-canvas" aria-hidden="true"></canvas>
@@ -231,20 +231,26 @@
         </div>
       </section>
 
-      <section id="game-gallery" class="section game-gallery-section">
+      <section id="game-gallery" class="section game-gallery-section island-winner-gallery-section">
         <div class="about-block-head" data-reveal>
           <span class="section-kicker" data-i18n="gameGalleryKicker">VISUAL ARCHIVE</span>
           <h2 data-i18n="gameGalleryTitle">游戏画面</h2>
-          <p data-i18n="gameGalleryLead">点击缩略图切换预览，快速浏览荒岛大赢家的关键场景。</p>
+          <p data-i18n="gameGalleryLead">使用左右切换或横向胶片条，快速浏览荒岛大赢家的关键场景。</p>
         </div>
 
-        <div class="game-gallery-layout" data-reveal>
-          <div class="game-gallery-viewer">
+        <div class="game-gallery-layout island-winner-gallery-layout" data-reveal>
+          <div class="game-gallery-viewer island-winner-gallery-viewer">
             <img
               id="gameGalleryImage"
               src="./assets/island-winner/hero.png"
               alt="荒岛大赢家游戏画面预览"
             />
+            <button class="island-gallery-nav island-gallery-prev" type="button" data-gallery-step="-1" aria-label="上一张游戏画面">
+              <span aria-hidden="true">←</span>
+            </button>
+            <button class="island-gallery-nav island-gallery-next" type="button" data-gallery-step="1" aria-label="下一张游戏画面">
+              <span aria-hidden="true">→</span>
+            </button>
             <div class="game-gallery-caption">
               <span>LIVE PREVIEW</span>
               <h3 id="gameGalleryTitleText" data-i18n="gameGallery1Title">绝境孤岛</h3>
@@ -252,7 +258,7 @@
             </div>
           </div>
 
-          <div class="game-gallery-thumbs" aria-label="游戏画面缩略图">
+          <div class="game-gallery-thumbs island-winner-gallery-thumbs" aria-label="游戏画面缩略图">
             <button
               class="is-active"
               type="button"
@@ -339,6 +345,6 @@
       <p class="copyright">© 2026 Singularity Games. 保留所有权利。</p>
     </footer>
 
-    <script src="./app.js?v=game-detail-1"></script>
+    <script src="./app.js?v=game-detail-3"></script>
   </body>
 </html>

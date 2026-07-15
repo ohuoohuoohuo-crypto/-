@@ -177,7 +177,7 @@ const translations = {
     gameFeature9Body: "解开岛上的谜题与秘密，发现遗迹真相，每个谜题都是故事的一部分。",
     gameGalleryKicker: "VISUAL ARCHIVE",
     gameGalleryTitle: "游戏画面",
-    gameGalleryLead: "点击缩略图切换预览，快速浏览荒岛大赢家的关键场景。",
+    gameGalleryLead: "使用左右切换或横向胶片条，快速浏览荒岛大赢家的关键场景。",
     gameGallery1Title: "绝境孤岛",
     gameGallery1Body: "荒岛冒险争资源，独狼突围夺生机。",
     gameGallery2Title: "招募同盟",
@@ -375,7 +375,7 @@ const translations = {
     gameFeature9Body: "Solve island mysteries and discover how each puzzle connects to the story.",
     gameGalleryKicker: "VISUAL ARCHIVE",
     gameGalleryTitle: "Game Screens",
-    gameGalleryLead: "Click a thumbnail to switch the preview and scan key island scenes.",
+    gameGalleryLead: "Use the arrows or horizontal filmstrip to scan key island scenes.",
     gameGallery1Title: "Desperate Island",
     gameGallery1Body: "Compete for resources and fight for a way out.",
     gameGallery2Title: "Recruit Allies",
@@ -569,7 +569,7 @@ const translations = {
     gameFeature9Body: "島の謎と秘密を解き、遺跡の真相と物語のつながりを発見します。",
     gameGalleryKicker: "VISUAL ARCHIVE",
     gameGalleryTitle: "ゲーム画面",
-    gameGalleryLead: "サムネイルをクリックして、荒島の主要シーンを切り替えられます。",
+    gameGalleryLead: "左右の矢印または横型フィルムストリップで、荒島の主要シーンを切り替えられます。",
     gameGallery1Title: "絶境孤島",
     gameGallery1Body: "資源を奪い合い、孤島からの突破口を探します。",
     gameGallery2Title: "仲間募集",
@@ -2412,6 +2412,7 @@ function updateGameGalleryText() {
 function setupGameGallery() {
   const viewer = document.getElementById("gameGalleryImage");
   const buttons = document.querySelectorAll(".game-gallery-thumbs button");
+  const controls = document.querySelectorAll("[data-gallery-step]");
   if (!viewer || !buttons.length) return;
 
   buttons.forEach((button) => {
@@ -2433,6 +2434,21 @@ function setupGameGallery() {
         }
       }, 120);
       spawnBurst(button, 18);
+    });
+  });
+
+  controls.forEach((control) => {
+    control.addEventListener("click", () => {
+      const activeIndex = [...buttons].findIndex((button) => button.classList.contains("is-active"));
+      const step = Number(control.dataset.galleryStep) || 1;
+      const nextIndex = (activeIndex + step + buttons.length) % buttons.length;
+      const nextButton = buttons[nextIndex];
+      nextButton.click();
+      nextButton.scrollIntoView({
+        block: "nearest",
+        inline: "center",
+        behavior: prefersReduced ? "auto" : "smooth",
+      });
     });
   });
 
