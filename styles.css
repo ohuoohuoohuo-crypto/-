@@ -2932,6 +2932,65 @@ main,
   font-weight: 680;
 }
 
+.island-showcase-card {
+  min-height: 27rem;
+  background:
+    radial-gradient(circle at 50% 28%, hsl(var(--accent) / 0.28), transparent 54%),
+    linear-gradient(160deg, rgba(18, 31, 53, 0.94), rgba(5, 9, 23, 0.98));
+}
+
+.island-showcase-card::before {
+  background:
+    linear-gradient(180deg, transparent 42%, rgba(4, 7, 18, 0.16) 58%, rgba(4, 7, 18, 0.94)),
+    radial-gradient(circle at var(--mx, 50%) var(--my, 34%), hsl(var(--accent) / 0.22), transparent 16rem);
+}
+
+.game-shot-card.island-showcase-card img {
+  inset: 0.65rem 0.65rem 4.7rem;
+  width: calc(100% - 1.3rem);
+  height: calc(100% - 5.35rem);
+  object-fit: contain;
+  object-position: center;
+  filter:
+    saturate(1.06)
+    contrast(1.04)
+    brightness(1.08)
+    drop-shadow(0 22px 28px rgba(0, 0, 0, 0.38));
+  transform: scale(0.96) translateY(0.1rem);
+}
+
+.game-shot-card.island-showcase-card:hover img,
+.game-shot-card.island-showcase-card:focus-visible img {
+  filter:
+    saturate(1.12)
+    contrast(1.05)
+    brightness(1.12)
+    drop-shadow(0 28px 34px hsl(var(--accent) / 0.24));
+  transform: scale(1.01) translateY(-0.25rem);
+}
+
+.island-showcase-card div {
+  padding: 1.2rem 1.25rem;
+}
+
+.island-showcase-allies {
+  background:
+    radial-gradient(circle at 50% 25%, rgba(255, 157, 72, 0.32), transparent 52%),
+    linear-gradient(160deg, rgba(41, 31, 35, 0.96), rgba(8, 11, 25, 0.98));
+}
+
+.island-showcase-vision {
+  background:
+    radial-gradient(circle at 50% 26%, rgba(71, 225, 255, 0.26), transparent 52%),
+    linear-gradient(160deg, rgba(18, 38, 50, 0.96), rgba(8, 10, 24, 0.98));
+}
+
+.island-showcase-ruins {
+  background:
+    radial-gradient(circle at 50% 26%, rgba(128, 115, 255, 0.3), transparent 52%),
+    linear-gradient(160deg, rgba(22, 31, 58, 0.96), rgba(8, 9, 24, 0.98));
+}
+
 .game-feature-grid {
   width: min(78rem, 100%);
   margin: 1.35rem auto 0;
