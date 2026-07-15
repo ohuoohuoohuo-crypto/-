@@ -2620,6 +2620,46 @@ main,
   filter: saturate(1.16) contrast(1.08) brightness(0.88);
 }
 
+.island-winner-hero-media {
+  background:
+    radial-gradient(circle at 50% 68%, rgba(255, 188, 92, 0.2), transparent 19rem),
+    radial-gradient(circle at 74% 24%, rgba(66, 245, 255, 0.14), transparent 18rem),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.015)),
+    rgba(8, 14, 34, 0.7);
+}
+
+.island-winner-hero-media::before {
+  background:
+    linear-gradient(180deg, rgba(4, 5, 16, 0.02), rgba(4, 5, 16, 0.38)),
+    radial-gradient(circle at 52% 62%, rgba(255, 188, 92, 0.16), transparent 18rem),
+    radial-gradient(circle at 70% 26%, rgba(66, 245, 255, 0.12), transparent 17rem);
+}
+
+.game-hero-media .island-winner-hero-art {
+  position: absolute;
+  left: 50%;
+  bottom: 3.5rem;
+  z-index: 1;
+  width: min(92%, 46rem);
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center bottom;
+  transform: translateX(-50%) scale(0.98);
+  filter:
+    saturate(1.08) contrast(1.04) brightness(1.02)
+    drop-shadow(0 30px 42px rgba(0, 0, 0, 0.48))
+    drop-shadow(0 0 34px rgba(255, 188, 92, 0.18));
+}
+
+.game-hero-media:hover .island-winner-hero-art {
+  transform: translateX(-50%) translateY(-2%) scale(1.03);
+  filter:
+    saturate(1.13) contrast(1.05) brightness(1.07)
+    drop-shadow(0 34px 50px rgba(0, 0, 0, 0.54))
+    drop-shadow(0 0 42px rgba(66, 245, 255, 0.2));
+}
+
 .game-hero-hud {
   position: absolute;
   left: clamp(1rem, 2vw, 1.4rem);
