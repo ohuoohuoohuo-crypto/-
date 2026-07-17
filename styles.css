@@ -2099,16 +2099,20 @@ main,
   position: relative;
   z-index: 2;
   display: grid;
+  justify-items: center;
   gap: 0.35rem;
   min-height: 4.8rem;
   margin-bottom: 1rem;
   overflow: hidden;
+  text-align: center;
   color: rgba(184, 255, 106, 0.72);
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.72rem;
 }
 
 .data-stream span {
+  display: block;
+  width: 100%;
   animation: dataDrift 3.6s linear infinite;
 }
 
