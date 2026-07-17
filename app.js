@@ -638,7 +638,7 @@ const fantasyTranslations = {
     fantasyFeature6Body: "欣赏精心设计的游戏场景和角色，沉浸在奇幻的视觉盛宴中。",
     fantasyGalleryKicker: "VISUAL ARCHIVE",
     fantasyGalleryTitle: "游戏截图",
-    fantasyGalleryLead: "点击缩略图切换预览，浏览海岛探索、营地、雪境、洞穴和生活系统。",
+    fantasyGalleryLead: "使用左右切换或横向胶片条，快速浏览奇幻岛屿的关键场景。",
     fantasyGallery1Title: "海岛远眺",
     fantasyGallery1Body: "从高处俯瞰蔚蓝海面，旅程从神秘群岛开始。",
     fantasyGallery2Title: "俯瞰岛屿",
@@ -720,7 +720,7 @@ const fantasyTranslations = {
     fantasyFeature6Body: "Enjoy carefully designed environments and characters in a vivid fantasy world.",
     fantasyGalleryKicker: "VISUAL ARCHIVE",
     fantasyGalleryTitle: "Game Screens",
-    fantasyGalleryLead: "Click thumbnails to preview island exploration, camps, snowfields, caves, and life systems.",
+    fantasyGalleryLead: "Use the arrows or horizontal filmstrip to browse key Fantasy Island scenes.",
     fantasyGallery1Title: "Ocean Lookout",
     fantasyGallery1Body: "A blue horizon opens the journey across the mysterious archipelago.",
     fantasyGallery2Title: "Island Overview",
@@ -802,7 +802,7 @@ const fantasyTranslations = {
     fantasyFeature6Body: "丁寧に設計された風景とキャラクターで、幻想的なビジュアル体験に没入できます。",
     fantasyGalleryKicker: "VISUAL ARCHIVE",
     fantasyGalleryTitle: "ゲーム画面",
-    fantasyGalleryLead: "サムネイルをクリックして、島の探索、拠点、雪原、洞窟、生活システムを確認できます。",
+    fantasyGalleryLead: "左右の矢印または横型フィルムストリップで、ファンタジーアイランドの主要シーンをすばやく確認できます。",
     fantasyGallery1Title: "海の眺望",
     fantasyGallery1Body: "青い海を見渡す場所から、神秘的な群島への旅が始まります。",
     fantasyGallery2Title: "島の俯瞰",
@@ -1376,9 +1376,9 @@ const snakeTranslations = {
     snakeStep4Body: "身体越长越容易限制自己的回旋空间。不要盲目加速，尽量利用开阔区域调整方向。",
     snakeGalleryKicker: "VISUAL ARCHIVE",
     snakeGalleryTitle: "游戏画面",
-    snakeGalleryLead: "点击缩略图切换预览，浏览能量收集、加速冲刺、多蛇蛇阵与高压控场。",
-    snakeGallery1Title: "能量点收集",
-    snakeGallery1Body: "在六边形地图里收集彩色光点，身体不断延长。",
+    snakeGalleryLead: "使用左右切换或横向胶片条，浏览能量收集、加速冲刺、多蛇蛇阵与高压控场。",
+    snakeGallery1Title: "霓虹蛇阵",
+    snakeGallery1Body: "在六边形霓虹竞技场中收集能量、加速穿行并持续成长。",
     snakeGallery2Title: "长蛇控场",
     snakeGallery2Body: "蛇身变长后，转向空间变小，更考验路线控制。",
     snakeGallery3Title: "高压蛇阵",
@@ -1463,9 +1463,9 @@ const snakeTranslations = {
     snakeStep4Body: "Long bodies reduce turning room. Avoid blind boosts and use open zones to reset direction.",
     snakeGalleryKicker: "VISUAL ARCHIVE",
     snakeGalleryTitle: "Game Screens",
-    snakeGalleryLead: "Click thumbnails to preview energy pickup, boost movement, multi-snake fields, and pressure routes.",
-    snakeGallery1Title: "Energy Pickup",
-    snakeGallery1Body: "Collect colored points across the hex grid and keep growing.",
+    snakeGalleryLead: "Use the arrows or horizontal filmstrip to preview energy pickup, boost movement, multi-snake fields, and pressure routes.",
+    snakeGallery1Title: "Neon Snake Arena",
+    snakeGallery1Body: "Collect energy, boost through the neon hex arena, and keep growing.",
     snakeGallery2Title: "Long Body Control",
     snakeGallery2Body: "A longer snake leaves less room to turn and demands cleaner positioning.",
     snakeGallery3Title: "Pressure Field",
@@ -1550,9 +1550,9 @@ const snakeTranslations = {
     snakeStep4Body: "長い体は回り込みを制限します。無理な加速を避け、開けた場所で方向を整えます。",
     snakeGalleryKicker: "VISUAL ARCHIVE",
     snakeGalleryTitle: "ゲーム画面",
-    snakeGalleryLead: "サムネイルをクリックして、エネルギー回収、加速移動、複数蛇の盤面、高圧ルートを確認できます。",
-    snakeGallery1Title: "エネルギー回収",
-    snakeGallery1Body: "六角形マップで色付き光点を集め、体を伸ばします。",
+    snakeGalleryLead: "左右の矢印または横型フィルムストリップで、エネルギー回収、加速移動、複数蛇の盤面、高圧ルートを確認できます。",
+    snakeGallery1Title: "ネオンスネークアリーナ",
+    snakeGallery1Body: "六角形のネオンアリーナでエネルギーを集め、加速しながら成長します。",
     snakeGallery2Title: "長い体の制御",
     snakeGallery2Body: "蛇が長くなるほど曲がる空間が減り、位置取りが重要になります。",
     snakeGallery3Title: "高圧蛇陣",
@@ -2411,6 +2411,7 @@ function updateGameGalleryText() {
 
 function setupGameGallery() {
   const viewer = document.getElementById("gameGalleryImage");
+  const viewerFrame = viewer?.closest(".game-gallery-viewer");
   const buttons = document.querySelectorAll(".game-gallery-thumbs button");
   const controls = document.querySelectorAll("[data-gallery-step]");
   if (!viewer || !buttons.length) return;
@@ -2424,6 +2425,7 @@ function setupGameGallery() {
       viewer.classList.add("is-switching");
       window.setTimeout(() => {
         viewer.src = image;
+        viewerFrame?.classList.toggle("is-model-view", button.dataset.galleryKind === "model");
         updateGameGalleryText();
         viewer.classList.remove("is-switching");
         if (window.innerWidth < 1100) {
